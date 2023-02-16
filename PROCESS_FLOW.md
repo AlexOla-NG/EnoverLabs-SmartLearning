@@ -1,8 +1,8 @@
 This is a document outlining the process flow for the Enoverlabs project.
 
 ## Process Flow
-- Install libraries
-- Create routes
+- Install libraries ✅
+- Create routes ✅
 - Create default CSS styles, typography, colors
 - Create components
 - Build views/pages (landing/home, signup/login, pricing, study plan, take a test)

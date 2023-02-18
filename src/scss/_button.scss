@@ -1,0 +1,13 @@
+.btn {
+	@include resize(fs-body2);
+	text-transform: capitalize;
+}
+
+.color-btn {
+	background-color: $secondary-color;
+	color: $primary-color;
+}
+
+.white-btn {
+	color: $text-body-color;
+}

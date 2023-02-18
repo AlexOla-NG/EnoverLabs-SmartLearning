@@ -13,8 +13,13 @@
 	$result: map-get($font-sizes, $size-name);
 	font-size: $result;
 
-	@media only screen and (min-width: 2560px) {
+	@media only screen and (min-width: 1440px) {
 		$result: map-get($font-sizes, $size-name) + 0.5; // increase font size by 0.5
+		font-size: $result;
+	}
+
+	@media only screen and (min-width: 2560px) {
+		$result: map-get($font-sizes, $size-name) + 1; // increase font size by 1
 		font-size: $result;
 	}
 }

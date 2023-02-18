@@ -7,11 +7,38 @@
   padding: 0;
 }
 
+.btn {
+  font-size: 1.125rem;
+  text-transform: capitalize;
+}
+@media only screen and (min-width: 1440px) {
+  .btn {
+    font-size: 1.625rem;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .btn {
+    font-size: 2.125rem;
+  }
+}
+
+.color-btn {
+  background-color: hsl(217deg, 92%, 51%);
+  color: hsl(0deg, 0%, 98%);
+}
+
+.white-btn {
+  color: hsl(0deg, 0%, 26%);
+}
+
+:root {
+  font-size: 16px;
+}
+
 body {
   background-color: hsl(0deg, 0%, 98%);
   color: hsl(0deg, 0%, 26%);
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
   font-weight: 400;
 }
 
@@ -26,5 +53,16 @@ h6 {
 
 a {
   color: hsl(0deg, 0%, 26%);
+  cursor: pointer;
   text-decoration: none;
+}
+
+button {
+  background-color: inherit;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
 }/*# sourceMappingURL=main.css.map */

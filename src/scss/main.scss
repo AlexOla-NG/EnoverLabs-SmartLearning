@@ -1,0 +1,23 @@
+@import "resets", "variables", "config", "responsiveness";
+
+body {
+	background-color: $primary-color;
+	color: $text-body-color;
+	font-family: "Poppins", sans-serif;
+	font-size: 16px;
+	font-weight: weight(regular);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-transform: capitalize;
+}
+
+a {
+	color: $text-body-color;
+	text-decoration: none;
+}

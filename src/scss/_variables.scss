@@ -1,0 +1,42 @@
+// STUB: font
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+// STUB: colors
+$primary-color: hsl(0, 0%, 98%);
+$secondary-color: hsl(217, 92%, 51%);
+$accent-color: hsl(204, 100%, 98%);
+$text-title-color: hsl(0, 0%, 33%);
+$text-body-color: hsl(0, 0%, 26%);
+$monthly-plan-color: hsl(217, 92%, 90%);
+$quarterly-plan-color: hsl(91, 80%, 90%);
+$yearly-plan-color: hsl(21, 88%, 90%);
+$subscribe-bg-color: hsl(0, 0%, 88%);
+$white-color: hsl(0, 0%, 100%);
+
+// STUB: border radius
+$border-radii: (
+	"btn-radius": 1.25rem,
+	"input-radius": 0.313rem,
+	"regular": 0.625rem,
+	"circle": 50%,
+);
+
+// STUB: font size
+$font-sizes: (
+	"fs-h1": 3.375rem,
+	"fs-h2": 2.188rem,
+	"fs-h3": 2rem,
+	"fs-h4": 1.75rem,
+	"fs-h5": 1.563rem,
+	"fs-body1": 1.25rem,
+	"fs-body2": 1.125rem,
+	"fs-body3": 1rem,
+);
+
+// STUB: font weight
+$font-weights: (
+	"regular": 400,
+	"bold": 500,
+	"x-bold": 600,
+	"xx-bold": 700,
+);

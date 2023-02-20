@@ -2,10 +2,36 @@
 }
 
 @include media-lg {
+	nav {
+		.container {
+			align-items: center;
+			gap: 2rem;
+
+			.navbar-items {
+				.login-wrapper {
+					margin-left: 2rem;
+				}
+			}
+		}
+	}
 }
 
 @include media-xl {
+	nav {
+		.container {
+			.navbar-items {
+				gap: 3rem;
+			}
+		}
+	}
 }
 
 @include media-xxl {
+	nav {
+		.container {
+			.navbar-items {
+				gap: 5rem;
+			}
+		}
+	}
 }

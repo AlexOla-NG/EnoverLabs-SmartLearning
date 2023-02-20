@@ -13,12 +13,12 @@
 }
 @media only screen and (min-width: 1440px) {
   .btn {
-    font-size: 1.625rem;
+    font-size: 1.425rem;
   }
 }
 @media only screen and (min-width: 2560px) {
   .btn {
-    font-size: 2.125rem;
+    font-size: 2.625rem;
   }
 }
 
@@ -31,6 +31,81 @@
   color: hsl(0deg, 0%, 26%);
 }
 
+nav {
+  padding: 0.5rem 0;
+  width: 100%;
+}
+nav > .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+nav > .container .navbar-title {
+  font-weight: 700;
+  font-size: 1.563rem;
+  padding: 0.3125rem 0;
+}
+@media only screen and (min-width: 1440px) {
+  nav > .container .navbar-title {
+    font-size: 1.863rem;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  nav > .container .navbar-title {
+    font-size: 3.063rem;
+  }
+}
+nav > .container .navbar-title span:first-child {
+  color: hsl(0deg, 0%, 33%);
+}
+nav > .container .navbar-title span:last-child {
+  color: hsl(217deg, 92%, 51%);
+}
+nav > .container .navbar-items {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.125rem;
+  margin: 0.5rem auto;
+  text-transform: capitalize;
+}
+@media only screen and (min-width: 1440px) {
+  nav > .container .navbar-items {
+    font-size: 1.425rem;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  nav > .container .navbar-items {
+    font-size: 2.625rem;
+  }
+}
+nav > .container .navbar-items-active {
+  display: flex;
+  font-weight: 700;
+}
+nav > .container .navbar-items .login-wrapper {
+  align-self: center;
+}
+
+@media screen and (min-width: 1024px) {
+  nav .container {
+    align-items: center;
+    gap: 2rem;
+  }
+  nav .container .navbar-items .login-wrapper {
+    margin-left: 2rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  nav .container .navbar-items {
+    gap: 3rem;
+  }
+}
+@media screen and (min-width: 2560px) {
+  nav .container .navbar-items {
+    gap: 5rem;
+  }
+}
 :root {
   font-size: 16px;
 }

@@ -14,12 +14,12 @@
 	font-size: $result;
 
 	@media only screen and (min-width: 1440px) {
-		$result: map-get($font-sizes, $size-name) + 0.5; // increase font size by 0.5
+		$result: map-get($font-sizes, $size-name) + 0.3; // increase font size by 0.3
 		font-size: $result;
 	}
 
 	@media only screen and (min-width: 2560px) {
-		$result: map-get($font-sizes, $size-name) + 1; // increase font size by 1
+		$result: map-get($font-sizes, $size-name) + 1.5; // increase font size by 1.5
 		font-size: $result;
 	}
 }

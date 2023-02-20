@@ -13,6 +13,7 @@ This is a document outlining the process flow for the Enoverlabs project.
 -   React router
 -   Axios
 -   Framer motion
+-   Material UI
 -   Firebase 🤔🤔🤔
 
 ## Components

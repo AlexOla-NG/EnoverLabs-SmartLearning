@@ -1,0 +1,16 @@
+.image-text-wrapper {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+
+	img {
+		border-radius: 50%;
+		max-width: 100%;
+		height: auto;
+	}
+	p {
+		@include resize(fs-body2);
+		text-transform: capitalize;
+		font-weight: weight(bold);
+	}
+}

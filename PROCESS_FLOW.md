@@ -20,9 +20,7 @@ This is a document outlining the process flow for the Enoverlabs project.
 
 -   Buttons ✅
 -   Navbar ✅
--   Signup
--   Login
--   Image + Text
+-   Image + Text ✅
 -   Card (Icon + Text, Price, Subject)
 -   Avatar
 -   Leaderboard
@@ -31,7 +29,8 @@ This is a document outlining the process flow for the Enoverlabs project.
 ## Pages
 
 -   Landing/Home
--   Signup/Login
+-   Signup
+-   Login
 -   Pricing
 -   StudyPlan
 -   TakeATest

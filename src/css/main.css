@@ -87,6 +87,32 @@ nav > .container .navbar-items .login-wrapper {
   align-self: center;
 }
 
+.image-text-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.image-text-wrapper img {
+  border-radius: 50%;
+  max-width: 100%;
+  height: auto;
+}
+.image-text-wrapper p {
+  font-size: 1.125rem;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+@media only screen and (min-width: 1440px) {
+  .image-text-wrapper p {
+    font-size: 1.425rem;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .image-text-wrapper p {
+    font-size: 2.625rem;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   nav .container {
     align-items: center;

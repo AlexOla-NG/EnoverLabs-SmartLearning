@@ -22,3 +22,30 @@
 		text-transform: capitalize;
 	}
 }
+
+.price-card-wrapper {
+	border-radius: radius(regular);
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	max-width: 23.938rem;
+	padding: 1rem 0.7rem;
+
+	.title-wrapper {
+		display: flex;
+		justify-content: space-between;
+
+		h3 {
+			@include resize(fs-h5);
+			font-weight: weight(x-bold);
+		}
+	}
+
+	p {
+		@include resize(fs-body3);
+	}
+
+	svg {
+		align-self: flex-end;
+	}
+}

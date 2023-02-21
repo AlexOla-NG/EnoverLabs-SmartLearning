@@ -1,10 +1,10 @@
 import React from "react";
-import ImageText from "../components/leaderboard/ImageText";
+import IconText from "../components/card/IconText";
 
 const Home = () => {
 	return (
 		<div>
-			<ImageText />
+			<IconText />
 		</div>
 	);
 };

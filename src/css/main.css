@@ -113,6 +113,39 @@ nav > .container .navbar-items .login-wrapper {
   }
 }
 
+.icon-text-wrapper {
+  background: hsl(0deg, 0%, 98%);
+  border-radius: 0.938rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  width: fit-content;
+}
+.icon-text-wrapper .icon-wrapper {
+  background-color: hsl(217deg, 92%, 51%);
+  border-radius: 0.938rem;
+  display: flex;
+  justify-content: center;
+  padding: 0.4rem;
+  width: fit-content;
+}
+.icon-text-wrapper p {
+  font-size: 1.125rem;
+  text-transform: capitalize;
+}
+@media only screen and (min-width: 1440px) {
+  .icon-text-wrapper p {
+    font-size: 1.425rem;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .icon-text-wrapper p {
+    font-size: 2.625rem;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   nav .container {
     align-items: center;
@@ -137,7 +170,7 @@ nav > .container .navbar-items .login-wrapper {
 }
 
 body {
-  background-color: hsl(0deg, 0%, 98%);
+  background-color: hsl(0deg, 0%, 100%);
   color: hsl(0deg, 0%, 26%);
   font-family: "Poppins", sans-serif;
   font-weight: 400;

@@ -1,0 +1,24 @@
+.icon-text-wrapper {
+	background: $primary-color;
+	border-radius: radius(icon-radius);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+	padding: 1rem 2rem;
+	width: fit-content;
+
+	.icon-wrapper {
+		background-color: $secondary-color;
+		border-radius: radius(icon-radius);
+		display: flex;
+		justify-content: center;
+		padding: 0.4rem;
+		width: fit-content;
+	}
+
+	p {
+		@include resize(fs-body2);
+		text-transform: capitalize;
+	}
+}

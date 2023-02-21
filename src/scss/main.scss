@@ -1,12 +1,12 @@
 @import "resets", "variables", "config", "button", "navbar", "leaderboard",
-	"responsiveness";
+	"card", "responsiveness";
 
 :root {
 	font-size: 16px;
 }
 
 body {
-	background-color: $primary-color;
+	background-color: $white-color;
 	color: $text-body-color;
 	font-family: "Poppins", sans-serif;
 	font-weight: weight(regular);

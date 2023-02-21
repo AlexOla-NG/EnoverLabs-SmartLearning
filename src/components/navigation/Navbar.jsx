@@ -30,6 +30,8 @@ const navlinks = [
 	},
 ];
 
+// TODO: refactor code. it's too messy and not DRY enough
+
 const Navbar = () => {
 	const [anchorElNav, setAnchorElNav] = useState(null);
 	const location = useLocation();

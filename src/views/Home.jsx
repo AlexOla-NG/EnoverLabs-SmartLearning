@@ -1,7 +1,12 @@
 import React from "react";
+import ImageText from "../components/leaderboard/ImageText";
 
 const Home = () => {
-	return <div>Home</div>;
+	return (
+		<div>
+			<ImageText />
+		</div>
+	);
 };
 
 export default Home;

@@ -113,6 +113,30 @@ nav > .container .navbar-items .login-wrapper {
   }
 }
 
+.coin {
+  background-color: hsl(0deg, 0%, 94%);
+  border-radius: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  padding: 0.3rem 1.6rem;
+  width: fit-content;
+}
+.coin p {
+  font-size: 1.125rem;
+}
+@media only screen and (min-width: 1440px) {
+  .coin p {
+    font-size: 1.425rem;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .coin p {
+    font-size: 2.625rem;
+  }
+}
+
 .icon-text-wrapper {
   background: hsl(0deg, 0%, 98%);
   border-radius: 0.938rem;
@@ -189,6 +213,70 @@ nav > .container .navbar-items .login-wrapper {
   align-self: flex-end;
 }
 
+.test-card-wrapper {
+  background-color: hsl(0deg, 0%, 98%);
+  border-radius: 0.625rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem 1.5rem;
+  max-width: 40.75rem;
+}
+.test-card-wrapper .details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.test-card-wrapper .details .topic-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  text-align: center;
+}
+.test-card-wrapper .details .topic-wrapper h5 {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+@media only screen and (min-width: 1440px) {
+  .test-card-wrapper .details .topic-wrapper h5 {
+    font-size: 1.425rem;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .test-card-wrapper .details .topic-wrapper h5 {
+    font-size: 2.625rem;
+  }
+}
+.test-card-wrapper .details .topic-wrapper p {
+  font-size: 0.938rem;
+}
+@media only screen and (min-width: 1440px) {
+  .test-card-wrapper .details .topic-wrapper p {
+    font-size: 1.238rem;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .test-card-wrapper .details .topic-wrapper p {
+    font-size: 2.438rem;
+  }
+}
+.test-card-wrapper .image-wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .test-card-wrapper {
+    justify-content: space-between;
+  }
+  .test-card-wrapper .details {
+    align-items: normal;
+    gap: 1.5rem;
+  }
+}
 @media screen and (min-width: 1024px) {
   nav .container {
     align-items: center;
@@ -202,10 +290,17 @@ nav > .container .navbar-items .login-wrapper {
   nav .container .navbar-items {
     gap: 3rem;
   }
+  .test-card-wrapper .details {
+    align-items: center;
+  }
 }
 @media screen and (min-width: 2560px) {
   nav .container .navbar-items {
     gap: 5rem;
+  }
+  .coin svg {
+    height: 2.813rem;
+    width: 2.813rem;
   }
 }
 :root {

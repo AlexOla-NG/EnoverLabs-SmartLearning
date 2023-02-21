@@ -1,4 +1,12 @@
 @include media-md {
+	.test-card-wrapper {
+		justify-content: space-between;
+
+		.details {
+			align-items: normal;
+			gap: 1.5rem;
+		}
+	}
 }
 
 @include media-lg {
@@ -24,6 +32,12 @@
 			}
 		}
 	}
+
+	.test-card-wrapper {
+		.details {
+			align-items: center;
+		}
+	}
 }
 
 @include media-xxl {
@@ -32,6 +46,12 @@
 			.navbar-items {
 				gap: 5rem;
 			}
+		}
+	}
+	.coin {
+		svg {
+			height: 2.813rem;
+			width: 2.813rem;
 		}
 	}
 }

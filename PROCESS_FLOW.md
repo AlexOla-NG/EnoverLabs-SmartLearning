@@ -21,7 +21,8 @@ This is a document outlining the process flow for the Enoverlabs project.
 -   Buttons ✅
 -   Navbar ✅
 -   Image + Text ✅
--   Card (Icon + Text, Price, Subject)
+-   Coin ✅
+-   Card (Icon + Text, Price, Test, SubjectProgress)
 -   Avatar
 -   Leaderboard
 -   Footer

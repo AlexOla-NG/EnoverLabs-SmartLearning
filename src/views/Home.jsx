@@ -1,10 +1,10 @@
 import React from "react";
-import PriceCard from "../components/card/PriceCard";
+import TestCard from "../components/card/TestCard";
 
 const Home = () => {
 	return (
 		<div>
-			<PriceCard />
+			<TestCard />
 		</div>
 	);
 };

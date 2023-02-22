@@ -90,3 +90,77 @@
 		}
 	}
 }
+
+.text-icon-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.8rem;
+	width: fit-content;
+
+	p {
+		@include resize(fs-body4);
+		text-transform: capitalize;
+	}
+
+	.icon-wrapper {
+		background-color: $monthly-plan-color;
+		border-radius: radius(circle);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0.5rem;
+		width: 3.125rem;
+		height: 3.125rem;
+	}
+}
+
+.subject-progress {
+	background-color: $coin-bg-color;
+	border-radius: radius(icon-radius);
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	max-width: 66.18rem;
+	padding: 1rem;
+
+	.image-wrapper {
+		align-self: center;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		border-radius: radius(circle);
+		height: 6.25rem;
+		width: 6.25rem;
+	}
+
+	.progress-wrapper {
+		display: grid;
+		grid-template-columns: 1fr 0.25fr;
+		align-items: center;
+		gap: 1rem;
+
+		.progress {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			gap: 1rem;
+
+			h4 {
+				@include resize(fs-body2);
+				font-weight: weight(xx-bold);
+			}
+		}
+
+		h4 {
+			@include resize(fs-h5);
+			font-weight: weight(xx-bold);
+		}
+	}
+
+	.options-wrapper {
+		align-self: center;
+		display: flex;
+		gap: 1rem;
+	}
+}

@@ -18,7 +18,7 @@
 }
 @media only screen and (min-width: 2560px) {
   .btn {
-    font-size: 2.625rem;
+    font-size: 1.925rem;
   }
 }
 
@@ -52,7 +52,7 @@ nav > .container .navbar-title {
 }
 @media only screen and (min-width: 2560px) {
   nav > .container .navbar-title {
-    font-size: 3.063rem;
+    font-size: 2.363rem;
   }
 }
 nav > .container .navbar-title span:first-child {
@@ -76,7 +76,7 @@ nav > .container .navbar-items {
 }
 @media only screen and (min-width: 2560px) {
   nav > .container .navbar-items {
-    font-size: 2.625rem;
+    font-size: 1.925rem;
   }
 }
 nav > .container .navbar-items-active {
@@ -109,7 +109,7 @@ nav > .container .navbar-items .login-wrapper {
 }
 @media only screen and (min-width: 2560px) {
   .image-text-wrapper p {
-    font-size: 2.625rem;
+    font-size: 1.925rem;
   }
 }
 
@@ -133,7 +133,7 @@ nav > .container .navbar-items .login-wrapper {
 }
 @media only screen and (min-width: 2560px) {
   .coin p {
-    font-size: 2.625rem;
+    font-size: 1.925rem;
   }
 }
 
@@ -166,7 +166,7 @@ nav > .container .navbar-items .login-wrapper {
 }
 @media only screen and (min-width: 2560px) {
   .icon-text-wrapper p {
-    font-size: 2.625rem;
+    font-size: 1.925rem;
   }
 }
 
@@ -193,7 +193,7 @@ nav > .container .navbar-items .login-wrapper {
 }
 @media only screen and (min-width: 2560px) {
   .price-card-wrapper .title-wrapper h3 {
-    font-size: 3.063rem;
+    font-size: 2.363rem;
   }
 }
 .price-card-wrapper p {
@@ -206,7 +206,7 @@ nav > .container .navbar-items .login-wrapper {
 }
 @media only screen and (min-width: 2560px) {
   .price-card-wrapper p {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
   }
 }
 .price-card-wrapper svg {
@@ -247,7 +247,7 @@ nav > .container .navbar-items .login-wrapper {
 }
 @media only screen and (min-width: 2560px) {
   .test-card-wrapper .details .topic-wrapper h5 {
-    font-size: 2.625rem;
+    font-size: 1.925rem;
   }
 }
 .test-card-wrapper .details .topic-wrapper p {
@@ -260,12 +260,108 @@ nav > .container .navbar-items .login-wrapper {
 }
 @media only screen and (min-width: 2560px) {
   .test-card-wrapper .details .topic-wrapper p {
-    font-size: 2.438rem;
+    font-size: 1.738rem;
   }
 }
 .test-card-wrapper .image-wrapper img {
   max-width: 100%;
   height: auto;
+}
+
+.text-icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  width: fit-content;
+}
+.text-icon-wrapper p {
+  font-size: 0.938rem;
+  text-transform: capitalize;
+}
+@media only screen and (min-width: 1440px) {
+  .text-icon-wrapper p {
+    font-size: 1.238rem;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .text-icon-wrapper p {
+    font-size: 1.738rem;
+  }
+}
+.text-icon-wrapper .icon-wrapper {
+  background-color: hsl(217deg, 92%, 90%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  width: 3.125rem;
+  height: 3.125rem;
+}
+
+.subject-progress {
+  background-color: hsl(0deg, 0%, 94%);
+  border-radius: 0.938rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 66.18rem;
+  padding: 1rem;
+}
+.subject-progress .image-wrapper {
+  align-self: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  height: 6.25rem;
+  width: 6.25rem;
+}
+.subject-progress .progress-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 0.25fr;
+  align-items: center;
+  gap: 1rem;
+}
+.subject-progress .progress-wrapper .progress {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.subject-progress .progress-wrapper .progress h4 {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+@media only screen and (min-width: 1440px) {
+  .subject-progress .progress-wrapper .progress h4 {
+    font-size: 1.425rem;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .subject-progress .progress-wrapper .progress h4 {
+    font-size: 1.925rem;
+  }
+}
+.subject-progress .progress-wrapper h4 {
+  font-size: 1.563rem;
+  font-weight: 700;
+}
+@media only screen and (min-width: 1440px) {
+  .subject-progress .progress-wrapper h4 {
+    font-size: 1.863rem;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .subject-progress .progress-wrapper h4 {
+    font-size: 2.363rem;
+  }
+}
+.subject-progress .options-wrapper {
+  align-self: center;
+  display: flex;
+  gap: 1rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -275,6 +371,12 @@ nav > .container .navbar-items .login-wrapper {
   .test-card-wrapper .details {
     align-items: normal;
     gap: 1.5rem;
+  }
+  .subject-progress {
+    flex-direction: row;
+  }
+  .subject-progress .progress-wrapper {
+    width: 65%;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -301,6 +403,14 @@ nav > .container .navbar-items .login-wrapper {
   .coin svg {
     height: 2.813rem;
     width: 2.813rem;
+  }
+  .text-icon-wrapper .icon-wrapper {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  .text-icon-wrapper .icon-wrapper svg {
+    width: 2rem;
+    height: 2rem;
   }
 }
 :root {

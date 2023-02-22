@@ -7,6 +7,14 @@
 			gap: 1.5rem;
 		}
 	}
+
+	.subject-progress {
+		flex-direction: row;
+
+		.progress-wrapper {
+			width: 65%;
+		}
+	}
 }
 
 @include media-lg {
@@ -52,6 +60,18 @@
 		svg {
 			height: 2.813rem;
 			width: 2.813rem;
+		}
+	}
+
+	.text-icon-wrapper {
+		.icon-wrapper {
+			width: 3.5rem;
+			height: 3.5rem;
+
+			svg {
+				width: 2rem;
+				height: 2rem;
+			}
 		}
 	}
 }

@@ -19,7 +19,7 @@
 	}
 
 	@media only screen and (min-width: 2560px) {
-		$result: map-get($font-sizes, $size-name) + 1.5; // increase font size by 1.5
+		$result: map-get($font-sizes, $size-name) + 0.8; // increase font size by 0.8
 		font-size: $result;
 	}
 }

@@ -1,11 +1,10 @@
 import React from "react";
-import SubjectProgress from "../components/card/SubjectProgress";
-import TextIcon from "../components/card/TextIcon";
+import Footer from "../components/footer/Footer";
 
 const Home = () => {
 	return (
 		<div>
-			<SubjectProgress />
+			<Footer />
 		</div>
 	);
 };

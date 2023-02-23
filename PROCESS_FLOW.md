@@ -25,7 +25,7 @@ This is a document outlining the process flow for the Enoverlabs project.
 -   Card (Icon + Text, Price, Test, SubjectProgress) ✅
 -   Avatar
 -   Leaderboard
--   Footer
+-   Footer ✅
 
 ## Pages
 

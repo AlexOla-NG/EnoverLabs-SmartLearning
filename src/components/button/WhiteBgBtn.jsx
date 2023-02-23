@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 // NOTE: pass backgroundColor, borderRadius & padding values when using WhiteBgBtn in subscribe component
 
 const WhiteBgBtn = (props) => {
-	const { backgroundColor, borderRadius, padding, text } = props;
+	const { backgroundColor, borderRadius, padding, title } = props;
 
 	return (
 		<motion.button
@@ -18,7 +18,7 @@ const WhiteBgBtn = (props) => {
 				padding: padding,
 			}}
 		>
-			{text}
+			{title}
 		</motion.button>
 	);
 };
@@ -29,5 +29,5 @@ WhiteBgBtn.defaultProps = {
 	backgroundColor: "none",
 	borderRadius: "20px",
 	padding: "11px 28px",
-	text: "sign in",
+	title: "sign in",
 };

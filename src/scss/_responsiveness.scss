@@ -15,6 +15,37 @@
 			width: 65%;
 		}
 	}
+
+	footer {
+		.footer {
+			flex-direction: row;
+			gap: 2.5rem;
+
+			.logo-wrapper {
+				h2 {
+					@include resize(fs-h4);
+				}
+			}
+
+			.details-wrapper {
+				h2 {
+					margin-bottom: 1rem;
+				}
+			}
+		}
+
+		.social-icons-wrapper {
+			margin: 2rem 0 0;
+		}
+
+		.hr-wrapper {
+			hr {
+				position: absolute;
+				width: 100%;
+				left: 0;
+			}
+		}
+	}
 }
 
 @include media-lg {
@@ -28,6 +59,14 @@
 					margin-left: 2rem;
 				}
 			}
+		}
+	}
+
+	footer {
+		padding: 4rem 3rem 2rem;
+
+		.footer {
+			gap: 10rem;
 		}
 	}
 }
@@ -44,6 +83,12 @@
 	.test-card-wrapper {
 		.details {
 			align-items: center;
+		}
+	}
+
+	footer {
+		.footer {
+			gap: 15rem;
 		}
 	}
 }
@@ -71,6 +116,24 @@
 			svg {
 				width: 2rem;
 				height: 2rem;
+			}
+		}
+	}
+
+	footer {
+		.footer {
+			gap: 25rem;
+		}
+
+		.social-icons-wrapper {
+			.icon-wrapper {
+				width: 3rem;
+				height: 3rem;
+
+				svg {
+					width: 1.5rem;
+					height: 1.5rem;
+				}
 			}
 		}
 	}

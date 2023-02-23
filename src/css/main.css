@@ -364,6 +364,130 @@ nav > .container .navbar-items .login-wrapper {
   gap: 1rem;
 }
 
+footer {
+  background-color: hsl(217deg, 92%, 51%);
+  color: hsl(0deg, 0%, 98%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+footer .footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+footer .footer .logo-wrapper {
+  margin-bottom: 1.5rem;
+}
+footer .footer .logo-wrapper h2 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+@media only screen and (min-width: 1440px) {
+  footer .footer .logo-wrapper h2 {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  footer .footer .logo-wrapper h2 {
+    font-size: 1.8rem;
+  }
+}
+footer .footer .details-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+}
+@media only screen and (min-width: 1440px) {
+  footer .footer .details-wrapper {
+    font-size: 1.05rem;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  footer .footer .details-wrapper {
+    font-size: 1.55rem;
+  }
+}
+footer .footer .details-wrapper h2 {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+@media only screen and (min-width: 1440px) {
+  footer .footer .details-wrapper h2 {
+    font-size: 1.425rem;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  footer .footer .details-wrapper h2 {
+    font-size: 1.925rem;
+  }
+}
+footer .footer .details-wrapper a {
+  color: hsl(0deg, 0%, 98%);
+  text-decoration: underline;
+}
+footer .footer .capitalize {
+  text-transform: capitalize;
+}
+footer .footer .input-wrapper {
+  background: hsl(0deg, 0%, 88%);
+  border: 0.109714px solid hsl(0deg, 0%, 58%);
+  border-radius: 0.313rem;
+  display: flex;
+  justify-content: space-between;
+  width: 12rem;
+}
+footer .footer .input-wrapper input {
+  all: unset;
+  padding-left: 0.6rem;
+}
+footer .footer .input-wrapper input,
+footer .footer .input-wrapper button {
+  font-size: 0.563rem;
+}
+@media only screen and (min-width: 1440px) {
+  footer .footer .input-wrapper input,
+  footer .footer .input-wrapper button {
+    font-size: 0.863rem;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  footer .footer .input-wrapper input,
+  footer .footer .input-wrapper button {
+    font-size: 1.363rem;
+  }
+}
+footer .social-icons-wrapper {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem auto 0;
+}
+footer .social-icons-wrapper .icon-wrapper {
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+footer .copyright-wrapper {
+  font-size: 0.75rem;
+  text-align: center;
+}
+@media only screen and (min-width: 1440px) {
+  footer .copyright-wrapper {
+    font-size: 1.05rem;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  footer .copyright-wrapper {
+    font-size: 1.55rem;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .test-card-wrapper {
     justify-content: space-between;
@@ -378,6 +502,40 @@ nav > .container .navbar-items .login-wrapper {
   .subject-progress .progress-wrapper {
     width: 65%;
   }
+  footer .footer {
+    flex-direction: row;
+    gap: 2.5rem;
+  }
+  footer .footer .logo-wrapper h2 {
+    font-size: 1.75rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 1440px) {
+  footer .footer .logo-wrapper h2 {
+    font-size: 2.05rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 2560px) {
+  footer .footer .logo-wrapper h2 {
+    font-size: 2.55rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  footer .footer .details-wrapper h2 {
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  footer .social-icons-wrapper {
+    margin: 2rem 0 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  footer .hr-wrapper hr {
+    position: absolute;
+    width: 100%;
+    left: 0;
+  }
 }
 @media screen and (min-width: 1024px) {
   nav .container {
@@ -387,6 +545,12 @@ nav > .container .navbar-items .login-wrapper {
   nav .container .navbar-items .login-wrapper {
     margin-left: 2rem;
   }
+  footer {
+    padding: 4rem 3rem 2rem;
+  }
+  footer .footer {
+    gap: 10rem;
+  }
 }
 @media screen and (min-width: 1440px) {
   nav .container .navbar-items {
@@ -394,6 +558,9 @@ nav > .container .navbar-items .login-wrapper {
   }
   .test-card-wrapper .details {
     align-items: center;
+  }
+  footer .footer {
+    gap: 15rem;
   }
 }
 @media screen and (min-width: 2560px) {
@@ -411,6 +578,17 @@ nav > .container .navbar-items .login-wrapper {
   .text-icon-wrapper .icon-wrapper svg {
     width: 2rem;
     height: 2rem;
+  }
+  footer .footer {
+    gap: 25rem;
+  }
+  footer .social-icons-wrapper .icon-wrapper {
+    width: 3rem;
+    height: 3rem;
+  }
+  footer .social-icons-wrapper .icon-wrapper svg {
+    width: 1.5rem;
+    height: 1.5rem;
   }
 }
 :root {

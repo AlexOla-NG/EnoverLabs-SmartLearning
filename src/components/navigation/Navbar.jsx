@@ -31,6 +31,7 @@ const navlinks = [
 ];
 
 // TODO: refactor code. it's too messy and not DRY enough
+// add hover effect for navlinks. use framer.motion
 
 const Navbar = () => {
 	const [anchorElNav, setAnchorElNav] = useState(null);

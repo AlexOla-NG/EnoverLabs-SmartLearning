@@ -1094,7 +1094,7 @@ footer .copyright-wrapper {
     grid-template-columns: 1fr 1fr;
   }
   .home .middle-section .text-details-wrapper .benefits {
-    grid-template-columns: repeat(auto-fit, minmax(11.875rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(14.875rem, 1fr));
   }
   footer {
     overflow-x: hidden;
@@ -1114,9 +1114,6 @@ footer .copyright-wrapper {
   .image-text-wrapper img {
     width: 1.425rem;
     height: 1.425rem;
-  }
-  .home .middle-section .text-details-wrapper .benefits {
-    grid-template-columns: repeat(auto-fit, minmax(14.875rem, 1fr));
   }
 }
 @media screen and (min-width: 2560px) {

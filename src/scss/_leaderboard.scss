@@ -5,12 +5,79 @@
 
 	img {
 		border-radius: 50%;
-		max-width: 100%;
-		height: auto;
+		width: 1.125rem;
+		object-fit: cover;
+		height: 1.125rem;
 	}
+
 	p {
 		@include resize(fs-body2);
 		text-transform: capitalize;
 		font-weight: weight(bold);
+	}
+}
+
+.demo-leaderboard {
+	background: $accent-color;
+	border-radius: radius(icon-radius);
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	padding: 1.5rem 0.8rem 2rem;
+	width: 100%;
+
+	.header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.3rem;
+
+		h4 {
+			@include resize(fs-body4-2);
+			font-weight: weight(x-bold);
+		}
+
+		h5 {
+			@include resize(fs-body5);
+			font-weight: weight(x-bold);
+		}
+
+		p {
+			@include resize(fs-body5);
+		}
+	}
+
+	.main {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+
+		.content {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			h5 {
+				@include resize(fs-body2);
+			}
+
+			p {
+				@include resize(fs-body2);
+				text-transform: capitalize;
+			}
+		}
+
+		.participants {
+			display: flex;
+			flex-direction: column;
+			gap: 2rem;
+
+			.details {
+				display: flex;
+				flex-direction: column;
+				gap: 1rem;
+				margin-left: 0.5rem;
+			}
+		}
 	}
 }

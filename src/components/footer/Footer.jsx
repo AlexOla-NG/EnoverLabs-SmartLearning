@@ -33,6 +33,11 @@ const Footer = () => {
 				</div>
 				<div className="details-wrapper">
 					<h2>stay up to date</h2>
+
+					{/* TODO: the btn is not properly aligned.
+							try: set btn to position: absolute; right: 0
+										dont forget to set parent to position: relative
+					 */}
 					<div className="input-wrapper capitalize">
 						<input type="text" placeholder="email address" />
 						<WhiteBgBtn

@@ -7,6 +7,15 @@
   padding: 0;
 }
 
+.banner {
+  margin: 0 -6.625rem;
+  padding: 3rem 8.5rem;
+}
+
+.container-layout {
+  padding: 0 1.7rem 5rem;
+}
+
 .btn {
   font-size: 1.125rem;
   text-transform: capitalize;
@@ -32,7 +41,7 @@
 }
 
 nav {
-  padding: 0.5rem 0;
+  padding: 1.7rem 1.7rem 3.17rem;
   width: 100%;
 }
 nav > .container {
@@ -479,8 +488,8 @@ footer {
   color: hsl(0, 0%, 98%);
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  padding: 1.5rem;
+  gap: 2.125rem;
+  padding: 1.7rem 1.8rem 2.4rem;
 }
 footer .footer {
   display: flex;
@@ -599,13 +608,16 @@ footer .copyright-wrapper {
 }
 
 .home {
+  display: flex;
+  flex-direction: column;
+  gap: 5.125rem;
   overflow-x: hidden;
 }
 .home .hero-mobile-text {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 3.75rem;
 }
 .home .hero-mobile-text h1 {
   font-size: 1.875rem;
@@ -867,9 +879,8 @@ footer .copyright-wrapper {
 .home .stats {
   background-color: hsl(204, 100%, 98%);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 1.5rem;
-  padding: 3rem 1rem;
 }
 .home .stats-details {
   text-align: center;
@@ -906,7 +917,6 @@ footer .copyright-wrapper {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  margin: 3rem 0;
 }
 .home .middle-section .text-details {
   display: flex;
@@ -1023,7 +1033,6 @@ footer .copyright-wrapper {
   flex-direction: column;
   align-items: center;
   gap: 3rem;
-  padding: 4.2rem 2rem;
   text-align: center;
 }
 .home .call-to-action h2 {
@@ -1059,7 +1068,7 @@ footer .copyright-wrapper {
 
 @media screen and (min-width: 768px) {
   .container-layout {
-    padding: 3.5rem 6.625rem;
+    padding: 0 6.625rem 2.1rem;
   }
   .nav {
     padding: 1.4rem 6.625rem;
@@ -1083,16 +1092,40 @@ footer .copyright-wrapper {
   }
   .home .hero-mobile .image-wrapper {
     flex-direction: row;
-    justify-content: center;
   }
   .home .hero-mobile .image-wrapper .testimonial {
     top: 70%;
+    margin-left: -3rem;
   }
+  .home .stats {
+    display: flex;
+    justify-content: space-between;
+  }
+  .home .banner {
+    padding: 3rem 1rem;
+  }
+  .home .middle-section .text-details h4 {
+    font-size: 1.563rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 1440px) {
+  .home .middle-section .text-details h4 {
+    font-size: 1.863rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 2560px) {
+  .home .middle-section .text-details h4 {
+    font-size: 2.363rem;
+  }
+}
+@media screen and (min-width: 768px) {
   .home .middle-section .grid-tc-1fr {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
   }
+}
+@media screen and (min-width: 768px) {
   .home .middle-section .text-details-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1101,6 +1134,8 @@ footer .copyright-wrapper {
   .home .middle-section .text-details-wrapper img {
     max-width: 100%;
   }
+}
+@media screen and (min-width: 768px) {
   .home .middle-section .reverse > .text-details {
     grid-column: 2/3;
     grid-row: 1;
@@ -1108,6 +1143,8 @@ footer .copyright-wrapper {
   .home .middle-section .reverse > .demo-leaderboard {
     grid-column: 1/2;
   }
+}
+@media screen and (min-width: 768px) {
   footer .footer {
     flex-direction: row;
     gap: 2.5rem;
@@ -1144,6 +1181,9 @@ footer .copyright-wrapper {
   }
 }
 @media screen and (min-width: 1024px) {
+  .nav {
+    padding: 1.4rem 6.625rem 3.5rem;
+  }
   nav > .container {
     flex-wrap: nowrap;
     align-items: center;
@@ -1163,6 +1203,9 @@ footer .copyright-wrapper {
   .home .hero-desktop .image-wrapper {
     position: absolute;
     right: -12.625rem;
+  }
+  .home .banner {
+    padding: 3rem 8.5rem;
   }
   .home .middle-section .text-details-wrapper {
     gap: 5rem;
@@ -1201,7 +1244,7 @@ footer .copyright-wrapper {
 @media screen and (min-width: 1024px) {
   footer {
     overflow-x: hidden;
-    padding: 4rem 3rem 2rem;
+    padding: 4.56rem 6.375rem 2.938rem;
   }
   footer .footer {
     gap: 10rem;
@@ -1222,9 +1265,6 @@ footer .copyright-wrapper {
 @media screen and (min-width: 2560px) {
   nav .container .navbar-items {
     gap: 5rem;
-  }
-  .container-layout {
-    padding: 2rem;
   }
   .coin svg {
     height: 2.813rem;
@@ -1250,6 +1290,10 @@ footer .copyright-wrapper {
   }
   footer .footer {
     gap: 25rem;
+  }
+  footer .footer .details-wrapper .input-wrapper {
+    width: unset;
+    min-width: 12rem;
   }
   footer .social-icons-wrapper .icon-wrapper {
     width: 3rem;

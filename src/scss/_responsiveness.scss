@@ -1,6 +1,6 @@
 @include media-md {
 	.container-layout {
-		padding: 3.5rem 6.625rem;
+		padding: 0 6.625rem 2.1rem;
 		// padding: 1rem 1.5rem;
 	}
 
@@ -34,15 +34,30 @@
 
 			.image-wrapper {
 				flex-direction: row;
-				justify-content: center;
 
 				.testimonial {
 					top: 70%;
+					margin-left: -3rem;
 				}
 			}
 		}
 
+		.stats {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.banner {
+			padding: 3rem 1rem;
+		}
+
 		.middle-section {
+			.text-details {
+				h4 {
+					@include resize(fs-h5);
+				}
+			}
+
 			.grid-tc-1fr {
 				display: grid;
 				grid-template-columns: 1fr 1fr;
@@ -104,6 +119,10 @@
 }
 
 @include media-lg {
+	.nav {
+		padding: 1.4rem 6.625rem 3.5rem;
+	}
+
 	nav {
 		& > .container {
 			flex-wrap: nowrap;
@@ -133,6 +152,10 @@
 			}
 		}
 
+		.banner {
+			padding: 3rem 8.5rem;
+		}
+
 		.middle-section {
 			.text-details-wrapper {
 				gap: 5rem;
@@ -154,6 +177,7 @@
 				@include resize(fs-h4);
 			}
 		}
+
 		.mobile-view-btn {
 			display: none;
 		}
@@ -165,7 +189,7 @@
 
 	footer {
 		overflow-x: hidden;
-		padding: 4rem 3rem 2rem;
+		padding: 4.56rem 6.375rem 2.938rem;
 
 		.footer {
 			gap: 10rem;
@@ -218,10 +242,6 @@
 		}
 	}
 
-	.container-layout {
-		padding: 2rem;
-	}
-
 	.coin {
 		svg {
 			height: 2.813rem;
@@ -263,6 +283,13 @@
 	footer {
 		.footer {
 			gap: 25rem;
+
+			.details-wrapper {
+				.input-wrapper {
+					width: unset;
+					min-width: 12rem;
+				}
+			}
 		}
 
 		.social-icons-wrapper {

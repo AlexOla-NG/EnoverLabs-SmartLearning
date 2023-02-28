@@ -10,7 +10,7 @@ const details = [
 
 const Stats = () => {
 	return (
-		<section className="stats my-1rem">
+		<section className="stats banner">
 			{details.map((detail, i) => {
 				const { value, title } = detail;
 				if (title === "subjects") {

@@ -3,7 +3,7 @@ import ColorBgBtn from "../button/ColorBgBtn";
 
 const CallToAction = () => {
 	return (
-		<section className="call-to-action">
+		<section className="call-to-action banner">
 			<h2>Do You Want To Ace Your Exams With Confidence?</h2>
 			<div className="mobile-view-btn">
 				<ColorBgBtn

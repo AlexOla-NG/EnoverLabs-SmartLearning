@@ -26,18 +26,24 @@ nav {
 			gap: 2rem;
 			@include resize(fs-body2);
 			margin: 0.5rem auto;
-			text-transform: capitalize;
 
 			// TODO: add hover styles for navbar-items
 
 			&-active {
 				// color: $secondary-color;
-				display: flex;
+				// display: flex;
 				font-weight: weight(xx-bold);
 			}
 
+			.navlinks-wrapper {
+				display: flex;
+				gap: 2.8rem;
+				text-transform: capitalize;
+			}
+
 			.login-wrapper {
-				align-self: center;
+				display: flex;
+				gap: 1.4rem;
 			}
 		}
 	}

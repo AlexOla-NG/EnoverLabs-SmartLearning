@@ -1,6 +1,11 @@
 @include media-md {
 	.container-layout {
-		padding: 1rem 1.5rem;
+		padding: 3.5rem 6.625rem;
+		// padding: 1rem 1.5rem;
+	}
+
+	.nav {
+		padding: 1.4rem 6.625rem;
 	}
 
 	.test-card-wrapper {
@@ -100,14 +105,14 @@
 
 @include media-lg {
 	nav {
-		.container {
+		& > .container {
+			flex-wrap: nowrap;
 			align-items: center;
 			gap: 2rem;
 
 			.navbar-items {
-				.login-wrapper {
-					margin-left: 2rem;
-				}
+				// gap: unset;
+				margin: 0;
 			}
 		}
 	}
@@ -120,6 +125,12 @@
 		.hero-desktop {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
+			position: relative;
+
+			.image-wrapper {
+				position: absolute;
+				right: -12.625rem;
+			}
 		}
 
 		.middle-section {

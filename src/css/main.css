@@ -67,7 +67,6 @@ nav > .container .navbar-items {
   gap: 2rem;
   font-size: 1.125rem;
   margin: 0.5rem auto;
-  text-transform: capitalize;
 }
 @media only screen and (min-width: 1440px) {
   nav > .container .navbar-items {
@@ -80,11 +79,16 @@ nav > .container .navbar-items {
   }
 }
 nav > .container .navbar-items-active {
-  display: flex;
   font-weight: 700;
 }
+nav > .container .navbar-items .navlinks-wrapper {
+  display: flex;
+  gap: 2.8rem;
+  text-transform: capitalize;
+}
 nav > .container .navbar-items .login-wrapper {
-  align-self: center;
+  display: flex;
+  gap: 1.4rem;
 }
 
 .image-text-wrapper {
@@ -1055,7 +1059,10 @@ footer .copyright-wrapper {
 
 @media screen and (min-width: 768px) {
   .container-layout {
-    padding: 1rem 1.5rem;
+    padding: 3.5rem 6.625rem;
+  }
+  .nav {
+    padding: 1.4rem 6.625rem;
   }
   .test-card-wrapper {
     justify-content: space-between;
@@ -1137,12 +1144,13 @@ footer .copyright-wrapper {
   }
 }
 @media screen and (min-width: 1024px) {
-  nav .container {
+  nav > .container {
+    flex-wrap: nowrap;
     align-items: center;
     gap: 2rem;
   }
-  nav .container .navbar-items .login-wrapper {
-    margin-left: 2rem;
+  nav > .container .navbar-items {
+    margin: 0;
   }
   .home .hero-mobile {
     display: none;
@@ -1150,6 +1158,11 @@ footer .copyright-wrapper {
   .home .hero-desktop {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    position: relative;
+  }
+  .home .hero-desktop .image-wrapper {
+    position: absolute;
+    right: -12.625rem;
   }
   .home .middle-section .text-details-wrapper {
     gap: 5rem;

@@ -4,9 +4,6 @@ import { ReactComponent as InstagramIcon } from "../../assets/svg/instagram-icon
 import { ReactComponent as FacebookIcon } from "../../assets/svg/facebook-icon.svg";
 import { ReactComponent as MailIcon } from "../../assets/svg/gmail-icon.svg";
 
-// TODO: stopped here
-// setup footer
-
 const Footer = () => {
 	return (
 		<footer>

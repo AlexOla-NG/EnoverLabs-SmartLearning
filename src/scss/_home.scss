@@ -233,12 +233,9 @@
 			}
 
 			.benefits {
-				// display: flex;
-				// flex-wrap: wrap;
-				gap: 1rem;
-
 				display: grid;
 				grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+				gap: 1rem;
 
 				&-detail {
 					background: $primary-color;
@@ -246,7 +243,6 @@
 					display: flex;
 					flex-direction: column;
 					gap: 0.5rem;
-					// width: 16.875rem;
 					padding: 1rem 0.5rem;
 
 					.icon-wrapper {
@@ -267,19 +263,42 @@
 					}
 				}
 			}
-
-			.text-details {
-				button {
-					@include resize(fs-body5);
-				}
-			}
 		}
-
-		// .flex-align-stretch {
-		// 	align-self: stretch;
-		// }
 	}
 
 	.feedback-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		h4 {
+			@include resize(fs-body2);
+			font-weight: weight(x-bold);
+		}
+	}
+
+	.call-to-action {
+		background-color: $accent-color;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 3rem;
+		padding: 4.2rem 2rem;
+		text-align: center;
+
+		h2 {
+			@include resize(fs-h5);
+			font-weight: weight(x-bold);
+		}
+	}
+
+	.mobile-view-btn {
+		button {
+			@include resize(fs-body5);
+		}
+	}
+
+	.desktop-view-btn {
+		display: none;
 	}
 }

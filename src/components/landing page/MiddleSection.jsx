@@ -18,7 +18,7 @@ const textFiller = (
 const MiddleSection = () => {
 	return (
 		<section className="middle-section">
-			<div className="text-details">
+			<div className="text-details grid-tc-1fr">
 				<h4>Why Students Choose SmartLearning Over Other Platforms</h4>
 				{textFiller}
 			</div>
@@ -34,16 +34,36 @@ const MiddleSection = () => {
 						Start Studying Smarter With A Study Plan, Just For You
 					</h4>
 					{textFiller}
-					<ColorBgBtn borderRadius="0.313rem" />
+					<div className="mobile-view-btn">
+						<ColorBgBtn
+							borderRadius="0.313rem"
+							padding="0.625rem 2.188rem"
+						/>
+					</div>
+					<div className="desktop-view-btn">
+						<ColorBgBtn padding="1.25rem 2.625rem" />
+					</div>
 				</div>
 				<img src={student6} alt="john smith" />
 			</div>
 
-			<div className="text-details-wrapper">
+			<div className="text-details-wrapper reverse">
 				<div className="text-details">
 					<h4>Gamified Learning</h4>
 					{textFiller}
-					<ColorBgBtn borderRadius="0.313rem" text="take test" />
+					<div className="mobile-view-btn">
+						<ColorBgBtn
+							borderRadius="0.313rem"
+							padding="0.625rem 2.188rem"
+							text="take test"
+						/>
+					</div>
+					<div className="desktop-view-btn">
+						<ColorBgBtn
+							padding="1.25rem 2.625rem"
+							text="take test"
+						/>
+					</div>
 				</div>
 				<DemoLeaderboard />
 			</div>

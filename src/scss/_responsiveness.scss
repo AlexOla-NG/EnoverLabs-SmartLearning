@@ -38,6 +38,12 @@
 		}
 
 		.middle-section {
+			.grid-tc-1fr {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 3rem;
+			}
+
 			.text-details-wrapper {
 				display: grid;
 				grid-template-columns: 1fr 1fr;
@@ -46,13 +52,16 @@
 				img {
 					max-width: 100%;
 				}
+			}
 
-				// .benefits {
-				// 	grid-template-columns: repeat(
-				// 		auto-fit,
-				// 		minmax(8rem rem, 1fr)
-				// 	);
-				// }
+			.reverse {
+				& > .text-details {
+					grid-column: 2/3;
+					grid-row: 1;
+				}
+				& > .demo-leaderboard {
+					grid-column: 1/2;
+				}
 			}
 		}
 	}
@@ -115,6 +124,8 @@
 
 		.middle-section {
 			.text-details-wrapper {
+				gap: 5rem;
+
 				.benefits {
 					grid-template-columns: repeat(
 						auto-fit,
@@ -122,6 +133,22 @@
 					);
 				}
 			}
+		}
+
+		.call-to-action {
+			flex-direction: row;
+			justify-content: space-between;
+
+			h2 {
+				@include resize(fs-h4);
+			}
+		}
+		.mobile-view-btn {
+			display: none;
+		}
+
+		.desktop-view-btn {
+			display: block;
 		}
 	}
 

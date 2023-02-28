@@ -947,9 +947,9 @@ footer .copyright-wrapper {
   max-width: 80%;
 }
 .home .middle-section .text-details-wrapper .benefits {
-  gap: 1rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  gap: 1rem;
 }
 .home .middle-section .text-details-wrapper .benefits-detail {
   background: hsl(0, 0%, 98%);
@@ -994,19 +994,65 @@ footer .copyright-wrapper {
     font-size: 1.55rem;
   }
 }
-.home .middle-section .text-details-wrapper .text-details button {
+.home .feedback-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home .feedback-wrapper h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+@media only screen and (min-width: 1440px) {
+  .home .feedback-wrapper h4 {
+    font-size: 1.425rem;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .home .feedback-wrapper h4 {
+    font-size: 1.925rem;
+  }
+}
+.home .call-to-action {
+  background-color: hsl(204, 100%, 98%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding: 4.2rem 2rem;
+  text-align: center;
+}
+.home .call-to-action h2 {
+  font-size: 1.563rem;
+  font-weight: 600;
+}
+@media only screen and (min-width: 1440px) {
+  .home .call-to-action h2 {
+    font-size: 1.863rem;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .home .call-to-action h2 {
+    font-size: 2.363rem;
+  }
+}
+.home .mobile-view-btn button {
   font-size: 0.75rem;
 }
 @media only screen and (min-width: 1440px) {
-  .home .middle-section .text-details-wrapper .text-details button {
+  .home .mobile-view-btn button {
     font-size: 1.05rem;
   }
 }
 @media only screen and (min-width: 2560px) {
-  .home .middle-section .text-details-wrapper .text-details button {
+  .home .mobile-view-btn button {
     font-size: 1.55rem;
   }
 }
+.home .desktop-view-btn {
+  display: none;
+}
+
 @media screen and (min-width: 768px) {
   .container-layout {
     padding: 1rem 1.5rem;
@@ -1035,6 +1081,11 @@ footer .copyright-wrapper {
   .home .hero-mobile .image-wrapper .testimonial {
     top: 70%;
   }
+  .home .middle-section .grid-tc-1fr {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
   .home .middle-section .text-details-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1042,6 +1093,13 @@ footer .copyright-wrapper {
   }
   .home .middle-section .text-details-wrapper img {
     max-width: 100%;
+  }
+  .home .middle-section .reverse > .text-details {
+    grid-column: 2/3;
+    grid-row: 1;
+  }
+  .home .middle-section .reverse > .demo-leaderboard {
+    grid-column: 1/2;
   }
   footer .footer {
     flex-direction: row;
@@ -1093,9 +1151,41 @@ footer .copyright-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+  .home .middle-section .text-details-wrapper {
+    gap: 5rem;
+  }
   .home .middle-section .text-details-wrapper .benefits {
     grid-template-columns: repeat(auto-fit, minmax(14.875rem, 1fr));
   }
+  .home .call-to-action {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .home .call-to-action h2 {
+    font-size: 1.75rem;
+  }
+}
+@media only screen and (min-width: 1024px) and (min-width: 1440px) {
+  .home .call-to-action h2 {
+    font-size: 2.05rem;
+  }
+}
+@media only screen and (min-width: 1024px) and (min-width: 2560px) {
+  .home .call-to-action h2 {
+    font-size: 2.55rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .home .mobile-view-btn {
+    display: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .home .desktop-view-btn {
+    display: block;
+  }
+}
+@media screen and (min-width: 1024px) {
   footer {
     overflow-x: hidden;
     padding: 4rem 3rem 2rem;

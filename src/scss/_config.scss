@@ -31,6 +31,12 @@
 	}
 }
 
+@mixin media-sm {
+	@media screen and (max-width: 500px) {
+		@content;
+	}
+}
+
 @mixin media-lg {
 	@media screen and (min-width: 1024px) {
 		@content;

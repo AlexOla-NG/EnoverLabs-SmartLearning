@@ -1,0 +1,189 @@
+.mainSignInContainer{
+    @include resize(fs-body4);
+    
+    .signInImageContainer{
+        background: url("../assets/images/SignInImage\(smallScreens\).png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 200px;
+    }
+    .signInContainer{
+        width: 100%;
+        margin: 0 auto;
+        padding: 30px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        
+        .signIcon{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            svg{
+                height: 30px;
+                width: 30px;
+            }
+        }
+
+        .form-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+
+            .form-items{
+                display: flex;
+                gap: 1rem;
+                flex-direction: column;
+
+                input {
+                    height: 50px;
+                    width: 100%;
+                    border-radius: 10px;
+                    border: 2px solid black;
+                    @include resize(fs-body3);
+                    padding-left: 10px;
+                }
+            }
+            .remember-div{
+                display: flex;
+                justify-content: space-between;
+                gap: 20px;
+                div{
+                    display: flex;
+                    gap: 10px;
+                }
+            }
+            .remember-div + div > button{
+                margin-top: 30px;
+                width: 100%;
+            }
+        }
+        .separator {
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+          
+        .separator::before,
+        .separator::after {
+        content: '';
+        flex: 1;
+        border-bottom: 2px solid #000;
+        }
+        
+        .separator:not(:empty)::before {
+        margin-right: 1em;
+        }
+        
+        .separator:not(:empty)::after {
+        margin-left: 1em;
+        }
+
+        .social-media-icons{
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            align-items: center;
+            svg{
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+        }
+    }
+}
+
+// .mainContainer{
+// 	display: grid;
+//     grid-template-columns: 0.8fr 1fr;
+//     @include resize(fs-body4);
+    
+//     .signInImageContainer{
+//         background-image: url("../assets/images/SignInImage\(smallScreens\).png");
+//         background-repeat: no-repeat;
+//         background-position: center;
+//         background-size: cover;
+//         border-radius: 0px 10px 10px 0px;
+//         width: 90%;
+//     }
+//     .signInContainer{
+//         width: 100%;
+//         margin: 0 auto;
+//         padding: 0px 100px;
+//         display: flex;
+//         flex-direction: column;
+//         gap: 3rem;
+        
+//         .signIcon{
+//             display: flex;
+//             align-items: center;
+//             gap: 1rem;
+//         }
+
+//         .form-container{
+//             display: flex;
+//             flex-direction: column;
+//             justify-content: center;
+//             gap: 1rem;
+
+//             .form-items{
+//                 display: flex;
+//                 gap: 1rem;
+//                 flex-direction: column;
+
+//                 input {
+//                     height: 50px;
+//                     width: 100%;
+//                     border-radius: 10px;
+//                     border: 2px solid black;
+//                     @include resize(fs-body3);
+//                     padding-left: 10px;
+//                 }
+//             }
+//             .remember-div{
+//                 display: flex;
+//                 justify-content: space-between;
+//                 div{
+//                     display: flex;
+//                     gap: 10px;
+//                 }
+//             }
+//             .remember-div + div > button{
+//                 margin-top: 30px;
+//                 width: 100%;
+//             }
+//         }
+//         .separator {
+//             display: flex;
+//             align-items: center;
+//             text-align: center;
+//         }
+          
+//         .separator::before,
+//         .separator::after {
+//         content: '';
+//         flex: 1;
+//         border-bottom: 2px solid #000;
+//         }
+        
+//         .separator:not(:empty)::before {
+//         margin-right: 1em;
+//         }
+        
+//         .separator:not(:empty)::after {
+//         margin-left: 1em;
+//         }
+
+//         .social-media-icons{
+//             display: flex;
+//             justify-content: center;
+//             gap: 50px;
+//             align-items: center;
+//             svg{
+//                 width: 2.5rem;
+//                 height: 2.5rem;
+//             }
+//         }
+//     }
+// }

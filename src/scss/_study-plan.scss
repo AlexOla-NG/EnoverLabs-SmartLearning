@@ -1,0 +1,29 @@
+.study-plan {
+	display: flex;
+	flex-direction: column;
+	gap: 2.625rem;
+	padding: 2.5rem 3rem 2.1rem;
+
+	.categories-wrapper {
+		.text-details {
+			display: flex;
+			flex-direction: column;
+			gap: 0.625rem;
+
+			.header-wrapper {
+				display: flex;
+				align-items: center;
+				gap: 0.75rem;
+
+				h1 {
+					@include resize(fs-body2);
+					font-weight: weight(x-bold);
+				}
+			}
+
+			p {
+				@include resize(fs-body4-2);
+			}
+		}
+	}
+}

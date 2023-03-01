@@ -14,6 +14,7 @@ This is a document outlining the process flow for the Enoverlabs project.
 -   Axios
 -   Framer motion
 -   Material UI
+-   SwiperJS
 -   Firebase 🤔🤔🤔
 
 ## Components

@@ -5,7 +5,7 @@ import StudyProgress from "../components/study plan/StudyProgress";
 
 const StudyPlan = () => {
 	return (
-		<main>
+		<main className="study-plan">
 			<Categories />
 			<Schedule />
 			<StudyProgress />

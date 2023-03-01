@@ -1,0 +1,87 @@
+.mainSignUpContainer{
+    @include resize(fs-body5);
+    
+    .signUpImageContainer{
+        background: url("../assets/images/SignUpImage\(smallScreens\).png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 200px;
+    }  
+    .signUpContainer{
+        width: 100%;
+        margin: 0 auto;
+        padding: 30px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        
+        .signIcon{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            svg{
+                height: 30px;
+                width: 30px;
+            }
+        }
+
+        .form-container{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            .form-items{
+                display: flex;
+                gap: 1rem;
+                flex-direction: column;
+
+                input {
+                    height: 50px;
+                    width: 100%;
+                    border-radius: 10px;
+                    border: 2px solid black;
+                    @include resize(fs-body3);
+                    padding-left: 10px;
+                }
+            }
+            .form-items + div > button{
+                margin-top: 30px;
+                margin-bottom: 30px;
+                width: 100%;
+            }
+        }
+        .separator {
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+          
+        .separator::before,
+        .separator::after {
+        content: '';
+        flex: 1;
+        border-bottom: 2px solid #000;
+        }
+        
+        .separator:not(:empty)::before {
+        margin-right: 1em;
+        }
+        
+        .separator:not(:empty)::after {
+        margin-left: 1em;
+        }
+
+        .social-media-icons{
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            align-items: center;
+            svg{
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+        }
+    }
+}
+

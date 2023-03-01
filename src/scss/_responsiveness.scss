@@ -8,6 +8,21 @@
 		padding: 1.4rem 6.625rem;
 	}
 
+	.icon-text-wrapper {
+		gap: 1rem;
+		padding: 1rem 2rem;
+
+		.icon-wrapper {
+			svg {
+				width: 1.5rem;
+				height: 1.5rem;
+			}
+		}
+		p {
+			@include resize(fs-body2);
+		}
+	}
+
 	.test-card-wrapper {
 		justify-content: space-between;
 
@@ -17,30 +32,30 @@
 		}
 	}
 
-	.mainSignUpContainer{
+	.mainSignUpContainer {
 		@include resize(fs-body2);
 		display: grid;
 		grid-template-columns: 0.8fr 1fr;
-		.signUpImageContainer{
+		.signUpImageContainer {
 			background-image: url("../assets/images/image11.png");
 			height: 100%;
 			border-radius: 0px 10px 10px 0px;
 		}
-		.signUpContainer{
+		.signUpContainer {
 			padding: 0px 50px;
 		}
 	}
 
-	.mainSignInContainer{
+	.mainSignInContainer {
 		@include resize(fs-body2);
 		display: grid;
 		grid-template-columns: 0.8fr 1fr;
-		.signInImageContainer{
+		.signInImageContainer {
 			background-image: url("../assets/images/image12.png");
 			border-radius: 0px 10px 10px 0px;
 			height: 100vh;
 		}
-		.signInContainer{
+		.signInContainer {
 			padding: 0px 50px;
 		}
 	}
@@ -164,28 +179,28 @@
 		}
 	}
 
-	.mainSignUpContainer{
+	.mainSignUpContainer {
 		display: grid;
 		grid-template-columns: 0.8fr 1fr;
-		.signUpImageContainer{
+		.signUpImageContainer {
 			background-image: url("../assets/images/image11.png");
 			border-radius: 0px 10px 10px 0px;
 		}
-		.signUpContainer{
+		.signUpContainer {
 			padding: 0px 100px;
 		}
 	}
 
-	.mainSignInContainer{
+	.mainSignInContainer {
 		@include resize(fs-body2);
 		display: grid;
 		grid-template-columns: 0.8fr 1fr;
-		.signInImageContainer{
+		.signInImageContainer {
 			background-image: url("../assets/images/image12.png");
 			border-radius: 0px 10px 10px 0px;
 			height: 100vh;
 		}
-		.signInContainer{
+		.signInContainer {
 			padding: 0px 100px;
 		}
 	}
@@ -266,29 +281,28 @@
 		}
 	}
 
-	.mainSignUpContainer{
+	.mainSignUpContainer {
 		display: grid;
 		grid-template-columns: 0.8fr 1fr;
-		.signUpImageContainer{
+		.signUpImageContainer {
 			background-image: url("../assets/images/image11.png");
 			border-radius: 0px 10px 10px 0px;
-
 		}
-		.signUpContainer{
+		.signUpContainer {
 			padding: 0px 100px;
 		}
 	}
 
-	.mainSignInContainer{
+	.mainSignInContainer {
 		@include resize(fs-body2);
 		display: grid;
 		grid-template-columns: 0.8fr 1fr;
-		.signInImageContainer{
+		.signInImageContainer {
 			background-image: url("../assets/images/image12.png");
 			border-radius: 0px 10px 10px 0px;
 			height: 100vh;
 		}
-		.signInContainer{
+		.signInContainer {
 			padding: 0px 100px;
 		}
 	}
@@ -299,19 +313,6 @@
 			height: 1.425rem;
 		}
 	}
-
-	// .home {
-	// 	.middle-section {
-	// 		.text-details-wrapper {
-	// 			.benefits {
-	// 				grid-template-columns: repeat(
-	// 					auto-fit,
-	// 					minmax(14.875rem, 1fr)
-	// 				);
-	// 			}
-	// 		}
-	// 	}
-	// }
 }
 
 @include media-xxl {
@@ -330,29 +331,29 @@
 		}
 	}
 
-	.mainSignUpContainer{
+	.mainSignUpContainer {
 		display: grid;
 		grid-template-columns: 0.8fr 1fr;
-		
-		.signUpImageContainer{
+
+		.signUpImageContainer {
 			background-image: url("../assets/images/image11.png");
 			border-radius: 0px 10px 10px 0px;
 		}
-		.signUpContainer{
+		.signUpContainer {
 			padding: 0px 100px;
 		}
 	}
 
-	.mainSignInContainer{
+	.mainSignInContainer {
 		@include resize(fs-body2);
 		display: grid;
 		grid-template-columns: 0.8fr 1fr;
-		.signInImageContainer{
+		.signInImageContainer {
 			background-image: url("../assets/images/image12.png");
 			border-radius: 0px 10px 10px 0px;
 			height: 100vh;
 		}
-		.signInContainer{
+		.signInContainer {
 			padding: 0px 100px;
 		}
 	}

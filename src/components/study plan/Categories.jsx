@@ -1,8 +1,9 @@
 import React from "react";
 import { ReactComponent as CategoriesIcon } from "../../assets/svg/categories-icon.svg";
+import Carousel from "./Carousel";
 
 // TODO: stopped here
-// add swiper component for subjectIcon carousel
+// fix icons responsiveness in swipper
 
 const Categories = () => {
 	return (
@@ -14,6 +15,7 @@ const Categories = () => {
 				</div>
 				<p>Select the subject you will like to study</p>
 			</div>
+			<Carousel />
 		</section>
 	);
 };

@@ -1,11 +1,11 @@
 import { ReactComponent as SubjectIcon } from "../../assets/svg/subjectIcon.svg";
 
 const IconText = (props) => {
-	const { icon, text } = props;
+	const { icon, title } = props;
 	return (
 		<div className="icon-text-wrapper">
 			<div className="icon-wrapper">{icon}</div>
-			<p>{text}</p>
+			<p>{title}</p>
 		</div>
 	);
 };
@@ -14,5 +14,5 @@ export default IconText;
 
 IconText.defaultProps = {
 	icon: <SubjectIcon />,
-	text: "english",
+	title: "english",
 };

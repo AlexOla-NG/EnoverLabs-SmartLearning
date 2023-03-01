@@ -108,7 +108,8 @@ nav > .container .navbar-items .login-wrapper {
 .image-text-wrapper img {
   border-radius: 50%;
   width: 1.125rem;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 1.125rem;
 }
 .image-text-wrapper p {
@@ -240,6 +241,7 @@ nav > .container .navbar-items .login-wrapper {
   justify-content: center;
   gap: 0.3rem;
   padding: 0.3rem 1.6rem;
+  width: -moz-fit-content;
   width: fit-content;
 }
 .coin p {
@@ -264,6 +266,7 @@ nav > .container .navbar-items .login-wrapper {
   align-items: center;
   gap: 1rem;
   padding: 1rem 2rem;
+  width: -moz-fit-content;
   width: fit-content;
 }
 .icon-text-wrapper .icon-wrapper {
@@ -272,6 +275,7 @@ nav > .container .navbar-items .login-wrapper {
   display: flex;
   justify-content: center;
   padding: 0.4rem;
+  width: -moz-fit-content;
   width: fit-content;
 }
 .icon-text-wrapper p {
@@ -392,6 +396,7 @@ nav > .container .navbar-items .login-wrapper {
   flex-direction: column;
   align-items: center;
   gap: 0.8rem;
+  width: -moz-fit-content;
   width: fit-content;
 }
 .text-icon-wrapper p {
@@ -836,7 +841,8 @@ footer .copyright-wrapper {
 .home .hero-desktop .image-wrapper .image img {
   border-radius: 0.625rem;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 100%;
 }
 .home .hero-desktop .image-wrapper .image-1 {
@@ -979,6 +985,7 @@ footer .copyright-wrapper {
   display: flex;
   justify-content: center;
   padding: 0.4rem;
+  width: -moz-fit-content;
   width: fit-content;
 }
 .home .middle-section .text-details-wrapper .benefits-detail h5 {
@@ -1066,6 +1073,211 @@ footer .copyright-wrapper {
   display: none;
 }
 
+.mainSignInContainer {
+  font-size: 0.938rem;
+}
+@media only screen and (min-width: 1440px) {
+  .mainSignInContainer {
+    font-size: 1.238rem;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .mainSignInContainer {
+    font-size: 1.738rem;
+  }
+}
+.mainSignInContainer .signInImageContainer {
+  background: url("../assets/images/SignInImage(smallScreens).png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 200px;
+}
+.mainSignInContainer .signInContainer {
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.mainSignInContainer .signInContainer .signIcon {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.mainSignInContainer .signInContainer .signIcon svg {
+  height: 30px;
+  width: 30px;
+}
+.mainSignInContainer .signInContainer .form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.mainSignInContainer .signInContainer .form-container .form-items {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+.mainSignInContainer .signInContainer .form-container .form-items input {
+  height: 50px;
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid black;
+  font-size: 1rem;
+  padding-left: 10px;
+}
+@media only screen and (min-width: 1440px) {
+  .mainSignInContainer .signInContainer .form-container .form-items input {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .mainSignInContainer .signInContainer .form-container .form-items input {
+    font-size: 1.8rem;
+  }
+}
+.mainSignInContainer .signInContainer .form-container .remember-div {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.mainSignInContainer .signInContainer .form-container .remember-div div {
+  display: flex;
+  gap: 10px;
+}
+.mainSignInContainer .signInContainer .form-container .remember-div + div > button {
+  margin-top: 30px;
+  width: 100%;
+}
+.mainSignInContainer .signInContainer .separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.mainSignInContainer .signInContainer .separator::before,
+.mainSignInContainer .signInContainer .separator::after {
+  content: "";
+  flex: 1;
+  border-bottom: 2px solid #000;
+}
+.mainSignInContainer .signInContainer .separator:not(:empty)::before {
+  margin-right: 1em;
+}
+.mainSignInContainer .signInContainer .separator:not(:empty)::after {
+  margin-left: 1em;
+}
+.mainSignInContainer .signInContainer .social-media-icons {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+}
+.mainSignInContainer .signInContainer .social-media-icons svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.mainSignUpContainer {
+  font-size: 0.75rem;
+}
+@media only screen and (min-width: 1440px) {
+  .mainSignUpContainer {
+    font-size: 1.05rem;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .mainSignUpContainer {
+    font-size: 1.55rem;
+  }
+}
+.mainSignUpContainer .signUpImageContainer {
+  background: url("../assets/images/SignUpImage(smallScreens).png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 200px;
+}
+.mainSignUpContainer .signUpContainer {
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.mainSignUpContainer .signUpContainer .signIcon {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.mainSignUpContainer .signUpContainer .signIcon svg {
+  height: 30px;
+  width: 30px;
+}
+.mainSignUpContainer .signUpContainer .form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.mainSignUpContainer .signUpContainer .form-container .form-items {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+.mainSignUpContainer .signUpContainer .form-container .form-items input {
+  height: 50px;
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid black;
+  font-size: 1rem;
+  padding-left: 10px;
+}
+@media only screen and (min-width: 1440px) {
+  .mainSignUpContainer .signUpContainer .form-container .form-items input {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .mainSignUpContainer .signUpContainer .form-container .form-items input {
+    font-size: 1.8rem;
+  }
+}
+.mainSignUpContainer .signUpContainer .form-container .form-items + div > button {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+.mainSignUpContainer .signUpContainer .separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.mainSignUpContainer .signUpContainer .separator::before,
+.mainSignUpContainer .signUpContainer .separator::after {
+  content: "";
+  flex: 1;
+  border-bottom: 2px solid #000;
+}
+.mainSignUpContainer .signUpContainer .separator:not(:empty)::before {
+  margin-right: 1em;
+}
+.mainSignUpContainer .signUpContainer .separator:not(:empty)::after {
+  margin-left: 1em;
+}
+.mainSignUpContainer .signUpContainer .social-media-icons {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+}
+.mainSignUpContainer .signUpContainer .social-media-icons svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 @media screen and (min-width: 768px) {
   .container-layout {
     padding: 0 6.625rem 2.1rem;
@@ -1080,12 +1292,72 @@ footer .copyright-wrapper {
     align-items: normal;
     gap: 1.5rem;
   }
+  .mainSignUpContainer {
+    font-size: 1.125rem;
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 1440px) {
+  .mainSignUpContainer {
+    font-size: 1.425rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 2560px) {
+  .mainSignUpContainer {
+    font-size: 1.925rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mainSignUpContainer .signUpImageContainer {
+    background-image: url("../assets/images/image11.png");
+    height: 100%;
+    border-radius: 0px 10px 10px 0px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mainSignUpContainer .signUpContainer {
+    padding: 0px 50px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mainSignInContainer {
+    font-size: 1.125rem;
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 1440px) {
+  .mainSignInContainer {
+    font-size: 1.425rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 2560px) {
+  .mainSignInContainer {
+    font-size: 1.925rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mainSignInContainer .signInImageContainer {
+    background-image: url("../assets/images/image12.png");
+    border-radius: 0px 10px 10px 0px;
+    height: 100vh;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mainSignInContainer .signInContainer {
+    padding: 0px 50px;
+  }
+}
+@media screen and (min-width: 768px) {
   .subject-progress {
     flex-direction: row;
   }
   .subject-progress .progress-wrapper {
     width: 65%;
   }
+}
+@media screen and (min-width: 768px) {
   .home .hero-mobile-text {
     gap: 2rem;
     margin-bottom: 2rem;
@@ -1192,6 +1464,46 @@ footer .copyright-wrapper {
   nav > .container .navbar-items {
     margin: 0;
   }
+  .mainSignUpContainer {
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+  }
+  .mainSignUpContainer .signUpImageContainer {
+    background-image: url("../assets/images/image11.png");
+    border-radius: 0px 10px 10px 0px;
+  }
+  .mainSignUpContainer .signUpContainer {
+    padding: 0px 100px;
+  }
+  .mainSignInContainer {
+    font-size: 1.125rem;
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+  }
+}
+@media only screen and (min-width: 1024px) and (min-width: 1440px) {
+  .mainSignInContainer {
+    font-size: 1.425rem;
+  }
+}
+@media only screen and (min-width: 1024px) and (min-width: 2560px) {
+  .mainSignInContainer {
+    font-size: 1.925rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .mainSignInContainer .signInImageContainer {
+    background-image: url("../assets/images/image12.png");
+    border-radius: 0px 10px 10px 0px;
+    height: 100vh;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .mainSignInContainer .signInContainer {
+    padding: 0px 100px;
+  }
+}
+@media screen and (min-width: 1024px) {
   .home .hero-mobile {
     display: none;
   }
@@ -1257,6 +1569,46 @@ footer .copyright-wrapper {
   .test-card-wrapper .details {
     align-items: center;
   }
+  .mainSignUpContainer {
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+  }
+  .mainSignUpContainer .signUpImageContainer {
+    background-image: url("../assets/images/image11.png");
+    border-radius: 0px 10px 10px 0px;
+  }
+  .mainSignUpContainer .signUpContainer {
+    padding: 0px 100px;
+  }
+  .mainSignInContainer {
+    font-size: 1.125rem;
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+  }
+}
+@media only screen and (min-width: 1440px) and (min-width: 1440px) {
+  .mainSignInContainer {
+    font-size: 1.425rem;
+  }
+}
+@media only screen and (min-width: 1440px) and (min-width: 2560px) {
+  .mainSignInContainer {
+    font-size: 1.925rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .mainSignInContainer .signInImageContainer {
+    background-image: url("../assets/images/image12.png");
+    border-radius: 0px 10px 10px 0px;
+    height: 100vh;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .mainSignInContainer .signInContainer {
+    padding: 0px 100px;
+  }
+}
+@media screen and (min-width: 1440px) {
   .image-text-wrapper img {
     width: 1.425rem;
     height: 1.425rem;
@@ -1270,6 +1622,46 @@ footer .copyright-wrapper {
     height: 2.813rem;
     width: 2.813rem;
   }
+  .mainSignUpContainer {
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+  }
+  .mainSignUpContainer .signUpImageContainer {
+    background-image: url("../assets/images/image11.png");
+    border-radius: 0px 10px 10px 0px;
+  }
+  .mainSignUpContainer .signUpContainer {
+    padding: 0px 100px;
+  }
+  .mainSignInContainer {
+    font-size: 1.125rem;
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+  }
+}
+@media only screen and (min-width: 2560px) and (min-width: 1440px) {
+  .mainSignInContainer {
+    font-size: 1.425rem;
+  }
+}
+@media only screen and (min-width: 2560px) and (min-width: 2560px) {
+  .mainSignInContainer {
+    font-size: 1.925rem;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .mainSignInContainer .signInImageContainer {
+    background-image: url("../assets/images/image12.png");
+    border-radius: 0px 10px 10px 0px;
+    height: 100vh;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .mainSignInContainer .signInContainer {
+    padding: 0px 100px;
+  }
+}
+@media screen and (min-width: 2560px) {
   .text-icon-wrapper .icon-wrapper {
     width: 3.5rem;
     height: 3.5rem;
@@ -1278,16 +1670,22 @@ footer .copyright-wrapper {
     width: 2rem;
     height: 2rem;
   }
+}
+@media screen and (min-width: 2560px) {
   .image-text-wrapper img {
     width: 1.925rem;
     height: 1.925rem;
   }
+}
+@media screen and (min-width: 2560px) {
   .home .hero-desktop {
     justify-items: center;
   }
   .home .middle-section .text-details-wrapper {
     gap: 10rem;
   }
+}
+@media screen and (min-width: 2560px) {
   footer .footer {
     gap: 25rem;
   }

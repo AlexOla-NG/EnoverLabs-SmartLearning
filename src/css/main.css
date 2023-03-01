@@ -1271,6 +1271,50 @@ footer .copyright-wrapper {
   height: 1.5rem;
 }
 
+.study-plan {
+  display: flex;
+  flex-direction: column;
+  gap: 2.625rem;
+  padding: 2.5rem 3rem 2.1rem;
+}
+.study-plan .categories-wrapper .text-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.study-plan .categories-wrapper .text-details .header-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.study-plan .categories-wrapper .text-details .header-wrapper h1 {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+@media only screen and (min-width: 1440px) {
+  .study-plan .categories-wrapper .text-details .header-wrapper h1 {
+    font-size: 1.425rem;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .study-plan .categories-wrapper .text-details .header-wrapper h1 {
+    font-size: 1.925rem;
+  }
+}
+.study-plan .categories-wrapper .text-details p {
+  font-size: 0.875rem;
+}
+@media only screen and (min-width: 1440px) {
+  .study-plan .categories-wrapper .text-details p {
+    font-size: 1.175rem;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .study-plan .categories-wrapper .text-details p {
+    font-size: 1.675rem;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .container-layout {
     padding: 0 6.625rem 2.1rem;

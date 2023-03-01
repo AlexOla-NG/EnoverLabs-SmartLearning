@@ -29,9 +29,9 @@ This is a document outlining the process flow for the Enoverlabs project.
 
 ## Pages
 
--   Landing/Home
--   Signup
--   Login
+-   Landing/Home ✅
+-   Signup ✅
+-   Login ✅
 -   Pricing
 -   StudyPlan
 -   TakeATest

@@ -4,6 +4,9 @@ import DatePicker from "./DatePicker";
 
 // NOTE: all links in schedule will redirect to the 404 page
 
+// TODO: stopped here
+// finish setting up schedule component
+
 const Schedule = () => {
 	return (
 		<section className="schedule">

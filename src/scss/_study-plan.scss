@@ -52,4 +52,70 @@
 			transition: opacity 500ms ease-in-out;
 		}
 	}
+
+	.schedule {
+		.date-picker {
+			margin: 0 auto;
+			max-width: 14.5rem;
+
+			.react-calendar {
+				.react-calendar__navigation {
+					display: flex;
+					button {
+						span {
+							@include resize(fs-body4-2);
+							font-weight: weight(x-bold);
+						}
+					}
+				}
+
+				.react-calendar__viewContainer {
+					.react-calendar__month-view {
+						@include resize(fs-body5);
+
+						.react-calendar__month-view__weekdays {
+							border-bottom: 0.65px solid $text-body-color;
+							display: flex !important;
+							justify-content: space-around;
+							font-weight: weight(x-bold);
+							padding: 0.65rem 0 0.5rem;
+
+							.react-calendar__month-view__weekdays__weekday {
+								flex: none !important;
+
+								abbr {
+									text-decoration: none;
+								}
+							}
+						}
+
+						.react-calendar__month-view__days {
+							display: grid !important;
+							grid-template-columns: 14.2% 14.2% 14.2% 14.2% 14.2% 14.2% 14.2%;
+							padding: 0.5rem 0 0.86rem;
+							row-gap: 0.975rem;
+
+							button {
+								padding: 0.5rem 0;
+							}
+						}
+
+						.react-calendar__month-view__days__day--neighboringMonth {
+							opacity: 0.7;
+						}
+
+						.react-calendar__tile--range {
+							border-bottom: 0.65px solid $text-body-color;
+						}
+					}
+				}
+
+				.highlight {
+					background-color: $secondary-color;
+					border-radius: radius(circle);
+					color: $white-color;
+				}
+			}
+		}
+	}
 }

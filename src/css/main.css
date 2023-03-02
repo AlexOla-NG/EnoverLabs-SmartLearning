@@ -108,8 +108,7 @@ nav > .container .navbar-items .login-wrapper {
 .image-text-wrapper img {
   border-radius: 50%;
   width: 1.125rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 1.125rem;
 }
 .image-text-wrapper p {
@@ -241,7 +240,6 @@ nav > .container .navbar-items .login-wrapper {
   justify-content: center;
   gap: 0.3rem;
   padding: 0.3rem 1.6rem;
-  width: -moz-fit-content;
   width: fit-content;
 }
 .coin p {
@@ -274,7 +272,6 @@ nav > .container .navbar-items .login-wrapper {
   display: flex;
   justify-content: center;
   padding: 0.4rem;
-  width: -moz-fit-content;
   width: fit-content;
 }
 .icon-text-wrapper .icon-wrapper svg {
@@ -399,7 +396,6 @@ nav > .container .navbar-items .login-wrapper {
   flex-direction: column;
   align-items: center;
   gap: 0.8rem;
-  width: -moz-fit-content;
   width: fit-content;
 }
 .text-icon-wrapper p {
@@ -844,8 +840,7 @@ footer .copyright-wrapper {
 .home .hero-desktop .image-wrapper .image img {
   border-radius: 0.625rem;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 100%;
 }
 .home .hero-desktop .image-wrapper .image-1 {
@@ -988,7 +983,6 @@ footer .copyright-wrapper {
   display: flex;
   justify-content: center;
   padding: 0.4rem;
-  width: -moz-fit-content;
   width: fit-content;
 }
 .home .middle-section .text-details-wrapper .benefits-detail h5 {
@@ -1345,6 +1339,73 @@ footer .copyright-wrapper {
 .study-plan .categories-wrapper .disabled {
   opacity: 0.5;
   transition: opacity 500ms ease-in-out;
+}
+.study-plan .schedule .date-picker {
+  margin: 0 auto;
+  max-width: 14.5rem;
+}
+.study-plan .schedule .date-picker .react-calendar .react-calendar__navigation {
+  display: flex;
+}
+.study-plan .schedule .date-picker .react-calendar .react-calendar__navigation button span {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+@media only screen and (min-width: 1440px) {
+  .study-plan .schedule .date-picker .react-calendar .react-calendar__navigation button span {
+    font-size: 1.175rem;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .study-plan .schedule .date-picker .react-calendar .react-calendar__navigation button span {
+    font-size: 1.675rem;
+  }
+}
+.study-plan .schedule .date-picker .react-calendar .react-calendar__viewContainer .react-calendar__month-view {
+  font-size: 0.75rem;
+}
+@media only screen and (min-width: 1440px) {
+  .study-plan .schedule .date-picker .react-calendar .react-calendar__viewContainer .react-calendar__month-view {
+    font-size: 1.05rem;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .study-plan .schedule .date-picker .react-calendar .react-calendar__viewContainer .react-calendar__month-view {
+    font-size: 1.55rem;
+  }
+}
+.study-plan .schedule .date-picker .react-calendar .react-calendar__viewContainer .react-calendar__month-view .react-calendar__month-view__weekdays {
+  border-bottom: 0.65px solid hsl(0, 0%, 26%);
+  display: flex !important;
+  justify-content: space-around;
+  font-weight: 600;
+  padding: 0.65rem 0 0.5rem;
+}
+.study-plan .schedule .date-picker .react-calendar .react-calendar__viewContainer .react-calendar__month-view .react-calendar__month-view__weekdays .react-calendar__month-view__weekdays__weekday {
+  flex: none !important;
+}
+.study-plan .schedule .date-picker .react-calendar .react-calendar__viewContainer .react-calendar__month-view .react-calendar__month-view__weekdays .react-calendar__month-view__weekdays__weekday abbr {
+  text-decoration: none;
+}
+.study-plan .schedule .date-picker .react-calendar .react-calendar__viewContainer .react-calendar__month-view .react-calendar__month-view__days {
+  display: grid !important;
+  grid-template-columns: 14.2% 14.2% 14.2% 14.2% 14.2% 14.2% 14.2%;
+  padding: 0.5rem 0 0.86rem;
+  row-gap: 0.975rem;
+}
+.study-plan .schedule .date-picker .react-calendar .react-calendar__viewContainer .react-calendar__month-view .react-calendar__month-view__days button {
+  padding: 0.5rem 0;
+}
+.study-plan .schedule .date-picker .react-calendar .react-calendar__viewContainer .react-calendar__month-view .react-calendar__month-view__days__day--neighboringMonth {
+  opacity: 0.7;
+}
+.study-plan .schedule .date-picker .react-calendar .react-calendar__viewContainer .react-calendar__month-view .react-calendar__tile--range {
+  border-bottom: 0.65px solid hsl(0, 0%, 26%);
+}
+.study-plan .schedule .date-picker .react-calendar .highlight {
+  background-color: hsl(217, 92%, 51%);
+  border-radius: 50%;
+  color: hsl(0, 0%, 100%);
 }
 
 @media screen and (min-width: 768px) {

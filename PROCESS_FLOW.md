@@ -15,6 +15,7 @@ This is a document outlining the process flow for the Enoverlabs project.
 -   Framer motion
 -   Material UI
 -   SwiperJS
+-   React Calendar
 -   Firebase 🤔🤔🤔
 
 ## Components

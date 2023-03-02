@@ -35,7 +35,7 @@
 	.mainSignUpContainer {
 		@include resize(fs-body2);
 		display: grid;
-		grid-template-columns: 0.8fr 1fr;
+		grid-template-columns: 0.6fr 1fr;
 		.signUpImageContainer {
 			background-image: url("../assets/images/image11.png");
 			height: 100%;
@@ -43,20 +43,22 @@
 		}
 		.signUpContainer {
 			padding: 0px 50px;
+			padding-bottom: 100px
 		}
 	}
 
 	.mainSignInContainer {
 		@include resize(fs-body2);
 		display: grid;
-		grid-template-columns: 0.8fr 1fr;
+		grid-template-columns: 0.6fr 1fr;
 		.signInImageContainer {
 			background-image: url("../assets/images/image12.png");
 			border-radius: 0px 10px 10px 0px;
-			height: 100vh;
+			height: 100%;
 		}
 		.signInContainer {
 			padding: 0px 50px;
+			padding-bottom: 200px
 		}
 	}
 
@@ -181,27 +183,30 @@
 
 	.mainSignUpContainer {
 		display: grid;
-		grid-template-columns: 0.8fr 1fr;
+		grid-template-columns: 0.6fr 1fr;
 		.signUpImageContainer {
 			background-image: url("../assets/images/image11.png");
 			border-radius: 0px 10px 10px 0px;
 		}
 		.signUpContainer {
-			padding: 0px 100px;
+			padding: 0px 150px;
+			padding-bottom: 100px
+
 		}
 	}
 
 	.mainSignInContainer {
 		@include resize(fs-body2);
 		display: grid;
-		grid-template-columns: 0.8fr 1fr;
+		grid-template-columns: 0.6fr 1fr;
 		.signInImageContainer {
 			background-image: url("../assets/images/image12.png");
 			border-radius: 0px 10px 10px 0px;
-			height: 100vh;
+			height: 100%;
 		}
 		.signInContainer {
-			padding: 0px 100px;
+			padding: 0px 150px;
+			padding-bottom: 200px
 		}
 	}
 
@@ -283,27 +288,29 @@
 
 	.mainSignUpContainer {
 		display: grid;
-		grid-template-columns: 0.8fr 1fr;
+		grid-template-columns: 0.6fr 1fr;
 		.signUpImageContainer {
 			background-image: url("../assets/images/image11.png");
 			border-radius: 0px 10px 10px 0px;
 		}
 		.signUpContainer {
-			padding: 0px 100px;
+			padding: 0px 150px;
+			padding-bottom: 100px
 		}
 	}
 
 	.mainSignInContainer {
 		@include resize(fs-body2);
 		display: grid;
-		grid-template-columns: 0.8fr 1fr;
+		grid-template-columns: 0.6fr 1fr;
 		.signInImageContainer {
 			background-image: url("../assets/images/image12.png");
 			border-radius: 0px 10px 10px 0px;
-			height: 100vh;
+			height: 100%;
 		}
 		.signInContainer {
-			padding: 0px 100px;
+			padding: 0px 150px;
+			padding-bottom: 200px
 		}
 	}
 
@@ -333,28 +340,30 @@
 
 	.mainSignUpContainer {
 		display: grid;
-		grid-template-columns: 0.8fr 1fr;
+		grid-template-columns: 0.6fr 1fr;
 
 		.signUpImageContainer {
 			background-image: url("../assets/images/image11.png");
 			border-radius: 0px 10px 10px 0px;
 		}
 		.signUpContainer {
-			padding: 0px 100px;
+			padding: 0px 150px;
+			padding-bottom: 100px
 		}
 	}
 
 	.mainSignInContainer {
 		@include resize(fs-body2);
 		display: grid;
-		grid-template-columns: 0.8fr 1fr;
+		grid-template-columns: 0.6fr 1fr;
 		.signInImageContainer {
 			background-image: url("../assets/images/image12.png");
 			border-radius: 0px 10px 10px 0px;
-			height: 100vh;
+			height: 100%;
 		}
 		.signInContainer {
-			padding: 0px 100px;
+			padding: 0px 150px;
+			padding-bottom: 200px
 		}
 	}
 

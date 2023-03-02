@@ -16,7 +16,9 @@ const SignIn = () => {
 			<h2>Sign In</h2>
 			<SignInIcon/>
 		</div>
-		<form className='form-container'>
+		<form className='form-container' onClick={(e) => {
+			e.preventDefault();
+		}}>
 			<div className='form-items'>
 				<label htmlFor="email">Email</label>
 				<input type="email" name="email" id="email"/>

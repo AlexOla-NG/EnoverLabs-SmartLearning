@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import IconText from "../card/IconText";
-import "swiper/css";
-import "swiper/css/navigation";
+import { ReactComponent as NextIcon } from "../../assets/svg/next-icon.svg";
+import { ReactComponent as PrevIcon } from "../../assets/svg/previous-icon.svg";
+import "swiper/scss";
+import "swiper/scss/navigation";
 
 const subjects = [
 	"maths",
@@ -18,8 +20,31 @@ const subjects = [
 ];
 
 const Carousel = () => {
+	const [isSliderStart, setISliderStart] = useState(false);
+	const [isSliderEnd, setISliderEnd] = useState(false);
+
+	// STUB: add disabled class to button if slider is at end or beginning
+	const handleSliderEvent = (e) => {
+		if (e.isEnd) {
+			setISliderEnd(true);
+		} else {
+			setISliderEnd(false);
+		}
+
+		if (e.isBeginning) {
+			setISliderStart(true);
+		} else {
+			setISliderStart(false);
+		}
+	};
+
 	return (
-		<>
+		<div className="swiper-wrapper" style={{ alignItems: "center" }}>
+			<PrevIcon
+				className={`review-swiper-button-prev ${
+					isSliderStart ? "disabled" : ""
+				} `}
+			/>
 			<Swiper
 				slidesPerView={5}
 				// spaceBetween={10}
@@ -30,7 +55,7 @@ const Carousel = () => {
 					},
 					// when window width is >= 480px
 					425: {
-						slidesPerView: 3,
+						slidesPerView: 4,
 						spaceBetween: 3.65,
 					},
 					// when window width is >= 640px
@@ -39,7 +64,11 @@ const Carousel = () => {
 						spaceBetween: 40,
 					},
 				}}
-				navigation={true}
+				navigation={{
+					nextEl: ".review-swiper-button-next",
+					prevEl: ".review-swiper-button-prev",
+				}}
+				onActiveIndexChange={handleSliderEvent}
 				modules={[Navigation]}
 				className="mySwiper"
 			>
@@ -51,7 +80,12 @@ const Carousel = () => {
 					);
 				})}
 			</Swiper>
-		</>
+			<NextIcon
+				className={`review-swiper-button-next ${
+					isSliderEnd ? "disabled" : ""
+				} `}
+			/>
+		</div>
 	);
 };
 

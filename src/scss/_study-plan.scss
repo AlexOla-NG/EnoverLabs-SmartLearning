@@ -4,27 +4,32 @@
 	gap: 2.625rem;
 	padding: 2.5rem 3rem 2.1rem;
 
-	.categories-wrapper {
-		.text-details {
+	// STUB: this class is common to all sections in study-plan
+	.text-details {
+		display: flex;
+		flex-direction: column;
+		gap: 0.625rem;
+
+		.header-wrapper {
 			display: flex;
-			flex-direction: column;
-			gap: 0.625rem;
+			align-items: center;
+			gap: 0.75rem;
 
-			.header-wrapper {
-				display: flex;
-				align-items: center;
-				gap: 0.75rem;
-
-				h1 {
-					@include resize(fs-body2);
-					font-weight: weight(x-bold);
-				}
-			}
-
-			p {
-				@include resize(fs-body4-2);
+			h1 {
+				@include resize(fs-body2);
+				font-weight: weight(x-bold);
 			}
 		}
+
+		p {
+			@include resize(fs-body4-2);
+		}
+	}
+
+	.categories-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 2.56rem;
 
 		.swiper {
 			width: 100%;
@@ -40,28 +45,11 @@
 				justify-content: center;
 				align-items: center;
 			}
+		}
 
-			.swiper-button-next {
-				background-image: url(./src/assets/svg/next-icon.svg);
-				background-repeat: no-repeat;
-				background-size: 100% auto;
-				background-position: center;
-			}
-
-			.swiper-button-next::after {
-				display: none;
-			}
-
-			.swiper-button-prev {
-				background-image: url(./src/assets/svg/previous-icon.svg);
-				background-repeat: no-repeat;
-				background-size: 100% auto;
-				background-position: center;
-			}
-
-			.swiper-button-prev::after {
-				display: none;
-			}
+		.disabled {
+			opacity: 0.5;
+			transition: opacity 500ms ease-in-out;
 		}
 	}
 }

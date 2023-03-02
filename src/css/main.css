@@ -108,7 +108,8 @@ nav > .container .navbar-items .login-wrapper {
 .image-text-wrapper img {
   border-radius: 50%;
   width: 1.125rem;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 1.125rem;
 }
 .image-text-wrapper p {
@@ -240,6 +241,7 @@ nav > .container .navbar-items .login-wrapper {
   justify-content: center;
   gap: 0.3rem;
   padding: 0.3rem 1.6rem;
+  width: -moz-fit-content;
   width: fit-content;
 }
 .coin p {
@@ -272,6 +274,7 @@ nav > .container .navbar-items .login-wrapper {
   display: flex;
   justify-content: center;
   padding: 0.4rem;
+  width: -moz-fit-content;
   width: fit-content;
 }
 .icon-text-wrapper .icon-wrapper svg {
@@ -396,6 +399,7 @@ nav > .container .navbar-items .login-wrapper {
   flex-direction: column;
   align-items: center;
   gap: 0.8rem;
+  width: -moz-fit-content;
   width: fit-content;
 }
 .text-icon-wrapper p {
@@ -840,7 +844,8 @@ footer .copyright-wrapper {
 .home .hero-desktop .image-wrapper .image img {
   border-radius: 0.625rem;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 100%;
 }
 .home .hero-desktop .image-wrapper .image-1 {
@@ -983,6 +988,7 @@ footer .copyright-wrapper {
   display: flex;
   justify-content: center;
   padding: 0.4rem;
+  width: -moz-fit-content;
   width: fit-content;
 }
 .home .middle-section .text-details-wrapper .benefits-detail h5 {
@@ -1383,7 +1389,7 @@ footer .copyright-wrapper {
   .mainSignUpContainer {
     font-size: 1.125rem;
     display: grid;
-    grid-template-columns: 0.8fr 1fr;
+    grid-template-columns: 0.6fr 1fr;
   }
 }
 @media only screen and (min-width: 768px) and (min-width: 1440px) {
@@ -1406,13 +1412,14 @@ footer .copyright-wrapper {
 @media screen and (min-width: 768px) {
   .mainSignUpContainer .signUpContainer {
     padding: 0px 50px;
+    padding-bottom: 100px;
   }
 }
 @media screen and (min-width: 768px) {
   .mainSignInContainer {
     font-size: 1.125rem;
     display: grid;
-    grid-template-columns: 0.8fr 1fr;
+    grid-template-columns: 0.6fr 1fr;
   }
 }
 @media only screen and (min-width: 768px) and (min-width: 1440px) {
@@ -1429,12 +1436,13 @@ footer .copyright-wrapper {
   .mainSignInContainer .signInImageContainer {
     background-image: url("../assets/images/image12.png");
     border-radius: 0px 10px 10px 0px;
-    height: 100vh;
+    height: 100%;
   }
 }
 @media screen and (min-width: 768px) {
   .mainSignInContainer .signInContainer {
     padding: 0px 50px;
+    padding-bottom: 200px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1554,19 +1562,20 @@ footer .copyright-wrapper {
   }
   .mainSignUpContainer {
     display: grid;
-    grid-template-columns: 0.8fr 1fr;
+    grid-template-columns: 0.6fr 1fr;
   }
   .mainSignUpContainer .signUpImageContainer {
     background-image: url("../assets/images/image11.png");
     border-radius: 0px 10px 10px 0px;
   }
   .mainSignUpContainer .signUpContainer {
-    padding: 0px 100px;
+    padding: 0px 150px;
+    padding-bottom: 100px;
   }
   .mainSignInContainer {
     font-size: 1.125rem;
     display: grid;
-    grid-template-columns: 0.8fr 1fr;
+    grid-template-columns: 0.6fr 1fr;
   }
 }
 @media only screen and (min-width: 1024px) and (min-width: 1440px) {
@@ -1583,12 +1592,13 @@ footer .copyright-wrapper {
   .mainSignInContainer .signInImageContainer {
     background-image: url("../assets/images/image12.png");
     border-radius: 0px 10px 10px 0px;
-    height: 100vh;
+    height: 100%;
   }
 }
 @media screen and (min-width: 1024px) {
   .mainSignInContainer .signInContainer {
-    padding: 0px 100px;
+    padding: 0px 150px;
+    padding-bottom: 200px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1659,19 +1669,20 @@ footer .copyright-wrapper {
   }
   .mainSignUpContainer {
     display: grid;
-    grid-template-columns: 0.8fr 1fr;
+    grid-template-columns: 0.6fr 1fr;
   }
   .mainSignUpContainer .signUpImageContainer {
     background-image: url("../assets/images/image11.png");
     border-radius: 0px 10px 10px 0px;
   }
   .mainSignUpContainer .signUpContainer {
-    padding: 0px 100px;
+    padding: 0px 150px;
+    padding-bottom: 100px;
   }
   .mainSignInContainer {
     font-size: 1.125rem;
     display: grid;
-    grid-template-columns: 0.8fr 1fr;
+    grid-template-columns: 0.6fr 1fr;
   }
 }
 @media only screen and (min-width: 1440px) and (min-width: 1440px) {
@@ -1688,12 +1699,13 @@ footer .copyright-wrapper {
   .mainSignInContainer .signInImageContainer {
     background-image: url("../assets/images/image12.png");
     border-radius: 0px 10px 10px 0px;
-    height: 100vh;
+    height: 100%;
   }
 }
 @media screen and (min-width: 1440px) {
   .mainSignInContainer .signInContainer {
-    padding: 0px 100px;
+    padding: 0px 150px;
+    padding-bottom: 200px;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -1712,19 +1724,20 @@ footer .copyright-wrapper {
   }
   .mainSignUpContainer {
     display: grid;
-    grid-template-columns: 0.8fr 1fr;
+    grid-template-columns: 0.6fr 1fr;
   }
   .mainSignUpContainer .signUpImageContainer {
     background-image: url("../assets/images/image11.png");
     border-radius: 0px 10px 10px 0px;
   }
   .mainSignUpContainer .signUpContainer {
-    padding: 0px 100px;
+    padding: 0px 150px;
+    padding-bottom: 100px;
   }
   .mainSignInContainer {
     font-size: 1.125rem;
     display: grid;
-    grid-template-columns: 0.8fr 1fr;
+    grid-template-columns: 0.6fr 1fr;
   }
 }
 @media only screen and (min-width: 2560px) and (min-width: 1440px) {
@@ -1741,12 +1754,13 @@ footer .copyright-wrapper {
   .mainSignInContainer .signInImageContainer {
     background-image: url("../assets/images/image12.png");
     border-radius: 0px 10px 10px 0px;
-    height: 100vh;
+    height: 100%;
   }
 }
 @media screen and (min-width: 2560px) {
   .mainSignInContainer .signInContainer {
-    padding: 0px 100px;
+    padding: 0px 150px;
+    padding-bottom: 200px;
   }
 }
 @media screen and (min-width: 2560px) {

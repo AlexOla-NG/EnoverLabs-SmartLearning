@@ -55,8 +55,9 @@
 
 	.schedule {
 		.date-picker {
-			margin: 0 auto;
+			width: 100%;
 			max-width: 14.5rem;
+			margin: 2rem auto;
 
 			.react-calendar {
 				.react-calendar__navigation {
@@ -116,6 +117,46 @@
 					color: $white-color;
 				}
 			}
+		}
+
+		hr {
+			border: 0.5px solid $hr-color;
+			margin-bottom: 3.063rem;
+		}
+
+		.create-schedule {
+			& > div {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 0.94rem;
+
+				.create-schedule-wrapper {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					gap: 0.65rem;
+
+					.MuiButton-outlined {
+						color: $text-title-color;
+						border-bottom: 1.5px solid $secondary-color;
+						border-radius: 0;
+						font-family: inherit;
+						@include resize(fs-body5);
+						text-transform: capitalize;
+					}
+				}
+			}
+		}
+	}
+
+	.study-progress {
+		display: flex;
+		flex-direction: column;
+		gap: 1.063rem;
+
+		.chart-wrapper {
+			display: flex;
 		}
 	}
 }

@@ -43,7 +43,7 @@
 		}
 		.signUpContainer {
 			padding: 0px 50px;
-			padding-bottom: 100px
+			padding-bottom: 100px;
 		}
 	}
 
@@ -58,7 +58,7 @@
 		}
 		.signInContainer {
 			padding: 0px 50px;
-			padding-bottom: 200px
+			padding-bottom: 200px;
 		}
 	}
 
@@ -161,6 +161,116 @@
 			}
 		}
 	}
+
+	.study-plan {
+		padding: 3.875rem 2.5rem 5.875rem;
+		gap: 5.875rem;
+
+		.text-details {
+			.header-wrapper {
+				h1 {
+					@include resize(fs-h5);
+				}
+			}
+
+			p {
+				@include resize(fs-body2);
+			}
+		}
+
+		.categories-wrapper {
+			.swiper {
+				.icon-text-wrapper {
+					width: 9rem;
+				}
+			}
+			svg {
+				width: 2.6rem;
+				height: 2.6rem;
+			}
+
+			.review-swiper-button-prev {
+				margin-right: 3.5rem;
+			}
+
+			.review-swiper-button-next {
+				margin-left: 3.5rem;
+			}
+		}
+
+		.schedule {
+			.date-schedule-wrapper {
+				display: grid;
+				grid-auto-flow: row;
+				grid-template-columns: 1fr 1fr;
+				align-items: center;
+
+				.date-picker {
+					grid-column: 2/3;
+					grid-row: 1;
+					margin-left: 3.8rem;
+					max-width: 22rem;
+
+					.react-calendar {
+						.react-calendar__navigation {
+							button {
+								span {
+									@include resize(fs-body1);
+								}
+							}
+						}
+
+						.react-calendar__viewContainer {
+							.react-calendar__month-view {
+								@include resize(fs-body2);
+							}
+
+							.react-calendar__month-view__weekdays {
+								padding: 1rem 0 0.75rem;
+							}
+
+							.react-calendar__month-view__days {
+								row-gap: 1.5rem;
+							}
+						}
+					}
+				}
+
+				hr {
+					display: none;
+				}
+
+				.create-schedule {
+					border-right: 0.5px solid $hr-color;
+					grid-column: 1/2;
+					padding: 4rem 0;
+
+					.create-schedule-wrapper {
+						p {
+							@include resize(fs-h5);
+							font-weight: weight(xx-bold);
+						}
+
+						.MuiButton-outlined {
+							@include resize(fs-body2);
+						}
+					}
+				}
+			}
+		}
+
+		.study-progress {
+			gap: 1.875rem;
+
+			.chart-wrapper {
+				margin-left: 7.563rem;
+				svg {
+					width: 57rem;
+					height: 39.375rem;
+				}
+			}
+		}
+	}
 }
 
 @include media-lg {
@@ -190,8 +300,7 @@
 		}
 		.signUpContainer {
 			padding: 0px 150px;
-			padding-bottom: 100px
-
+			padding-bottom: 100px;
 		}
 	}
 
@@ -206,7 +315,7 @@
 		}
 		.signInContainer {
 			padding: 0px 150px;
-			padding-bottom: 200px
+			padding-bottom: 200px;
 		}
 	}
 
@@ -269,6 +378,14 @@
 			gap: 10rem;
 		}
 	}
+
+	.study-plan {
+		.schedule {
+			.date-schedule-wrapper {
+				grid-template-columns: 1fr 0.7fr;
+			}
+		}
+	}
 }
 
 @include media-xl {
@@ -295,7 +412,7 @@
 		}
 		.signUpContainer {
 			padding: 0px 150px;
-			padding-bottom: 100px
+			padding-bottom: 100px;
 		}
 	}
 
@@ -310,7 +427,7 @@
 		}
 		.signInContainer {
 			padding: 0px 150px;
-			padding-bottom: 200px
+			padding-bottom: 200px;
 		}
 	}
 
@@ -348,7 +465,7 @@
 		}
 		.signUpContainer {
 			padding: 0px 150px;
-			padding-bottom: 100px
+			padding-bottom: 100px;
 		}
 	}
 
@@ -363,7 +480,7 @@
 		}
 		.signInContainer {
 			padding: 0px 150px;
-			padding-bottom: 200px
+			padding-bottom: 200px;
 		}
 	}
 

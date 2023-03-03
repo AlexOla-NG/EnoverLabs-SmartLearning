@@ -1336,6 +1336,10 @@ footer .copyright-wrapper {
   justify-content: center;
   align-items: center;
 }
+.study-plan .categories-wrapper .review-swiper-button-prev,
+.study-plan .categories-wrapper .review-swiper-button-next {
+  cursor: pointer;
+}
 .study-plan .categories-wrapper .disabled {
   opacity: 0.5;
   transition: opacity 500ms ease-in-out;
@@ -1652,6 +1656,160 @@ footer .copyright-wrapper {
     left: 0;
   }
 }
+@media screen and (min-width: 768px) {
+  .study-plan {
+    padding: 3.875rem 2.5rem 5.875rem;
+    gap: 5.875rem;
+  }
+  .study-plan .text-details .header-wrapper h1 {
+    font-size: 1.563rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 1440px) {
+  .study-plan .text-details .header-wrapper h1 {
+    font-size: 1.863rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 2560px) {
+  .study-plan .text-details .header-wrapper h1 {
+    font-size: 2.363rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .study-plan .text-details p {
+    font-size: 1.125rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 1440px) {
+  .study-plan .text-details p {
+    font-size: 1.425rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 2560px) {
+  .study-plan .text-details p {
+    font-size: 1.925rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .study-plan .categories-wrapper .swiper .icon-text-wrapper {
+    width: 9rem;
+  }
+  .study-plan .categories-wrapper svg {
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+  .study-plan .categories-wrapper .review-swiper-button-prev {
+    margin-right: 3.5rem;
+  }
+  .study-plan .categories-wrapper .review-swiper-button-next {
+    margin-left: 3.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .study-plan .schedule .date-schedule-wrapper {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+  .study-plan .schedule .date-schedule-wrapper .date-picker {
+    grid-column: 2/3;
+    grid-row: 1;
+    margin-left: 3.8rem;
+    max-width: 22rem;
+  }
+  .study-plan .schedule .date-schedule-wrapper .date-picker .react-calendar .react-calendar__navigation button span {
+    font-size: 1.25rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 1440px) {
+  .study-plan .schedule .date-schedule-wrapper .date-picker .react-calendar .react-calendar__navigation button span {
+    font-size: 1.55rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 2560px) {
+  .study-plan .schedule .date-schedule-wrapper .date-picker .react-calendar .react-calendar__navigation button span {
+    font-size: 2.05rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .study-plan .schedule .date-schedule-wrapper .date-picker .react-calendar .react-calendar__viewContainer .react-calendar__month-view {
+    font-size: 1.125rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 1440px) {
+  .study-plan .schedule .date-schedule-wrapper .date-picker .react-calendar .react-calendar__viewContainer .react-calendar__month-view {
+    font-size: 1.425rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 2560px) {
+  .study-plan .schedule .date-schedule-wrapper .date-picker .react-calendar .react-calendar__viewContainer .react-calendar__month-view {
+    font-size: 1.925rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .study-plan .schedule .date-schedule-wrapper .date-picker .react-calendar .react-calendar__viewContainer .react-calendar__month-view__weekdays {
+    padding: 1rem 0 0.75rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .study-plan .schedule .date-schedule-wrapper .date-picker .react-calendar .react-calendar__viewContainer .react-calendar__month-view__days {
+    row-gap: 1.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .study-plan .schedule .date-schedule-wrapper hr {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .study-plan .schedule .date-schedule-wrapper .create-schedule {
+    border-right: 0.5px solid hsl(0, 0%, 58%);
+    grid-column: 1/2;
+    padding: 4rem 0;
+  }
+  .study-plan .schedule .date-schedule-wrapper .create-schedule .create-schedule-wrapper p {
+    font-size: 1.563rem;
+    font-weight: 700;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 1440px) {
+  .study-plan .schedule .date-schedule-wrapper .create-schedule .create-schedule-wrapper p {
+    font-size: 1.863rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 2560px) {
+  .study-plan .schedule .date-schedule-wrapper .create-schedule .create-schedule-wrapper p {
+    font-size: 2.363rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .study-plan .schedule .date-schedule-wrapper .create-schedule .create-schedule-wrapper .MuiButton-outlined {
+    font-size: 1.125rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 1440px) {
+  .study-plan .schedule .date-schedule-wrapper .create-schedule .create-schedule-wrapper .MuiButton-outlined {
+    font-size: 1.425rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 2560px) {
+  .study-plan .schedule .date-schedule-wrapper .create-schedule .create-schedule-wrapper .MuiButton-outlined {
+    font-size: 1.925rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .study-plan .study-progress {
+    gap: 1.875rem;
+  }
+  .study-plan .study-progress .chart-wrapper {
+    margin-left: 7.563rem;
+  }
+  .study-plan .study-progress .chart-wrapper svg {
+    width: 57rem;
+    height: 39.375rem;
+  }
+}
 @media screen and (min-width: 1024px) {
   .nav {
     padding: 1.4rem 6.625rem 3.5rem;
@@ -1762,6 +1920,11 @@ footer .copyright-wrapper {
   }
   footer .footer {
     gap: 10rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .study-plan .schedule .date-schedule-wrapper {
+    grid-template-columns: 1fr 0.7fr;
   }
 }
 @media screen and (min-width: 1440px) {

@@ -16,14 +16,16 @@ const Schedule = () => {
 				<p>Pick the best study time that works for you</p>
 			</div>
 
-			<div className="date-picker">
-				<DatePicker />
-			</div>
+			<div className="date-schedule-wrapper">
+				<div className="date-picker">
+					<DatePicker />
+				</div>
 
-			<hr />
+				<hr />
 
-			<div className="create-schedule">
-				<CreateSchedule />
+				<div className="create-schedule">
+					<CreateSchedule />
+				</div>
 			</div>
 		</section>
 	);

@@ -46,8 +46,8 @@ const Carousel = () => {
 				} `}
 			/>
 			<Swiper
-				slidesPerView={5}
-				// spaceBetween={10}
+				// slidesPerView={5}
+				// spaceBetween={20}
 				breakpoints={{
 					320: {
 						slidesPerView: 3,
@@ -62,6 +62,16 @@ const Carousel = () => {
 					640: {
 						slidesPerView: 4,
 						spaceBetween: 40,
+					},
+					// when window width is >= 768px
+					768: {
+						slidesPerView: 3,
+						spaceBetween: 20,
+					},
+					// when window width is >= 1024px
+					1024: {
+						slidesPerView: 5,
+						spaceBetween: 20,
 					},
 				}}
 				navigation={{

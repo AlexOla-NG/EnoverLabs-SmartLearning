@@ -1457,10 +1457,10 @@ footer .copyright-wrapper {
 
 @media screen and (min-width: 768px) {
   .container-layout {
-    padding: 0 6.625rem 2.1rem;
+    padding: 1.4rem 6.625rem 2.1rem;
   }
   .nav {
-    padding: 1.4rem 6.625rem;
+    padding: 1.4rem 6.625rem 0;
   }
   .icon-text-wrapper {
     gap: 1rem;
@@ -1658,7 +1658,7 @@ footer .copyright-wrapper {
 }
 @media screen and (min-width: 768px) {
   .study-plan {
-    padding: 3.875rem 2.5rem 5.875rem;
+    padding: 3.5rem 2.5rem 5.875rem;
     gap: 5.875rem;
   }
   .study-plan .text-details .header-wrapper h1 {
@@ -1811,8 +1811,11 @@ footer .copyright-wrapper {
   }
 }
 @media screen and (min-width: 1024px) {
+  .container-layout {
+    padding: 3.5rem 6.625rem 2.1rem;
+  }
   .nav {
-    padding: 1.4rem 6.625rem 3.5rem;
+    padding: 1.4rem 6.625rem 0;
   }
   nav > .container {
     flex-wrap: nowrap;

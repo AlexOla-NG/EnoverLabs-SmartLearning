@@ -1341,8 +1341,9 @@ footer .copyright-wrapper {
   transition: opacity 500ms ease-in-out;
 }
 .study-plan .schedule .date-picker {
-  margin: 0 auto;
+  width: 100%;
   max-width: 14.5rem;
+  margin: 2rem auto;
 }
 .study-plan .schedule .date-picker .react-calendar .react-calendar__navigation {
   display: flex;
@@ -1406,6 +1407,48 @@ footer .copyright-wrapper {
   background-color: hsl(217, 92%, 51%);
   border-radius: 50%;
   color: hsl(0, 0%, 100%);
+}
+.study-plan .schedule hr {
+  border: 0.5px solid hsl(0, 0%, 58%);
+  margin-bottom: 3.063rem;
+}
+.study-plan .schedule .create-schedule > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.94rem;
+}
+.study-plan .schedule .create-schedule > div .create-schedule-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.65rem;
+}
+.study-plan .schedule .create-schedule > div .create-schedule-wrapper .MuiButton-outlined {
+  color: hsl(0, 0%, 33%);
+  border-bottom: 1.5px solid hsl(217, 92%, 51%);
+  border-radius: 0;
+  font-family: inherit;
+  font-size: 0.75rem;
+  text-transform: capitalize;
+}
+@media only screen and (min-width: 1440px) {
+  .study-plan .schedule .create-schedule > div .create-schedule-wrapper .MuiButton-outlined {
+    font-size: 1.05rem;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .study-plan .schedule .create-schedule > div .create-schedule-wrapper .MuiButton-outlined {
+    font-size: 1.55rem;
+  }
+}
+.study-plan .study-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 1.063rem;
+}
+.study-plan .study-progress .chart-wrapper {
+  display: flex;
 }
 
 @media screen and (min-width: 768px) {

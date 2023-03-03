@@ -1,11 +1,9 @@
 import React from "react";
 import { ReactComponent as CalendarIcon } from "../../assets/svg/calendar-icon.svg";
+import CreateSchedule from "./CreateSchedule";
 import DatePicker from "./DatePicker";
 
-// NOTE: all links in schedule will redirect to the 404 page
-
-// TODO: stopped here
-// finish setting up schedule component
+// NOTE: all links in schedule will redirect to a coming soon modal (use mui)
 
 const Schedule = () => {
 	return (
@@ -20,6 +18,12 @@ const Schedule = () => {
 
 			<div className="date-picker">
 				<DatePicker />
+			</div>
+
+			<hr />
+
+			<div className="create-schedule">
+				<CreateSchedule />
 			</div>
 		</section>
 	);

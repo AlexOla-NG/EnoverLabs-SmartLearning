@@ -27,7 +27,6 @@ const DatePicker = () => {
 					date.toLocaleDateString("en-GB", options) ===
 					new Date().toLocaleDateString("en-GB", options)
 				) {
-					console.log("match");
 					return "highlight"; // your class name
 				}
 			}}

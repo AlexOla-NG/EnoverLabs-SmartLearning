@@ -2,9 +2,6 @@ import React from "react";
 import { ReactComponent as CategoriesIcon } from "../../assets/svg/categories-icon.svg";
 import Carousel from "./Carousel";
 
-// TODO: stopped here
-// fix icons responsiveness in swipper
-
 const Categories = () => {
 	return (
 		<section className="categories-wrapper">

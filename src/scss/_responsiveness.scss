@@ -270,6 +270,23 @@
 			}
 		}
 	}
+
+	.take-a-test {
+		gap: 1.91rem;
+		padding: 2.13rem 1.85rem 6.86rem;
+
+		.header {
+			.profile-card-wrapper {
+				width: 14.45rem;
+				height: 21.44rem;
+
+				.profile-card {
+					height: 100%;
+					justify-content: center;
+				}
+			}
+		}
+	}
 }
 
 @include media-lg {

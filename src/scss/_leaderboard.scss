@@ -81,3 +81,15 @@
 		}
 	}
 }
+
+.leaderboard {
+	background: $primary-color;
+	border-radius: radius(regular);
+	padding: 1rem 1.784rem;
+
+	.header {
+		h2 {
+			@include resize(fs-body1);
+		}
+	}
+}

@@ -1,0 +1,55 @@
+.take-a-test {
+	display: flex;
+	flex-direction: column;
+	gap: 2.53rem;
+	padding: 1.063rem 1.875rem 2.67rem;
+
+	.header {
+		display: flex;
+		flex-direction: column;
+		gap: 1.4rem;
+
+		.text-wrapper {
+			h1 {
+				@include resize(fs-body1);
+				font-weight: weight(x-bold);
+			}
+
+			p {
+				color: $hr-color;
+				@include resize(fs-body4-2);
+			}
+		}
+	}
+
+	.progress {
+		display: flex;
+		flex-direction: column;
+		gap: 1.063rem;
+
+		.text-wrapper {
+			display: flex;
+			flex-direction: column;
+			gap: 0.45rem;
+
+			h2 {
+				@include resize(fs-body3);
+				font-weight: weight(xx-bold);
+			}
+
+			p {
+				@include resize(fs-body5);
+			}
+		}
+
+		.subject-progress-wrapper {
+			display: flex;
+			flex-direction: column;
+			gap: 1.063rem;
+		}
+	}
+
+	.ranking {
+		margin: 0 auto;
+	}
+}

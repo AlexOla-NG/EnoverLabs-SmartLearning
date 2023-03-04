@@ -6,14 +6,14 @@ import ColorBgBtn from "../button/ColorBgBtn";
 const TestCard = (props) => {
 	const { coinValue, imagePreview, time, topic } = props;
 	return (
-		<div className="test-card-wrapper">
+		<div className="test-card">
 			<div className="details">
 				<Coin value={coinValue} />
 				<div className="topic-wrapper">
 					<h5>{topic}</h5>
 					<p>{time} minutes</p>
 				</div>
-				<ColorBgBtn text="start" padding="0.3rem 2rem" />
+				<ColorBgBtn text="start" padding="0.38rem 0.39rem" />
 			</div>
 			<div className="image-wrapper">
 				<img src={imagePreview} alt={topic} />

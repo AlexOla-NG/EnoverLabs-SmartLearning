@@ -50,6 +50,70 @@
 	}
 
 	.ranking {
-		margin: 0 auto;
+		// margin: 0 auto;
+	}
+
+	.available-test {
+		display: flex;
+		flex-direction: column;
+		gap: 0.98rem;
+
+		h2 {
+			@include resize(fs-body3);
+			font-weight: weight(xx-bold);
+		}
+
+		.test-card-wrapper {
+			display: flex;
+			flex-direction: column;
+			gap: 0.73rem;
+
+			.test-card {
+				justify-content: space-between;
+				flex-wrap: unset;
+				gap: unset;
+				padding: 0.8rem 0.7rem;
+
+				.details {
+					display: unset;
+
+					.coin p,
+					.topic-wrapper h5,
+					button {
+						@include resize(fs-body5-2);
+					}
+
+					.topic-wrapper p {
+						@include resize(fs-body6-2);
+					}
+
+					.coin,
+					button {
+						width: 3.92rem;
+					}
+
+					.coin {
+						padding: 0.38rem;
+
+						svg {
+							width: 12.31px;
+							height: 12.59px;
+						}
+					}
+
+					.topic-wrapper {
+						margin-top: 1.05rem;
+						margin-bottom: 0.52rem;
+					}
+				}
+
+				.image-wrapper {
+					img {
+						width: 8.32rem;
+						height: 6.4rem;
+					}
+				}
+			}
+		}
 	}
 }

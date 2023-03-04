@@ -1,5 +1,6 @@
 import React from "react";
 import ImageText from "./ImageText";
+import ColorBgBtn from "../button/ColorBgBtn";
 import student1 from "../../assets/images/student-1.png";
 import student2 from "../../assets/images/student-2.png";
 import student3 from "../../assets/images/student-3.png";
@@ -20,9 +21,6 @@ const details = [
 	{ image: student6, name: "henry fagbemi", points: "2,200" },
 ];
 
-// TODO: stopped here
-// style leaderboard
-
 const Leaderboard = () => {
 	return (
 		<div className="leaderboard">
@@ -40,6 +38,14 @@ const Leaderboard = () => {
 						</div>
 					);
 				})}
+			</div>
+
+			<div className="btn-wrapper">
+				<ColorBgBtn
+					text="challenge leader"
+					borderRadius="0.69rem"
+					padding="0.9rem 0"
+				/>
 			</div>
 		</div>
 	);

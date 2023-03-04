@@ -86,10 +86,49 @@
 	background: $primary-color;
 	border-radius: radius(regular);
 	padding: 1rem 1.784rem;
+	margin: 0 auto;
+	max-width: 21.25rem;
 
 	.header {
+		text-align: center;
+
 		h2 {
 			@include resize(fs-body1);
+		}
+	}
+
+	.participants {
+		display: flex;
+		flex-direction: column;
+		gap: 1.24rem;
+		margin-top: 1.31rem;
+		margin-bottom: 3.53rem;
+
+		.content {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			@include resize(fs-body4-2);
+
+			.image-text-wrapper {
+				// gap: 1.37rem;
+
+				img {
+					width: 1.375rem;
+					height: 1.375rem;
+				}
+
+				p {
+					@include resize(fs-body4-2);
+				}
+			}
+		}
+	}
+
+	.btn-wrapper {
+		button {
+			@include resize(fs-body4-2);
+			width: 100%;
 		}
 	}
 }

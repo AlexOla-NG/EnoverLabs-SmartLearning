@@ -236,6 +236,11 @@ nav > .container .navbar-items .login-wrapper {
   background: hsl(0, 0%, 98%);
   border-radius: 0.625rem;
   padding: 1rem 1.784rem;
+  margin: 0 auto;
+  max-width: 21.25rem;
+}
+.leaderboard .header {
+  text-align: center;
 }
 .leaderboard .header h2 {
   font-size: 1.25rem;
@@ -248,6 +253,60 @@ nav > .container .navbar-items .login-wrapper {
 @media only screen and (min-width: 2560px) {
   .leaderboard .header h2 {
     font-size: 2.05rem;
+  }
+}
+.leaderboard .participants {
+  display: flex;
+  flex-direction: column;
+  gap: 1.24rem;
+  margin-top: 1.31rem;
+  margin-bottom: 3.53rem;
+}
+.leaderboard .participants .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.875rem;
+}
+@media only screen and (min-width: 1440px) {
+  .leaderboard .participants .content {
+    font-size: 1.175rem;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .leaderboard .participants .content {
+    font-size: 1.675rem;
+  }
+}
+.leaderboard .participants .content .image-text-wrapper img {
+  width: 1.375rem;
+  height: 1.375rem;
+}
+.leaderboard .participants .content .image-text-wrapper p {
+  font-size: 0.875rem;
+}
+@media only screen and (min-width: 1440px) {
+  .leaderboard .participants .content .image-text-wrapper p {
+    font-size: 1.175rem;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .leaderboard .participants .content .image-text-wrapper p {
+    font-size: 1.675rem;
+  }
+}
+.leaderboard .btn-wrapper button {
+  font-size: 0.875rem;
+  width: 100%;
+}
+@media only screen and (min-width: 1440px) {
+  .leaderboard .btn-wrapper button {
+    font-size: 1.175rem;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .leaderboard .btn-wrapper button {
+    font-size: 1.675rem;
   }
 }
 
@@ -355,7 +414,7 @@ nav > .container .navbar-items .login-wrapper {
   align-self: flex-end;
 }
 
-.test-card-wrapper {
+.test-card {
   background-color: hsl(0, 0%, 98%);
   border-radius: 0.625rem;
   display: flex;
@@ -366,46 +425,46 @@ nav > .container .navbar-items .login-wrapper {
   padding: 1rem 1.5rem;
   max-width: 40.75rem;
 }
-.test-card-wrapper .details {
+.test-card .details {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
 }
-.test-card-wrapper .details .topic-wrapper {
+.test-card .details .topic-wrapper {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
   text-align: center;
 }
-.test-card-wrapper .details .topic-wrapper h5 {
+.test-card .details .topic-wrapper h5 {
   font-size: 1.125rem;
   font-weight: 700;
 }
 @media only screen and (min-width: 1440px) {
-  .test-card-wrapper .details .topic-wrapper h5 {
+  .test-card .details .topic-wrapper h5 {
     font-size: 1.425rem;
   }
 }
 @media only screen and (min-width: 2560px) {
-  .test-card-wrapper .details .topic-wrapper h5 {
+  .test-card .details .topic-wrapper h5 {
     font-size: 1.925rem;
   }
 }
-.test-card-wrapper .details .topic-wrapper p {
+.test-card .details .topic-wrapper p {
   font-size: 0.938rem;
 }
 @media only screen and (min-width: 1440px) {
-  .test-card-wrapper .details .topic-wrapper p {
+  .test-card .details .topic-wrapper p {
     font-size: 1.238rem;
   }
 }
 @media only screen and (min-width: 2560px) {
-  .test-card-wrapper .details .topic-wrapper p {
+  .test-card .details .topic-wrapper p {
     font-size: 1.738rem;
   }
 }
-.test-card-wrapper .image-wrapper img {
+.test-card .image-wrapper img {
   max-width: 100%;
   height: auto;
 }
@@ -1607,8 +1666,89 @@ footer .copyright-wrapper {
   flex-direction: column;
   gap: 1.063rem;
 }
-.take-a-test .ranking {
-  margin: 0 auto;
+.take-a-test .available-test {
+  display: flex;
+  flex-direction: column;
+  gap: 0.98rem;
+}
+.take-a-test .available-test h2 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+@media only screen and (min-width: 1440px) {
+  .take-a-test .available-test h2 {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .take-a-test .available-test h2 {
+    font-size: 1.8rem;
+  }
+}
+.take-a-test .available-test .test-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.73rem;
+}
+.take-a-test .available-test .test-card-wrapper .test-card {
+  justify-content: space-between;
+  flex-wrap: unset;
+  gap: unset;
+  padding: 0.8rem 0.7rem;
+}
+.take-a-test .available-test .test-card-wrapper .test-card .details {
+  display: unset;
+}
+.take-a-test .available-test .test-card-wrapper .test-card .details .coin p,
+.take-a-test .available-test .test-card-wrapper .test-card .details .topic-wrapper h5,
+.take-a-test .available-test .test-card-wrapper .test-card .details button {
+  font-size: 0.606rem;
+}
+@media only screen and (min-width: 1440px) {
+  .take-a-test .available-test .test-card-wrapper .test-card .details .coin p,
+  .take-a-test .available-test .test-card-wrapper .test-card .details .topic-wrapper h5,
+  .take-a-test .available-test .test-card-wrapper .test-card .details button {
+    font-size: 0.906rem;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .take-a-test .available-test .test-card-wrapper .test-card .details .coin p,
+  .take-a-test .available-test .test-card-wrapper .test-card .details .topic-wrapper h5,
+  .take-a-test .available-test .test-card-wrapper .test-card .details button {
+    font-size: 1.406rem;
+  }
+}
+.take-a-test .available-test .test-card-wrapper .test-card .details .topic-wrapper p {
+  font-size: 0.543rem;
+}
+@media only screen and (min-width: 1440px) {
+  .take-a-test .available-test .test-card-wrapper .test-card .details .topic-wrapper p {
+    font-size: 0.843rem;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .take-a-test .available-test .test-card-wrapper .test-card .details .topic-wrapper p {
+    font-size: 1.343rem;
+  }
+}
+.take-a-test .available-test .test-card-wrapper .test-card .details .coin,
+.take-a-test .available-test .test-card-wrapper .test-card .details button {
+  width: 3.92rem;
+}
+.take-a-test .available-test .test-card-wrapper .test-card .details .coin {
+  padding: 0.38rem;
+}
+.take-a-test .available-test .test-card-wrapper .test-card .details .coin svg {
+  width: 12.31px;
+  height: 12.59px;
+}
+.take-a-test .available-test .test-card-wrapper .test-card .details .topic-wrapper {
+  margin-top: 1.05rem;
+  margin-bottom: 0.52rem;
+}
+.take-a-test .available-test .test-card-wrapper .test-card .image-wrapper img {
+  width: 8.32rem;
+  height: 6.4rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -1641,10 +1781,10 @@ footer .copyright-wrapper {
   }
 }
 @media screen and (min-width: 768px) {
-  .test-card-wrapper {
+  .test-card {
     justify-content: space-between;
   }
-  .test-card-wrapper .details {
+  .test-card .details {
     align-items: normal;
     gap: 1.5rem;
   }
@@ -2090,7 +2230,7 @@ footer .copyright-wrapper {
   nav .container .navbar-items {
     gap: 3rem;
   }
-  .test-card-wrapper .details {
+  .test-card .details {
     align-items: center;
   }
   .mainSignUpContainer {

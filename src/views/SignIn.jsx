@@ -38,7 +38,7 @@ const SignIn = () => {
 				<ColorBgBtn text = "Sign In" borderRadius = "10px"/>
 			</div>
 		</form>
-		<div class="separator">OR</div>
+		<div className="separator">OR</div>
 		<div className='social-media-icons'>
 			<MailIcon />
 			<FacebookIcon />

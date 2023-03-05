@@ -6,7 +6,6 @@ import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
 import MenuItem from "@mui/material/MenuItem";
 import WhiteBgBtn from "../button/WhiteBgBtn";
 import ColorBgBtn from "../button/ColorBgBtn";
@@ -32,6 +31,13 @@ const navlinks = [
 
 // TODO: refactor code. it's too messy and not DRY enough
 // add hover effect for navlinks. use framer.motion
+
+// TODO: stopped here
+// redo navbar
+// landing page is logo, navlinks, signin/signup links
+// pricing page is logo, navlinks
+// signin/signup page is logo
+// study plan, take a test & dynamic test page is logo, notification icon, avatar dropdown
 
 const Navbar = () => {
 	const [anchorElNav, setAnchorElNav] = useState(null);

@@ -36,4 +36,4 @@ This is a document outlining the process flow for the Enoverlabs project.
 -   Login ✅
 -   Pricing
 -   StudyPlan ✅
--   TakeATest
+-   TakeATest ✅

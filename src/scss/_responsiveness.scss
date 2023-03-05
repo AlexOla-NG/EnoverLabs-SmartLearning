@@ -22,15 +22,6 @@
 		}
 	}
 
-	.test-card {
-		justify-content: space-between;
-
-		.details {
-			align-items: normal;
-			gap: 1.5rem;
-		}
-	}
-
 	.mainSignUpContainer {
 		@include resize(fs-body2);
 		display: grid;
@@ -58,14 +49,6 @@
 		.signInContainer {
 			padding: 0px 50px;
 			padding-bottom: 200px;
-		}
-	}
-
-	.subject-progress {
-		flex-direction: row;
-
-		.progress-wrapper {
-			width: 65%;
 		}
 	}
 
@@ -276,6 +259,19 @@
 		padding: 2.13rem 1.85rem 6.86rem;
 
 		.header {
+			.text-wrapper {
+				h1 {
+					@include resize(fs-h5);
+					font-weight: weight(xx-bold);
+				}
+
+				p {
+					color: $text-body-color;
+					@include resize(fs-body2);
+				}
+			}
+
+			// STUB: absolutely position profile card after building sidebar
 			.profile-card-wrapper {
 				width: 14.45rem;
 				height: 21.44rem;
@@ -283,6 +279,143 @@
 				.profile-card {
 					height: 100%;
 					justify-content: center;
+					gap: 0.69rem;
+					padding: 1.38rem 2.54rem;
+
+					.avatar-wrapper {
+						.avatar {
+							img {
+								width: unset;
+							}
+						}
+
+						h3 {
+							@include resize(fs-body2);
+						}
+					}
+
+					.profile-details-wrapper {
+						.profile-details {
+							.icon-wrapper {
+								width: 2.61rem;
+								height: 2.81rem;
+							}
+
+							p {
+								@include resize(fs-body2);
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.progress {
+			.text-wrapper {
+				h2 {
+					@include resize(fs-h5);
+				}
+
+				p {
+					@include resize(fs-body4-2);
+				}
+			}
+
+			.subject-progress-wrapper {
+				gap: 1.5rem;
+
+				.subject-progress {
+					grid-template-columns: 0.15fr 1fr 0.3fr;
+
+					.image-wrapper {
+						width: 3.77rem;
+						height: 3.77rem;
+					}
+
+					.progress-wrapper {
+						.progress {
+							h4 {
+								@include resize(fs-body4);
+							}
+						}
+
+						h4 {
+							@include resize(fs-body1);
+						}
+					}
+
+					.options-wrapper {
+						.text-icon-wrapper {
+							gap: 0.875rem;
+
+							p {
+								@include resize(fs-body5);
+							}
+
+							.icon-wrapper {
+								width: 1.89rem;
+								height: 1.89rem;
+
+								svg {
+									width: 1.375rem;
+									height: 1.375rem;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.available-test {
+			h2 {
+				@include resize(fs-h5);
+			}
+
+			.test-card-wrapper {
+				gap: 1.313rem;
+
+				.test-card {
+					background-color: $monthly-plan-color;
+					padding: 1.5rem 2.125rem;
+
+					.details {
+						.coin p,
+						.topic-wrapper h5,
+						button {
+							@include resize(fs-body2);
+						}
+
+						.coin {
+							background-color: $white-color;
+							width: 7rem;
+
+							svg {
+								width: unset;
+								height: unset;
+							}
+						}
+
+						.topic-wrapper {
+							margin-top: 1.875rem;
+							margin-bottom: 0.94rem;
+
+							p {
+								@include resize(fs-body4);
+							}
+						}
+
+						button {
+							width: 7.75rem;
+						}
+					}
+
+					.image-wrapper {
+						img {
+							width: unset;
+							height: unset;
+						}
+					}
 				}
 			}
 		}

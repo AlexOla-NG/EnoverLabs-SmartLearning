@@ -135,7 +135,7 @@
 	display: grid;
 	grid-template-columns: 0.25fr 1fr 0.25fr;
 	gap: 0.313rem;
-	max-width: 66.18rem;
+	max-width: 47.25rem;
 	padding: 2.188rem 0.5rem;
 
 	.image-wrapper {
@@ -196,11 +196,24 @@
 	padding: 0.675rem 1.35rem;
 
 	.avatar-wrapper {
-		background: $monthly-plan-color;
-		border-radius: radius(circle);
-		display: flex;
-		padding: 0.625rem;
-		width: fit-content;
+		.avatar {
+			background: $monthly-plan-color;
+			border-radius: radius(circle);
+			display: flex;
+			padding: 0.625rem;
+			width: fit-content;
+
+			img {
+				width: 4.94rem;
+			}
+		}
+
+		h3 {
+			@include resize(fs-body3);
+			font-weight: weight(x-bold);
+			margin-top: 0.5rem;
+			text-align: center;
+		}
 	}
 
 	.profile-details-wrapper {

@@ -3,7 +3,7 @@ import { ReactComponent as Ellipse } from "../../assets/svg/Ellipse324.svg";
 
 const pricingCard = ({duration, price}) => {
   return (
-    <div className='pricingCardItem'>
+    <div className='pricingCardItem' id={duration}>
       <div className='pricingCardItemTop'>
         <div className='durationSection'>
             <h2>{duration} Plan</h2>

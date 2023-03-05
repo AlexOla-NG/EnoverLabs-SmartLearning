@@ -1460,46 +1460,49 @@ footer .copyright-wrapper {
 .pricingContainer {
   padding: 0rem 1.7rem;
 }
-.pricingContainer h2 {
+.pricingContainer .descriptionSection {
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 33px;
 }
 @media only screen and (min-width: 1440px) {
-  .pricingContainer h2 {
+  .pricingContainer .descriptionSection {
     font-size: 1.55rem;
   }
 }
 @media only screen and (min-width: 2560px) {
-  .pricingContainer h2 {
+  .pricingContainer .descriptionSection {
     font-size: 2.05rem;
   }
 }
-.pricingContainer h2 + p {
+.pricingContainer .pricingHeroSection img {
+  display: none;
+}
+.pricingContainer .pricingHeroSection .pricingHeroSectionFeatures .pricingHeroSectionFeaturesPara {
   margin: 30px 0px;
 }
-.pricingContainer .pricingFeatures {
+.pricingContainer .pricingHeroSection .pricingHeroSectionFeatures .pricingFeatures {
   font-size: 1rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 @media only screen and (min-width: 1440px) {
-  .pricingContainer .pricingFeatures {
+  .pricingContainer .pricingHeroSection .pricingHeroSectionFeatures .pricingFeatures {
     font-size: 1.3rem;
   }
 }
 @media only screen and (min-width: 2560px) {
-  .pricingContainer .pricingFeatures {
+  .pricingContainer .pricingHeroSection .pricingHeroSectionFeatures .pricingFeatures {
     font-size: 1.8rem;
   }
 }
-.pricingContainer .pricingFeatures .pricingFeaturesItem {
+.pricingContainer .pricingHeroSection .pricingHeroSectionFeatures .pricingFeatures .pricingFeaturesItem {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-.pricingContainer .pricingFeatures + p {
+.pricingContainer .pricingHeroSection + p {
   margin: 3.3rem 0px 2rem;
 }
 .pricingContainer .pricingCardContainer {
@@ -1626,6 +1629,79 @@ footer .copyright-wrapper {
   .mainSignInContainer .signInContainer {
     padding: 0px 50px;
     padding-bottom: 200px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .pricingContainer {
+    padding: 0rem 6rem;
+  }
+  .pricingContainer .descriptionSection {
+    margin: 0 auto 3.313rem;
+    text-align: center;
+    width: 80%;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 48px;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 1440px) {
+  .pricingContainer .descriptionSection {
+    font-size: 2.3rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 2560px) {
+  .pricingContainer .descriptionSection {
+    font-size: 2.8rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .pricingContainer .pricingHeroSection .pricingHeroSectionFeatures .pricingHeroSectionFeaturesPara {
+    margin: 0px 0px 84px;
+    font-size: 1.563rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 1440px) {
+  .pricingContainer .pricingHeroSection .pricingHeroSectionFeatures .pricingHeroSectionFeaturesPara {
+    font-size: 1.863rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 2560px) {
+  .pricingContainer .pricingHeroSection .pricingHeroSectionFeatures .pricingHeroSectionFeaturesPara {
+    font-size: 2.363rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .pricingContainer .pricingHeroSection .pricingHeroSectionFeatures .pricingFeatures {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .pricingContainer .pricingHeroSection + p {
+    font-size: 1.563rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 1440px) {
+  .pricingContainer .pricingHeroSection + p {
+    font-size: 1.863rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 2560px) {
+  .pricingContainer .pricingHeroSection + p {
+    font-size: 2.363rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .pricingContainer .pricingCardContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .pricingContainer .pricingCardContainer .pricingCardItem {
+    gap: 1rem;
+    padding: 30px 13px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1785,6 +1861,89 @@ footer .copyright-wrapper {
   }
 }
 @media screen and (min-width: 1024px) {
+  .pricingContainer {
+    padding: 0rem 6rem;
+  }
+  .pricingContainer .descriptionSection {
+    margin: 0 auto 3.313rem;
+    text-align: center;
+    width: 60%;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 48px;
+  }
+}
+@media only screen and (min-width: 1024px) and (min-width: 1440px) {
+  .pricingContainer .descriptionSection {
+    font-size: 2.3rem;
+  }
+}
+@media only screen and (min-width: 1024px) and (min-width: 2560px) {
+  .pricingContainer .descriptionSection {
+    font-size: 2.8rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .pricingContainer .pricingHeroSection {
+    display: grid;
+    grid-template-columns: 0.6fr 1fr;
+    align-items: center;
+    gap: 2rem;
+  }
+  .pricingContainer .pricingHeroSection img {
+    display: block;
+    border-radius: 10px;
+  }
+  .pricingContainer .pricingHeroSection .pricingHeroSectionFeatures .pricingHeroSectionFeaturesPara {
+    margin: 0px 0px 50px;
+    font-size: 1.563rem;
+  }
+}
+@media only screen and (min-width: 1024px) and (min-width: 1440px) {
+  .pricingContainer .pricingHeroSection .pricingHeroSectionFeatures .pricingHeroSectionFeaturesPara {
+    font-size: 1.863rem;
+  }
+}
+@media only screen and (min-width: 1024px) and (min-width: 2560px) {
+  .pricingContainer .pricingHeroSection .pricingHeroSectionFeatures .pricingHeroSectionFeaturesPara {
+    font-size: 2.363rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .pricingContainer .pricingHeroSection .pricingHeroSectionFeatures .pricingFeatures {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .pricingContainer .pricingHeroSection + p {
+    font-size: 1.563rem;
+  }
+}
+@media only screen and (min-width: 1024px) and (min-width: 1440px) {
+  .pricingContainer .pricingHeroSection + p {
+    font-size: 1.863rem;
+  }
+}
+@media only screen and (min-width: 1024px) and (min-width: 2560px) {
+  .pricingContainer .pricingHeroSection + p {
+    font-size: 2.363rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .pricingContainer .pricingCardContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .pricingContainer .pricingCardContainer .pricingCardItem {
+    gap: 1rem;
+    padding: 30px 13px;
+  }
+}
+@media screen and (min-width: 1024px) {
   .home .hero-mobile {
     display: none;
   }
@@ -1892,6 +2051,89 @@ footer .copyright-wrapper {
   }
 }
 @media screen and (min-width: 1440px) {
+  .pricingContainer {
+    padding: 0rem 6rem;
+  }
+  .pricingContainer .descriptionSection {
+    margin: 0 auto 3.313rem;
+    text-align: center;
+    width: 60%;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 48px;
+  }
+}
+@media only screen and (min-width: 1440px) and (min-width: 1440px) {
+  .pricingContainer .descriptionSection {
+    font-size: 2.3rem;
+  }
+}
+@media only screen and (min-width: 1440px) and (min-width: 2560px) {
+  .pricingContainer .descriptionSection {
+    font-size: 2.8rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .pricingContainer .pricingHeroSection {
+    display: grid;
+    grid-template-columns: 0.6fr 1fr;
+    align-items: center;
+    gap: 2rem;
+  }
+  .pricingContainer .pricingHeroSection img {
+    display: block;
+    border-radius: 10px;
+  }
+  .pricingContainer .pricingHeroSection .pricingHeroSectionFeatures .pricingHeroSectionFeaturesPara {
+    margin: 0px 0px 84px;
+    font-size: 1.563rem;
+  }
+}
+@media only screen and (min-width: 1440px) and (min-width: 1440px) {
+  .pricingContainer .pricingHeroSection .pricingHeroSectionFeatures .pricingHeroSectionFeaturesPara {
+    font-size: 1.863rem;
+  }
+}
+@media only screen and (min-width: 1440px) and (min-width: 2560px) {
+  .pricingContainer .pricingHeroSection .pricingHeroSectionFeatures .pricingHeroSectionFeaturesPara {
+    font-size: 2.363rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .pricingContainer .pricingHeroSection .pricingHeroSectionFeatures .pricingFeatures {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .pricingContainer .pricingHeroSection + p {
+    font-size: 1.563rem;
+  }
+}
+@media only screen and (min-width: 1440px) and (min-width: 1440px) {
+  .pricingContainer .pricingHeroSection + p {
+    font-size: 1.863rem;
+  }
+}
+@media only screen and (min-width: 1440px) and (min-width: 2560px) {
+  .pricingContainer .pricingHeroSection + p {
+    font-size: 2.363rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .pricingContainer .pricingCardContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .pricingContainer .pricingCardContainer .pricingCardItem {
+    gap: 1rem;
+    padding: 30px 13px;
+  }
+}
+@media screen and (min-width: 1440px) {
   .image-text-wrapper img {
     width: 1.425rem;
     height: 1.425rem;
@@ -1944,6 +2186,89 @@ footer .copyright-wrapper {
   .mainSignInContainer .signInContainer {
     padding: 0px 150px;
     padding-bottom: 200px;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .pricingContainer {
+    padding: 0rem 6rem;
+  }
+  .pricingContainer .descriptionSection {
+    margin: 0 auto 3.313rem;
+    text-align: center;
+    width: 60%;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 48px;
+  }
+}
+@media only screen and (min-width: 2560px) and (min-width: 1440px) {
+  .pricingContainer .descriptionSection {
+    font-size: 2.3rem;
+  }
+}
+@media only screen and (min-width: 2560px) and (min-width: 2560px) {
+  .pricingContainer .descriptionSection {
+    font-size: 2.8rem;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .pricingContainer .pricingHeroSection {
+    display: grid;
+    grid-template-columns: 0.6fr 1fr;
+    align-items: center;
+    gap: 2rem;
+  }
+  .pricingContainer .pricingHeroSection img {
+    display: block;
+    border-radius: 10px;
+  }
+  .pricingContainer .pricingHeroSection .pricingHeroSectionFeatures .pricingHeroSectionFeaturesPara {
+    margin: 0px 0px 84px;
+    font-size: 1.563rem;
+  }
+}
+@media only screen and (min-width: 2560px) and (min-width: 1440px) {
+  .pricingContainer .pricingHeroSection .pricingHeroSectionFeatures .pricingHeroSectionFeaturesPara {
+    font-size: 1.863rem;
+  }
+}
+@media only screen and (min-width: 2560px) and (min-width: 2560px) {
+  .pricingContainer .pricingHeroSection .pricingHeroSectionFeatures .pricingHeroSectionFeaturesPara {
+    font-size: 2.363rem;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .pricingContainer .pricingHeroSection .pricingHeroSectionFeatures .pricingFeatures {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .pricingContainer .pricingHeroSection + p {
+    font-size: 1.563rem;
+  }
+}
+@media only screen and (min-width: 2560px) and (min-width: 1440px) {
+  .pricingContainer .pricingHeroSection + p {
+    font-size: 1.863rem;
+  }
+}
+@media only screen and (min-width: 2560px) and (min-width: 2560px) {
+  .pricingContainer .pricingHeroSection + p {
+    font-size: 2.363rem;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .pricingContainer .pricingCardContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .pricingContainer .pricingCardContainer .pricingCardItem {
+    gap: 1rem;
+    padding: 30px 13px;
   }
 }
 @media screen and (min-width: 2560px) {

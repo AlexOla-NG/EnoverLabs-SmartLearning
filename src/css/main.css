@@ -510,7 +510,7 @@ nav > .container .navbar-items .login-wrapper {
   display: grid;
   grid-template-columns: 0.25fr 1fr 0.25fr;
   gap: 0.313rem;
-  max-width: 66.18rem;
+  max-width: 47.25rem;
   padding: 2.188rem 0.5rem;
 }
 .subject-progress .image-wrapper {
@@ -577,12 +577,31 @@ nav > .container .navbar-items .login-wrapper {
   flex-wrap: wrap;
   padding: 0.675rem 1.35rem;
 }
-.profile-card .avatar-wrapper {
+.profile-card .avatar-wrapper .avatar {
   background: hsl(217, 92%, 90%);
   border-radius: 50%;
   display: flex;
   padding: 0.625rem;
   width: fit-content;
+}
+.profile-card .avatar-wrapper .avatar img {
+  width: 4.94rem;
+}
+.profile-card .avatar-wrapper h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+@media only screen and (min-width: 1440px) {
+  .profile-card .avatar-wrapper h3 {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .profile-card .avatar-wrapper h3 {
+    font-size: 1.8rem;
+  }
 }
 .profile-card .profile-details-wrapper {
   display: flex;
@@ -1749,6 +1768,7 @@ footer .copyright-wrapper {
 .take-a-test .available-test .test-card-wrapper .test-card .image-wrapper img {
   width: 8.32rem;
   height: 6.4rem;
+  object-fit: contain;
 }
 
 @media screen and (min-width: 768px) {
@@ -1778,15 +1798,6 @@ footer .copyright-wrapper {
 @media only screen and (min-width: 768px) and (min-width: 2560px) {
   .icon-text-wrapper p {
     font-size: 1.925rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  .test-card {
-    justify-content: space-between;
-  }
-  .test-card .details {
-    align-items: normal;
-    gap: 1.5rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1847,14 +1858,6 @@ footer .copyright-wrapper {
   .mainSignInContainer .signInContainer {
     padding: 0px 50px;
     padding-bottom: 200px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .subject-progress {
-    flex-direction: row;
-  }
-  .subject-progress .progress-wrapper {
-    width: 65%;
   }
 }
 @media screen and (min-width: 768px) {
@@ -2111,6 +2114,38 @@ footer .copyright-wrapper {
     gap: 1.91rem;
     padding: 2.13rem 1.85rem 6.86rem;
   }
+  .take-a-test .header .text-wrapper h1 {
+    font-size: 1.563rem;
+    font-weight: 700;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 1440px) {
+  .take-a-test .header .text-wrapper h1 {
+    font-size: 1.863rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 2560px) {
+  .take-a-test .header .text-wrapper h1 {
+    font-size: 2.363rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .take-a-test .header .text-wrapper p {
+    color: hsl(0, 0%, 26%);
+    font-size: 1.125rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 1440px) {
+  .take-a-test .header .text-wrapper p {
+    font-size: 1.425rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 2560px) {
+  .take-a-test .header .text-wrapper p {
+    font-size: 1.925rem;
+  }
+}
+@media screen and (min-width: 768px) {
   .take-a-test .header .profile-card-wrapper {
     width: 14.45rem;
     height: 21.44rem;
@@ -2118,6 +2153,224 @@ footer .copyright-wrapper {
   .take-a-test .header .profile-card-wrapper .profile-card {
     height: 100%;
     justify-content: center;
+    gap: 0.69rem;
+    padding: 1.38rem 2.54rem;
+  }
+  .take-a-test .header .profile-card-wrapper .profile-card .avatar-wrapper .avatar img {
+    width: unset;
+  }
+  .take-a-test .header .profile-card-wrapper .profile-card .avatar-wrapper h3 {
+    font-size: 1.125rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 1440px) {
+  .take-a-test .header .profile-card-wrapper .profile-card .avatar-wrapper h3 {
+    font-size: 1.425rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 2560px) {
+  .take-a-test .header .profile-card-wrapper .profile-card .avatar-wrapper h3 {
+    font-size: 1.925rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .take-a-test .header .profile-card-wrapper .profile-card .profile-details-wrapper .profile-details .icon-wrapper {
+    width: 2.61rem;
+    height: 2.81rem;
+  }
+  .take-a-test .header .profile-card-wrapper .profile-card .profile-details-wrapper .profile-details p {
+    font-size: 1.125rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 1440px) {
+  .take-a-test .header .profile-card-wrapper .profile-card .profile-details-wrapper .profile-details p {
+    font-size: 1.425rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 2560px) {
+  .take-a-test .header .profile-card-wrapper .profile-card .profile-details-wrapper .profile-details p {
+    font-size: 1.925rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .take-a-test .progress .text-wrapper h2 {
+    font-size: 1.563rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 1440px) {
+  .take-a-test .progress .text-wrapper h2 {
+    font-size: 1.863rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 2560px) {
+  .take-a-test .progress .text-wrapper h2 {
+    font-size: 2.363rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .take-a-test .progress .text-wrapper p {
+    font-size: 0.875rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 1440px) {
+  .take-a-test .progress .text-wrapper p {
+    font-size: 1.175rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 2560px) {
+  .take-a-test .progress .text-wrapper p {
+    font-size: 1.675rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .take-a-test .progress .subject-progress-wrapper {
+    gap: 1.5rem;
+  }
+  .take-a-test .progress .subject-progress-wrapper .subject-progress {
+    grid-template-columns: 0.15fr 1fr 0.3fr;
+  }
+  .take-a-test .progress .subject-progress-wrapper .subject-progress .image-wrapper {
+    width: 3.77rem;
+    height: 3.77rem;
+  }
+  .take-a-test .progress .subject-progress-wrapper .subject-progress .progress-wrapper .progress h4 {
+    font-size: 0.938rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 1440px) {
+  .take-a-test .progress .subject-progress-wrapper .subject-progress .progress-wrapper .progress h4 {
+    font-size: 1.238rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 2560px) {
+  .take-a-test .progress .subject-progress-wrapper .subject-progress .progress-wrapper .progress h4 {
+    font-size: 1.738rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .take-a-test .progress .subject-progress-wrapper .subject-progress .progress-wrapper h4 {
+    font-size: 1.25rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 1440px) {
+  .take-a-test .progress .subject-progress-wrapper .subject-progress .progress-wrapper h4 {
+    font-size: 1.55rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 2560px) {
+  .take-a-test .progress .subject-progress-wrapper .subject-progress .progress-wrapper h4 {
+    font-size: 2.05rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .take-a-test .progress .subject-progress-wrapper .subject-progress .options-wrapper .text-icon-wrapper {
+    gap: 0.875rem;
+  }
+  .take-a-test .progress .subject-progress-wrapper .subject-progress .options-wrapper .text-icon-wrapper p {
+    font-size: 0.75rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 1440px) {
+  .take-a-test .progress .subject-progress-wrapper .subject-progress .options-wrapper .text-icon-wrapper p {
+    font-size: 1.05rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 2560px) {
+  .take-a-test .progress .subject-progress-wrapper .subject-progress .options-wrapper .text-icon-wrapper p {
+    font-size: 1.55rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .take-a-test .progress .subject-progress-wrapper .subject-progress .options-wrapper .text-icon-wrapper .icon-wrapper {
+    width: 1.89rem;
+    height: 1.89rem;
+  }
+  .take-a-test .progress .subject-progress-wrapper .subject-progress .options-wrapper .text-icon-wrapper .icon-wrapper svg {
+    width: 1.375rem;
+    height: 1.375rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .take-a-test .available-test h2 {
+    font-size: 1.563rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 1440px) {
+  .take-a-test .available-test h2 {
+    font-size: 1.863rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 2560px) {
+  .take-a-test .available-test h2 {
+    font-size: 2.363rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .take-a-test .available-test .test-card-wrapper {
+    gap: 1.313rem;
+  }
+  .take-a-test .available-test .test-card-wrapper .test-card {
+    background-color: hsl(217, 92%, 90%);
+    padding: 1.5rem 2.125rem;
+  }
+  .take-a-test .available-test .test-card-wrapper .test-card .details .coin p,
+  .take-a-test .available-test .test-card-wrapper .test-card .details .topic-wrapper h5,
+  .take-a-test .available-test .test-card-wrapper .test-card .details button {
+    font-size: 1.125rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 1440px) {
+  .take-a-test .available-test .test-card-wrapper .test-card .details .coin p,
+  .take-a-test .available-test .test-card-wrapper .test-card .details .topic-wrapper h5,
+  .take-a-test .available-test .test-card-wrapper .test-card .details button {
+    font-size: 1.425rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 2560px) {
+  .take-a-test .available-test .test-card-wrapper .test-card .details .coin p,
+  .take-a-test .available-test .test-card-wrapper .test-card .details .topic-wrapper h5,
+  .take-a-test .available-test .test-card-wrapper .test-card .details button {
+    font-size: 1.925rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .take-a-test .available-test .test-card-wrapper .test-card .details .coin {
+    background-color: hsl(0, 0%, 100%);
+    width: 7rem;
+  }
+  .take-a-test .available-test .test-card-wrapper .test-card .details .coin svg {
+    width: unset;
+    height: unset;
+  }
+}
+@media screen and (min-width: 768px) {
+  .take-a-test .available-test .test-card-wrapper .test-card .details .topic-wrapper {
+    margin-top: 1.875rem;
+    margin-bottom: 0.94rem;
+  }
+  .take-a-test .available-test .test-card-wrapper .test-card .details .topic-wrapper p {
+    font-size: 0.938rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 1440px) {
+  .take-a-test .available-test .test-card-wrapper .test-card .details .topic-wrapper p {
+    font-size: 1.238rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 2560px) {
+  .take-a-test .available-test .test-card-wrapper .test-card .details .topic-wrapper p {
+    font-size: 1.738rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .take-a-test .available-test .test-card-wrapper .test-card .details button {
+    width: 7.75rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .take-a-test .available-test .test-card-wrapper .test-card .image-wrapper img {
+    width: unset;
+    height: unset;
   }
 }
 @media screen and (min-width: 1024px) {

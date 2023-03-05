@@ -4,9 +4,6 @@ import Header from "../components/take a test/Header";
 import Progress from "../components/take a test/Progress";
 import Ranking from "../components/take a test/Ranking";
 
-// TODO: stopped here
-// fix responsiveness on 768px, 1024px,... screens
-
 const TakeATest = () => {
 	return (
 		<main className="take-a-test">

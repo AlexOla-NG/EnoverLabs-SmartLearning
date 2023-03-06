@@ -48,9 +48,9 @@ const Pricing = () => {
         
         <p>Select a plan that works for you</p>
         <div className='pricingCardContainer'>
-            <PricingCard duration="monthly" price="1000"/>
-            <PricingCard duration="quarterly" price="2500"/>
-            <PricingCard duration="yearly" price="9000"/>
+            <PricingCard duration="monthly" price="1000" backgroundColor="hsl(217, 92%, 90%)"/>
+            <PricingCard duration="quarterly" price="2500" backgroundColor="hsl(91, 80%, 90%)"/>
+            <PricingCard duration="yearly" price="9000" backgroundColor="hsl(21, 88%, 90%)"/>
         </div>
       </main>
       <Footer/>

@@ -1,11 +1,11 @@
 nav {
-	padding: 1.7rem 1.7rem 3.17rem;
 	width: 100%;
 
 	& > .container {
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
+		padding: 2rem 2rem 0;
 
 		.navbar-title {
 			font-weight: weight(xx-bold);

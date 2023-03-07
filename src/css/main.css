@@ -41,13 +41,13 @@
 }
 
 nav {
-  padding: 1.7rem 1.7rem 3.17rem;
   width: 100%;
 }
 nav > .container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding: 2rem 2rem 0;
 }
 nav > .container .navbar-title {
   font-weight: 700;
@@ -108,8 +108,7 @@ nav > .container .navbar-items .login-wrapper {
 .image-text-wrapper img {
   border-radius: 50%;
   width: 1.125rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 1.125rem;
 }
 .image-text-wrapper p {
@@ -319,7 +318,6 @@ nav > .container .navbar-items .login-wrapper {
   justify-content: center;
   gap: 0.3rem;
   padding: 0.3rem 1.6rem;
-  width: -moz-fit-content;
   width: fit-content;
 }
 .coin p {
@@ -352,7 +350,6 @@ nav > .container .navbar-items .login-wrapper {
   display: flex;
   justify-content: center;
   padding: 0.4rem;
-  width: -moz-fit-content;
   width: fit-content;
 }
 .icon-text-wrapper .icon-wrapper svg {
@@ -477,7 +474,6 @@ nav > .container .navbar-items .login-wrapper {
   flex-direction: column;
   align-items: center;
   gap: 0.2rem;
-  width: -moz-fit-content;
   width: fit-content;
 }
 .text-icon-wrapper p {
@@ -586,7 +582,6 @@ nav > .container .navbar-items .login-wrapper {
   border-radius: 50%;
   display: flex;
   padding: 0.625rem;
-  width: -moz-fit-content;
   width: fit-content;
 }
 .profile-card .avatar-wrapper .avatar img {
@@ -770,6 +765,7 @@ footer .copyright-wrapper {
   flex-direction: column;
   gap: 5.125rem;
   overflow-x: hidden;
+  padding-top: 3.49rem;
 }
 .home .hero-mobile-text {
   display: flex;
@@ -994,8 +990,7 @@ footer .copyright-wrapper {
 .home .hero-desktop .image-wrapper .image img {
   border-radius: 0.625rem;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 100%;
 }
 .home .hero-desktop .image-wrapper .image-1 {
@@ -1138,7 +1133,6 @@ footer .copyright-wrapper {
   display: flex;
   justify-content: center;
   padding: 0.4rem;
-  width: -moz-fit-content;
   width: fit-content;
 }
 .home .middle-section .text-details-wrapper .benefits-detail h5 {
@@ -1612,7 +1606,7 @@ footer .copyright-wrapper {
 }
 
 .pricingContainer {
-  padding: 0rem 1.7rem;
+  padding: 2.74rem 1.7rem 0;
 }
 .pricingContainer .descriptionSection {
   font-size: 1.25rem;
@@ -1668,7 +1662,6 @@ footer .copyright-wrapper {
 .pricingContainer .pricingCardContainer .pricingCardItem {
   display: flex;
   flex-direction: column;
-  background-color: hsl(217, 92%, 90%);
   border-radius: 10px;
   padding: 18px 13px;
 }
@@ -1851,16 +1844,21 @@ footer .copyright-wrapper {
 .take-a-test .available-test .test-card-wrapper .test-card .image-wrapper img {
   width: 8.32rem;
   height: 6.4rem;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 @media screen and (min-width: 768px) {
   .container-layout {
     padding: 1.4rem 6.625rem 2.1rem;
   }
-  .nav {
+  .nav > .container {
     padding: 1.4rem 6.625rem 0;
+  }
+  .nav .signin-nav {
+    padding: 1.17rem 2.3rem 0;
+  }
+  .nav .pricing-nav {
+    padding: 1.86rem 5.99rem 0;
   }
   .icon-text-wrapper {
     gap: 1rem;
@@ -2534,13 +2532,11 @@ footer .copyright-wrapper {
   .container-layout {
     padding: 3.5rem 6.625rem 2.1rem;
   }
-  .nav {
-    padding: 1.4rem 6.625rem 0;
-  }
   nav > .container {
     flex-wrap: nowrap;
     align-items: center;
     gap: 2rem;
+    padding: 1.42rem 6.5rem 0;
   }
   nav > .container .navbar-items {
     margin: 0;

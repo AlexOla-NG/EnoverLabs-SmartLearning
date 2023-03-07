@@ -4,7 +4,17 @@
 	}
 
 	.nav {
-		padding: 1.4rem 6.625rem 0;
+		& > .container {
+			padding: 1.4rem 6.625rem 0;
+		}
+
+		.signin-nav {
+			padding: 1.17rem 2.3rem 0;
+		}
+
+		.pricing-nav {
+			padding: 1.86rem 5.99rem 0;
+		}
 	}
 
 	.icon-text-wrapper {
@@ -52,9 +62,9 @@
 		}
 	}
 
-	.pricingContainer{
+	.pricingContainer {
 		padding: 0rem 6rem;
-		.descriptionSection{
+		.descriptionSection {
 			margin: 30px auto 3.313rem;
 			text-align: center;
 			width: 80%;
@@ -62,33 +72,32 @@
 			font-weight: weight(xx-bold);
 			line-height: 48px;
 		}
-		.pricingHeroSection{
-			.pricingHeroSectionFeatures{
-				.pricingHeroSectionFeaturesPara{
+		.pricingHeroSection {
+			.pricingHeroSectionFeatures {
+				.pricingHeroSectionFeaturesPara {
 					margin: 0px 0px 84px;
 					@include resize(fs-h5);
 				}
-				.pricingFeatures{
+				.pricingFeatures {
 					display: grid;
 					grid-template-columns: 1fr 1fr;
 					gap: 2rem;
 				}
 			}
 		}
-		.pricingHeroSection + p{
+		.pricingHeroSection + p {
 			@include resize(fs-h5);
 		}
-		.pricingCardContainer{
+		.pricingCardContainer {
 			width: 100%;
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
 			gap: 2rem;
-			.pricingCardItem{
+			.pricingCardItem {
 				gap: 1rem;
 				padding: 30px 13px;
 			}
 		}
-	
 	}
 
 	.home {
@@ -466,15 +475,12 @@
 		padding: 3.5rem 6.625rem 2.1rem;
 	}
 
-	.nav {
-		padding: 1.4rem 6.625rem 0;
-	}
-
 	nav {
 		& > .container {
 			flex-wrap: nowrap;
 			align-items: center;
 			gap: 2rem;
+			padding: 1.42rem 6.5rem 0;
 
 			.navbar-items {
 				// gap: unset;
@@ -511,9 +517,9 @@
 		}
 	}
 
-	.pricingContainer{
+	.pricingContainer {
 		padding: 0rem 6rem;
-		.descriptionSection{
+		.descriptionSection {
 			margin: 30px auto 3.313rem;
 			text-align: center;
 			width: 60%;
@@ -521,42 +527,41 @@
 			font-weight: weight(xx-bold);
 			line-height: 48px;
 		}
-		.pricingHeroSection{
+		.pricingHeroSection {
 			display: grid;
 			grid-template-columns: 0.6fr 1fr;
 			align-items: center;
 			gap: 2rem;
 
-			img{
+			img {
 				display: block;
 				border-radius: 10px;
 			}
-			.pricingHeroSectionFeatures{
-				.pricingHeroSectionFeaturesPara{
+			.pricingHeroSectionFeatures {
+				.pricingHeroSectionFeaturesPara {
 					margin: 0px 0px 50px;
 					@include resize(fs-h5);
 				}
-				.pricingFeatures{
+				.pricingFeatures {
 					display: grid;
 					grid-template-columns: 1fr 1fr;
 					gap: 2rem;
 				}
 			}
 		}
-		.pricingHeroSection + p{
+		.pricingHeroSection + p {
 			@include resize(fs-h5);
 		}
-		.pricingCardContainer{
+		.pricingCardContainer {
 			width: 100%;
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
 			gap: 2rem;
-			.pricingCardItem{
+			.pricingCardItem {
 				gap: 1rem;
 				padding: 30px 13px;
 			}
 		}
-	
 	}
 
 	.home {
@@ -671,9 +676,9 @@
 		}
 	}
 
-	.pricingContainer{
+	.pricingContainer {
 		padding: 0rem 6rem;
-		.descriptionSection{
+		.descriptionSection {
 			margin: 30px auto 3.313rem;
 			text-align: center;
 			width: 60%;
@@ -681,42 +686,41 @@
 			font-weight: weight(xx-bold);
 			line-height: 48px;
 		}
-		.pricingHeroSection{
+		.pricingHeroSection {
 			display: grid;
 			grid-template-columns: 0.6fr 1fr;
 			align-items: center;
 			gap: 2rem;
 
-			img{
+			img {
 				display: block;
 				border-radius: 10px;
 			}
-			.pricingHeroSectionFeatures{
-				.pricingHeroSectionFeaturesPara{
+			.pricingHeroSectionFeatures {
+				.pricingHeroSectionFeaturesPara {
 					margin: 0px 0px 84px;
 					@include resize(fs-h5);
 				}
-				.pricingFeatures{
+				.pricingFeatures {
 					display: grid;
 					grid-template-columns: 1fr 1fr;
 					gap: 2rem;
 				}
 			}
 		}
-		.pricingHeroSection + p{
+		.pricingHeroSection + p {
 			@include resize(fs-h5);
 		}
-		.pricingCardContainer{
+		.pricingCardContainer {
 			width: 100%;
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
 			gap: 2rem;
-			.pricingCardItem{
+			.pricingCardItem {
 				gap: 1rem;
 				padding: 30px 13px;
 			}
 		}
-	
 	}
 
 	.image-text-wrapper {
@@ -772,9 +776,9 @@
 		}
 	}
 
-	.pricingContainer{
+	.pricingContainer {
 		padding: 0rem 6rem;
-		.descriptionSection{
+		.descriptionSection {
 			margin: 30px auto 3.313rem;
 			text-align: center;
 			width: 60%;
@@ -782,42 +786,41 @@
 			font-weight: weight(xx-bold);
 			line-height: 48px;
 		}
-		.pricingHeroSection{
+		.pricingHeroSection {
 			display: grid;
 			grid-template-columns: 0.6fr 1fr;
 			align-items: center;
 			gap: 2rem;
 
-			img{
+			img {
 				display: block;
 				border-radius: 10px;
 			}
-			.pricingHeroSectionFeatures{
-				.pricingHeroSectionFeaturesPara{
+			.pricingHeroSectionFeatures {
+				.pricingHeroSectionFeaturesPara {
 					margin: 0px 0px 84px;
 					@include resize(fs-h5);
 				}
-				.pricingFeatures{
+				.pricingFeatures {
 					display: grid;
 					grid-template-columns: 1fr 1fr;
 					gap: 2rem;
 				}
 			}
 		}
-		.pricingHeroSection + p{
+		.pricingHeroSection + p {
 			@include resize(fs-h5);
 		}
-		.pricingCardContainer{
+		.pricingCardContainer {
 			width: 100%;
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
 			gap: 2rem;
-			.pricingCardItem{
+			.pricingCardItem {
 				gap: 1rem;
 				padding: 30px 13px;
 			}
 		}
-	
 	}
 
 	.text-icon-wrapper {

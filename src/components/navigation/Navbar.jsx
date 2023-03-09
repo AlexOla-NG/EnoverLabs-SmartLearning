@@ -329,43 +329,44 @@ const Navbar = (props) => {
 				</Toolbar>
 			</AppBar>
 		);
-	} else if (
-		location.pathname === "/study-plan" ||
-		location.pathname === "/take-a-test" ||
-		location.pathname === "/take-a-test/:id"
-	) {
-		output = (
-			<AppBar
-				position="fixed"
-				sx={{
-					backgroundColor: "#fff",
-					boxShadow: "unset",
-					width: { sm: `calc(100% - ${drawerWidth}px)` },
-					ml: { sm: `${drawerWidth}px` },
-				}}
-			>
-				<Toolbar disableGutters>
-					<nav className="nav">
-						<div className="container">
-							<IconButton
-								aria-label="open drawer"
-								edge="start"
-								onClick={handleDrawerToggle}
-								sx={{ display: { sm: "none" }, m: 0, p: 0 }}
-							>
-								<MenuIcon />
-							</IconButton>
-
-							<NavLink to="/" className="navbar-title">
-								<span>Smart</span>
-								<span>Learning</span>
-							</NavLink>
-						</div>
-					</nav>
-				</Toolbar>
-			</AppBar>
-		);
 	}
+	// else if (
+	// 	location.pathname === "/study-plan" ||
+	// 	location.pathname === "/take-a-test" ||
+	// 	location.pathname === "/take-a-test/:id"
+	// ) {
+	// 	output = (
+	// 		<AppBar
+	// 			position="fixed"
+	// 			sx={{
+	// 				backgroundColor: "#fff",
+	// 				boxShadow: "unset",
+	// 				width: { sm: `calc(100% - ${drawerWidth}px)` },
+	// 				ml: { sm: `${drawerWidth}px` },
+	// 			}}
+	// 		>
+	// 			<Toolbar disableGutters>
+	// 				<nav className="nav">
+	// 					<div className="container">
+	// 						<IconButton
+	// 							aria-label="open drawer"
+	// 							edge="start"
+	// 							onClick={handleDrawerToggle}
+	// 							sx={{ display: { sm: "none" }, m: 0, p: 0 }}
+	// 						>
+	// 							<MenuIcon />
+	// 						</IconButton>
+
+	// 						<NavLink to="/" className="navbar-title">
+	// 							<span>Smart</span>
+	// 							<span>Learning</span>
+	// 						</NavLink>
+	// 					</div>
+	// 				</nav>
+	// 			</Toolbar>
+	// 		</AppBar>
+	// 	);
+	// }
 
 	return output;
 };

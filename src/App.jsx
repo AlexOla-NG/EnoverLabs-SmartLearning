@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Outlet, Routes, Route } from "react-router-dom";
 import Navbar from "./components/navigation/Navbar";
 import Home from "./views/Home";
 import Pricing from "./views/Pricing";
@@ -9,6 +9,7 @@ import Test from "./views/Test";
 import SignIn from "./views/SignIn";
 import SignUp from "./views/SignUp";
 import Error from "./views/Error";
+import OutletWrapper from "./components/shared/OutletWrapper";
 
 const drawerWidth = 240;
 
@@ -29,8 +30,18 @@ const App = () => {
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="pricing" element={<Pricing />} />
-				<Route path="study-plan" element={<StudyPlan />} />
-				<Route path="take-a-test" element={<TakeATest />} />
+				<Route
+					element={
+						<OutletWrapper
+							drawerWidth={drawerWidth}
+							mobileOpen={mobileOpen}
+							handleDrawerToggle={handleDrawerToggle}
+						/>
+					}
+				>
+					<Route path="study-plan" element={<StudyPlan />} />
+					<Route path="take-a-test" element={<TakeATest />} />
+				</Route>
 				<Route path="take-a-test/:id" element={<Test />} />
 				<Route path="signup" element={<SignUp />} />
 				<Route path="signin" element={<SignIn />} />

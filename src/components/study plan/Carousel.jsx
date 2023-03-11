@@ -19,6 +19,8 @@ const subjects = [
 	"ict",
 ];
 
+// TODO: give swiper fixed width
+
 const Carousel = () => {
 	const [isSliderStart, setISliderStart] = useState(false);
 	const [isSliderEnd, setISliderEnd] = useState(false);

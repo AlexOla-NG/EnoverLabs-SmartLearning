@@ -70,24 +70,6 @@ nav > .container .navbar-title span:first-child {
 nav > .container .navbar-title span:last-child {
   color: hsl(217, 92%, 51%);
 }
-nav > .container .navbar-title.controls {
-  font-size: 0.75rem;
-}
-@media only screen and (min-width: 1440px) {
-  nav > .container .navbar-title.controls {
-    font-size: 1.05rem;
-  }
-}
-@media only screen and (min-width: 2560px) {
-  nav > .container .navbar-title.controls {
-    font-size: 1.55rem;
-  }
-}
-nav > .container .navbar-controls {
-  display: flex;
-  align-items: center;
-  gap: 0.68rem;
-}
 nav > .container .navbar-items {
   display: flex;
   align-items: center;
@@ -116,10 +98,6 @@ nav > .container .navbar-items .navlinks-wrapper {
 nav > .container .navbar-items .login-wrapper {
   display: flex;
   gap: 1.4rem;
-}
-nav .outlet-nav {
-  flex-wrap: unset;
-  padding: 0.94rem 2rem 0.81rem;
 }
 
 .image-text-wrapper {
@@ -782,27 +760,37 @@ footer .copyright-wrapper {
   }
 }
 
-nav > .container .navbar-title.controls {
+.nav > .outlet-nav {
+  flex-wrap: unset;
+  padding: 0.94rem 2rem 0.81rem;
+}
+.nav > .outlet-nav div .controls {
   font-size: 0.75rem;
 }
 @media only screen and (min-width: 1440px) {
-  nav > .container .navbar-title.controls {
+  .nav > .outlet-nav div .controls {
     font-size: 1.05rem;
   }
 }
 @media only screen and (min-width: 2560px) {
-  nav > .container .navbar-title.controls {
+  .nav > .outlet-nav div .controls {
     font-size: 1.55rem;
   }
 }
-nav > .container .navbar-controls {
+.nav > .outlet-nav .navbar-controls {
   display: flex;
   align-items: center;
   gap: 0.68rem;
 }
-nav .outlet-nav {
-  flex-wrap: unset;
-  padding: 0.94rem 2rem 0.81rem;
+
+.sidemenu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.sidemenu .text-icon-wrapper {
+  flex-direction: row-reverse;
+  width: unset;
 }
 
 .home {
@@ -2190,6 +2178,9 @@ nav .outlet-nav {
   }
 }
 @media screen and (min-width: 768px) {
+  .study-plan .categories-wrapper {
+    width: 56.96rem;
+  }
   .study-plan .categories-wrapper .swiper .icon-text-wrapper {
     width: 9rem;
   }

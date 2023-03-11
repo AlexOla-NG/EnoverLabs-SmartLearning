@@ -8,14 +8,20 @@ import {
 	Divider,
 	Drawer,
 	IconButton,
+	List,
+	ListItem,
+	ListItemButton,
+	ListItemIcon,
+	ListItemText,
 	Toolbar,
+	Tooltip,
 } from "@mui/material";
 import MuiAppBar from "@mui/material/AppBar";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import MenuIcon from "@mui/icons-material/Menu";
 
-import TextIcon from "../card/TextIcon";
+import AccountMenu from "../navigation/AccountMenu";
 
 import { ReactComponent as SearchIcon } from "../../assets/svg/search-icon.svg";
 import { ReactComponent as NotificationIcon } from "../../assets/svg/notifications-icon.svg";
@@ -26,8 +32,8 @@ import { ReactComponent as ResourcesIcon } from "../../assets/svg/resources-icon
 import { ReactComponent as TestIcon } from "../../assets/svg/test-icon.svg";
 
 // TODO: stopped here
-// add menu to chevronDown icon
 // style sidebar
+// set take a test width: `calc(100% - ${drawerWidth}px)` & marginLeft: "auto",
 
 // STUB: define drawerwidth & items
 const drawerWidth = 240;
@@ -48,10 +54,10 @@ const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
 			duration: theme.transitions.duration.leavingScreen,
 		}),
 		marginLeft: `-${drawerWidth}px`,
-		[theme.breakpoints.up("sm")]: {
-			width: `calc(100% - ${drawerWidth}px)`,
-			marginLeft: "auto",
-		},
+		// [theme.breakpoints.up("sm")]: {
+		// 	width: `calc(100% - ${drawerWidth}px)`,
+		// 	marginLeft: "auto",
+		// },
 		...(open && {
 			transition: theme.transitions.create("margin", {
 				easing: theme.transitions.easing.easeOut,
@@ -92,6 +98,17 @@ const OutletWrapper = ({ children }) => {
 	const theme = useTheme();
 	const [open, setOpen] = useState(false);
 
+	const [anchorEl, setAnchorEl] = useState(null);
+	const openMenu = Boolean(anchorEl);
+
+	// STUB: controls for toggling menu popup
+	const handleMenuClick = (event) => {
+		setAnchorEl(event.currentTarget);
+	};
+	const handleMenuClose = () => {
+		setAnchorEl(null);
+	};
+
 	// STUB: controls for toggling drawer
 	const handleDrawerOpen = () => {
 		setOpen(true);
@@ -102,11 +119,19 @@ const OutletWrapper = ({ children }) => {
 	};
 
 	const drawer = (
-		<div>
+		<List>
 			{drawerItems.map((item, index) => {
-				return <TextIcon key={index} {...item} />;
+				const { text, icon } = item;
+				return (
+					<ListItem key={index} disablePadding>
+						<ListItemButton>
+							<ListItemIcon>{icon}</ListItemIcon>
+							<ListItemText primary={text} />
+						</ListItemButton>
+					</ListItem>
+				);
 			})}
-		</div>
+		</List>
 	);
 
 	return (
@@ -159,7 +184,29 @@ const OutletWrapper = ({ children }) => {
 									alt="avatar"
 									style={{ width: "32px", height: "32px" }}
 								/>
-								<ChevronDownIcon />
+								<Tooltip title="Account settings">
+									<IconButton
+										size="small"
+										sx={{ p: 0 }}
+										onClick={handleMenuClick}
+										aria-controls={
+											openMenu
+												? "account-menu"
+												: undefined
+										}
+										aria-haspopup="true"
+										aria-expanded={
+											openMenu ? "true" : undefined
+										}
+									>
+										<ChevronDownIcon />
+									</IconButton>
+								</Tooltip>
+								<AccountMenu
+									handleMenuClose={handleMenuClose}
+									openMenu={openMenu}
+									anchorEl={anchorEl}
+								/>
 							</div>
 						</div>
 					</nav>

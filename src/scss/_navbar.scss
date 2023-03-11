@@ -20,16 +20,6 @@ nav {
 			}
 		}
 
-		.navbar-title.controls {
-			@include resize(fs-body5);
-		}
-
-		.navbar-controls {
-			display: flex;
-			align-items: center;
-			gap: 0.68rem;
-		}
-
 		.navbar-items {
 			display: flex;
 			align-items: center;
@@ -56,11 +46,5 @@ nav {
 				gap: 1.4rem;
 			}
 		}
-	}
-
-	.outlet-nav {
-		flex-wrap: unset;
-		// gap: 6.04rem;
-		padding: 0.94rem 2rem 0.81rem;
 	}
 }

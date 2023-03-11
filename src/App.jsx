@@ -14,18 +14,18 @@ import OutletWrapper from "./components/shared/OutletWrapper";
 const drawerWidth = 240;
 
 const App = () => {
-	const [mobileOpen, setMobileOpen] = useState(false);
+	// const [mobileOpen, setMobileOpen] = useState(false);
 
 	// STUB: toggle drawer
-	const handleDrawerToggle = () => {
-		setMobileOpen(!mobileOpen);
-	};
+	// const handleDrawerToggle = () => {
+	// 	setMobileOpen(!mobileOpen);
+	// };
 
 	return (
 		<>
 			<Navbar
-				drawerWidth={drawerWidth}
-				handleDrawerToggle={handleDrawerToggle}
+			// drawerWidth={drawerWidth}
+			// handleDrawerToggle={handleDrawerToggle}
 			/>
 			<Routes>
 				<Route path="/" element={<Home />} />
@@ -33,9 +33,9 @@ const App = () => {
 				<Route
 					element={
 						<OutletWrapper
-							drawerWidth={drawerWidth}
-							mobileOpen={mobileOpen}
-							handleDrawerToggle={handleDrawerToggle}
+						// drawerWidth={drawerWidth}
+						// mobileOpen={mobileOpen}
+						// handleDrawerToggle={handleDrawerToggle}
 						/>
 					}
 				>

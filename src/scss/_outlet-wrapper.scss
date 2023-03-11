@@ -1,0 +1,28 @@
+.nav {
+	& > .outlet-nav {
+		flex-wrap: unset;
+		padding: 0.94rem 2rem 0.81rem;
+
+		div {
+			.controls {
+				@include resize(fs-body5);
+			}
+		}
+
+		.navbar-controls {
+			display: flex;
+			align-items: center;
+			gap: 0.68rem;
+		}
+	}
+}
+
+.sidemenu {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	.text-icon-wrapper {
+		flex-direction: row-reverse;
+		width: unset;
+	}
+}

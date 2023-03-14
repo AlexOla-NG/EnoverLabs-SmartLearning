@@ -17,6 +17,59 @@
 	}
 }
 
+.navbar-title {
+	font-weight: weight(xx-bold);
+	@include resize(fs-body5);
+	// padding: 0.3125rem 0;
+
+	span:first-child {
+		color: $text-title-color;
+	}
+	span:last-child {
+		color: $secondary-color;
+	}
+}
+
+.MuiDrawer-docked {
+	.MuiList-root {
+		margin-top: 3.33rem;
+		padding: 0 0.734rem;
+
+		.MuiListItemButton-root {
+			border-radius: radius(drawer-radius);
+			color: $drawer-item-color;
+			@include resize(fs-body4-2);
+			font-weight: weight(x-bold);
+			margin-bottom: 0.734rem;
+			text-transform: capitalize;
+			transition: all 600ms ease-in-out;
+
+			&:hover {
+				background-color: $secondary-color;
+				color: $white-color;
+
+				.MuiListItemIcon-root {
+					svg {
+						color: $white-color;
+					}
+				}
+			}
+		}
+
+		& > .Mui-selected,
+		& > .Mui-focusVisible {
+			background-color: $secondary-color;
+			color: $white-color;
+
+			.MuiListItemIcon-root {
+				svg {
+					color: $white-color;
+				}
+			}
+		}
+	}
+}
+
 .sidemenu {
 	display: flex;
 	flex-direction: column;

@@ -783,6 +783,65 @@ footer .copyright-wrapper {
   gap: 0.68rem;
 }
 
+.navbar-title {
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+@media only screen and (min-width: 1440px) {
+  .navbar-title {
+    font-size: 1.05rem;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .navbar-title {
+    font-size: 1.55rem;
+  }
+}
+.navbar-title span:first-child {
+  color: hsl(0, 0%, 33%);
+}
+.navbar-title span:last-child {
+  color: hsl(217, 92%, 51%);
+}
+
+.MuiDrawer-docked .MuiList-root {
+  margin-top: 3.33rem;
+  padding: 0 0.734rem;
+}
+.MuiDrawer-docked .MuiList-root .MuiListItemButton-root {
+  border-radius: 0.73rem;
+  color: hsl(220, 9%, 46%);
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.734rem;
+  text-transform: capitalize;
+  transition: all 600ms ease-in-out;
+}
+@media only screen and (min-width: 1440px) {
+  .MuiDrawer-docked .MuiList-root .MuiListItemButton-root {
+    font-size: 1.175rem;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .MuiDrawer-docked .MuiList-root .MuiListItemButton-root {
+    font-size: 1.675rem;
+  }
+}
+.MuiDrawer-docked .MuiList-root .MuiListItemButton-root:hover {
+  background-color: hsl(217, 92%, 51%);
+  color: hsl(0, 0%, 100%);
+}
+.MuiDrawer-docked .MuiList-root .MuiListItemButton-root:hover .MuiListItemIcon-root svg {
+  color: hsl(0, 0%, 100%);
+}
+.MuiDrawer-docked .MuiList-root > .Mui-selected, .MuiDrawer-docked .MuiList-root > .Mui-focusVisible {
+  background-color: hsl(217, 92%, 51%);
+  color: hsl(0, 0%, 100%);
+}
+.MuiDrawer-docked .MuiList-root > .Mui-selected .MuiListItemIcon-root svg, .MuiDrawer-docked .MuiList-root > .Mui-focusVisible .MuiListItemIcon-root svg {
+  color: hsl(0, 0%, 100%);
+}
+
 .sidemenu {
   display: flex;
   flex-direction: column;

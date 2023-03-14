@@ -12,6 +12,7 @@ $monthly-plan-color: hsl(217, 92%, 90%);
 $quarterly-plan-color: hsl(91, 80%, 90%);
 $yearly-plan-color: hsl(21, 88%, 90%);
 $subscribe-bg-color: hsl(0, 0%, 88%);
+$drawer-item-color: hsl(220, 9%, 46%);
 $hr-color: hsl(0, 0%, 58%);
 $white-color: hsl(0, 0%, 100%);
 
@@ -20,6 +21,7 @@ $border-radii: (
 	"input-radius": 0.313rem,
 	"img-radius": 0.4rem,
 	"regular": 0.625rem,
+	"drawer-radius": 0.73rem,
 	"icon-radius": 0.938rem,
 	"card-radius": 1.015rem,
 	"btn-radius": 1.25rem,

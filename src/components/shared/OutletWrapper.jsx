@@ -17,8 +17,7 @@ import {
 	Tooltip,
 } from "@mui/material";
 import MuiAppBar from "@mui/material/AppBar";
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
 
 import AccountMenu from "../navigation/AccountMenu";
@@ -32,7 +31,7 @@ import { ReactComponent as ResourcesIcon } from "../../assets/svg/resources-icon
 import { ReactComponent as TestIcon } from "../../assets/svg/test-icon.svg";
 
 // TODO: stopped here
-// style sidebar
+// style navbar on tablet, desktop screen
 // set take a test width: `calc(100% - ${drawerWidth}px)` & marginLeft: "auto",
 
 // STUB: define drawerwidth & items
@@ -88,15 +87,16 @@ const AppBar = styled(MuiAppBar, {
 const DrawerHeader = styled("div")(({ theme }) => ({
 	display: "flex",
 	alignItems: "center",
-	padding: theme.spacing(0, 1),
+	padding: "1.2rem 0.87rem",
 	// necessary for content to be below app bar
 	...theme.mixins.toolbar,
-	justifyContent: "flex-end",
+	justifyContent: "space-between",
 }));
 
 const OutletWrapper = ({ children }) => {
 	const theme = useTheme();
 	const [open, setOpen] = useState(false);
+	const [selectedIndex, setSelectedIndex] = useState(0);
 
 	const [anchorEl, setAnchorEl] = useState(null);
 	const openMenu = Boolean(anchorEl);
@@ -118,17 +118,24 @@ const OutletWrapper = ({ children }) => {
 		setOpen(false);
 	};
 
+	// STUB: apply selected class to ListItem
+	const handleListItemClick = (event, index) => {
+		setSelectedIndex(index);
+	};
+
 	const drawer = (
 		<List>
 			{drawerItems.map((item, index) => {
 				const { text, icon } = item;
 				return (
-					<ListItem key={index} disablePadding>
-						<ListItemButton>
-							<ListItemIcon>{icon}</ListItemIcon>
-							<ListItemText primary={text} />
-						</ListItemButton>
-					</ListItem>
+					<ListItemButton
+						key={index}
+						selected={selectedIndex === index}
+						onClick={(event) => handleListItemClick(event, index)}
+					>
+						<ListItemIcon>{icon}</ListItemIcon>
+						<ListItemText primary={text} />
+					</ListItemButton>
 				);
 			})}
 		</List>
@@ -227,15 +234,14 @@ const OutletWrapper = ({ children }) => {
 				open={open}
 			>
 				<DrawerHeader>
-					<IconButton onClick={handleDrawerClose}>
-						{theme.direction === "ltr" ? (
-							<ChevronLeftIcon />
-						) : (
-							<ChevronRightIcon />
-						)}
+					<NavLink to="/" className="navbar-title controls">
+						<span>Smart</span>
+						<span>Learning</span>
+					</NavLink>
+					<IconButton onClick={handleDrawerClose} sx={{ p: 0 }}>
+						<CloseIcon />
 					</IconButton>
 				</DrawerHeader>
-				<Divider />
 				{drawer}
 			</Drawer>
 

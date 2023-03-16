@@ -1,15 +1,13 @@
 import React, { useState } from "react";
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
 import { styled, useTheme } from "@mui/material/styles";
-
+import ClickAwayListener from "@mui/base/ClickAwayListener";
 import {
 	Box,
 	CssBaseline,
-	Divider,
 	Drawer,
 	IconButton,
 	List,
-	ListItem,
 	ListItemButton,
 	ListItemIcon,
 	ListItemText,
@@ -31,8 +29,7 @@ import { ReactComponent as ResourcesIcon } from "../../assets/svg/resources-icon
 import { ReactComponent as TestIcon } from "../../assets/svg/test-icon.svg";
 
 // TODO: stopped here
-// style navbar on tablet, desktop screen
-// set take a test width: `calc(100% - ${drawerWidth}px)` & marginLeft: "auto",
+// style take-a-test for tablet, desktop screen
 
 // STUB: define drawerwidth & items
 const drawerWidth = 240;
@@ -53,10 +50,6 @@ const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
 			duration: theme.transitions.duration.leavingScreen,
 		}),
 		marginLeft: `-${drawerWidth}px`,
-		// [theme.breakpoints.up("sm")]: {
-		// 	width: `calc(100% - ${drawerWidth}px)`,
-		// 	marginLeft: "auto",
-		// },
 		...(open && {
 			transition: theme.transitions.create("margin", {
 				easing: theme.transitions.easing.easeOut,
@@ -66,6 +59,29 @@ const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
 		}),
 	})
 );
+
+const TestMain = styled("main", {
+	shouldForwardProp: (prop) => prop !== "open",
+})(({ theme, open }) => ({
+	flexGrow: 1,
+	padding: "24px 0 24px",
+	transition: theme.transitions.create("margin", {
+		easing: theme.transitions.easing.sharp,
+		duration: theme.transitions.duration.leavingScreen,
+	}),
+	marginLeft: `-${drawerWidth}px`,
+	[theme.breakpoints.up("sm")]: {
+		width: `calc(100% - ${drawerWidth}px)`,
+		marginLeft: "auto",
+	},
+	...(open && {
+		transition: theme.transitions.create("margin", {
+			easing: theme.transitions.easing.easeOut,
+			duration: theme.transitions.duration.enteringScreen,
+		}),
+		marginLeft: 0,
+	}),
+}));
 
 const AppBar = styled(MuiAppBar, {
 	shouldForwardProp: (prop) => prop !== "open",
@@ -87,6 +103,7 @@ const AppBar = styled(MuiAppBar, {
 const DrawerHeader = styled("div")(({ theme }) => ({
 	display: "flex",
 	alignItems: "center",
+	// borderBottom: "0.5px solid #959595",
 	padding: "1.2rem 0.87rem",
 	// necessary for content to be below app bar
 	...theme.mixins.toolbar,
@@ -94,6 +111,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 }));
 
 const OutletWrapper = ({ children }) => {
+	const location = useLocation();
 	const theme = useTheme();
 	const [open, setOpen] = useState(false);
 	const [selectedIndex, setSelectedIndex] = useState(0);
@@ -142,24 +160,27 @@ const OutletWrapper = ({ children }) => {
 	);
 
 	return (
-		<Box sx={{ display: "flex" }}>
+		<Box sx={{ display: "flex" }} className="outlet-wrapper">
 			<CssBaseline />
 			<AppBar
 				position="fixed"
 				open={open}
 				sx={{
 					backgroundColor: "#fff",
+					borderBottom: "0.5px solid #959595",
 					boxShadow: "unset",
 				}}
 			>
-				<Toolbar>
+				<Toolbar disableGutters>
 					<nav className="nav">
-						<div className="container outlet-nav">
+						<div className="outlet-nav">
+							{/* STUB: mobile view */}
 							<Box
 								sx={{
-									display: "flex",
+									display: { xs: "flex", sm: "none" },
 									alignItems: "center",
 									gap: "0.76rem",
+									...(open && { display: "none" }),
 								}}
 							>
 								<IconButton
@@ -169,7 +190,6 @@ const OutletWrapper = ({ children }) => {
 									edge="start"
 									sx={{
 										p: 0,
-										...(open && { display: "none" }),
 									}}
 								>
 									<MenuIcon />
@@ -181,6 +201,22 @@ const OutletWrapper = ({ children }) => {
 									<span>Smart</span>
 									<span>Learning</span>
 								</NavLink>
+							</Box>
+
+							{/* STUB: desktop view */}
+							<Box
+								sx={{
+									display: { xs: "none", sm: "block" },
+									...(open && { display: "none" }),
+								}}
+							>
+								<h1
+									className="navbar-title"
+									onClick={handleDrawerOpen}
+								>
+									<span>Smart</span>
+									<span>Learning</span>
+								</h1>
 							</Box>
 
 							<div className="navbar-controls">
@@ -220,35 +256,66 @@ const OutletWrapper = ({ children }) => {
 				</Toolbar>
 			</AppBar>
 
-			<Drawer
-				sx={{
-					width: drawerWidth,
-					flexShrink: 0,
-					"& .MuiDrawer-paper": {
-						width: drawerWidth,
-						boxSizing: "border-box",
-					},
-				}}
-				variant="persistent"
-				anchor="left"
-				open={open}
+			<ClickAwayListener
+				onClickAway={handleDrawerClose}
+				mouseEvent="onMouseDown" // this ensures that handleDrawerOpen works
 			>
-				<DrawerHeader>
-					<NavLink to="/" className="navbar-title controls">
-						<span>Smart</span>
-						<span>Learning</span>
-					</NavLink>
-					<IconButton onClick={handleDrawerClose} sx={{ p: 0 }}>
-						<CloseIcon />
-					</IconButton>
-				</DrawerHeader>
-				{drawer}
-			</Drawer>
+				<div role="presentation">
+					<Drawer
+						sx={{
+							width: drawerWidth,
+							flexShrink: 0,
+							"& .MuiDrawer-paper": {
+								width: drawerWidth,
+								backgroundColor: "#fafafa",
+								boxSizing: "border-box",
+								borderRight: "0.5px solid #959595",
+							},
+						}}
+						variant="persistent"
+						anchor="left"
+						open={open}
+					>
+						<DrawerHeader
+							sx={{
+								pb: { xs: 0, sm: "1.5rem" },
+								pt: { xs: 0, sm: "1.7rem" },
+								borderBottom: {
+									sm: "0.5px solid #959595",
+								},
+							}}
+						>
+							<NavLink to="/" className="navbar-title">
+								<span>Smart</span>
+								<span>Learning</span>
+							</NavLink>
 
-			<Main open={open}>
-				<DrawerHeader />
-				<Outlet>{children}</Outlet>
-			</Main>
+							<IconButton
+								onClick={handleDrawerClose}
+								sx={{
+									display: { xs: "flex", sm: "none" },
+								}}
+							>
+								<CloseIcon />
+							</IconButton>
+						</DrawerHeader>
+						{drawer}
+					</Drawer>
+				</div>
+			</ClickAwayListener>
+
+			{/* STUB: use TestMain if on take-a-test route, else use Main */}
+			{location.pathname === "/take-a-test" ? (
+				<TestMain open={open}>
+					<DrawerHeader />
+					<Outlet>{children}</Outlet>
+				</TestMain>
+			) : (
+				<Main open={open}>
+					<DrawerHeader />
+					<Outlet>{children}</Outlet>
+				</Main>
+			)}
 		</Box>
 	);
 };

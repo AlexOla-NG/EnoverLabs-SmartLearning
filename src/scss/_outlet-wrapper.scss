@@ -1,6 +1,9 @@
 .nav {
 	& > .outlet-nav {
-		flex-wrap: unset;
+		// border-bottom: 1px solid #959595;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 		padding: 0.94rem 2rem 0.81rem;
 
 		div {
@@ -13,11 +16,13 @@
 			display: flex;
 			align-items: center;
 			gap: 0.68rem;
+			margin-left: auto;
 		}
 	}
 }
 
 .navbar-title {
+	cursor: pointer;
 	font-weight: weight(xx-bold);
 	@include resize(fs-body5);
 	// padding: 0.3125rem 0;
@@ -32,8 +37,7 @@
 
 .MuiDrawer-docked {
 	.MuiList-root {
-		margin-top: 3.33rem;
-		padding: 0 0.734rem;
+		padding: 3.14rem 0.734rem;
 
 		.MuiListItemButton-root {
 			border-radius: radius(drawer-radius);

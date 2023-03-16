@@ -108,8 +108,7 @@ nav > .container .navbar-items .login-wrapper {
 .image-text-wrapper img {
   border-radius: 50%;
   width: 1.125rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 1.125rem;
 }
 .image-text-wrapper p {
@@ -319,7 +318,6 @@ nav > .container .navbar-items .login-wrapper {
   justify-content: center;
   gap: 0.3rem;
   padding: 0.3rem 1.6rem;
-  width: -moz-fit-content;
   width: fit-content;
 }
 .coin p {
@@ -352,7 +350,6 @@ nav > .container .navbar-items .login-wrapper {
   display: flex;
   justify-content: center;
   padding: 0.4rem;
-  width: -moz-fit-content;
   width: fit-content;
 }
 .icon-text-wrapper .icon-wrapper svg {
@@ -477,7 +474,6 @@ nav > .container .navbar-items .login-wrapper {
   flex-direction: column;
   align-items: center;
   gap: 0.2rem;
-  width: -moz-fit-content;
   width: fit-content;
 }
 .text-icon-wrapper p {
@@ -586,7 +582,6 @@ nav > .container .navbar-items .login-wrapper {
   border-radius: 50%;
   display: flex;
   padding: 0.625rem;
-  width: -moz-fit-content;
   width: fit-content;
 }
 .profile-card .avatar-wrapper .avatar img {
@@ -766,7 +761,9 @@ footer .copyright-wrapper {
 }
 
 .nav > .outlet-nav {
-  flex-wrap: unset;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 0.94rem 2rem 0.81rem;
 }
 .nav > .outlet-nav div .controls {
@@ -786,9 +783,11 @@ footer .copyright-wrapper {
   display: flex;
   align-items: center;
   gap: 0.68rem;
+  margin-left: auto;
 }
 
 .navbar-title {
+  cursor: pointer;
   font-weight: 700;
   font-size: 0.75rem;
 }
@@ -810,8 +809,7 @@ footer .copyright-wrapper {
 }
 
 .MuiDrawer-docked .MuiList-root {
-  margin-top: 3.33rem;
-  padding: 0 0.734rem;
+  padding: 3.14rem 0.734rem;
 }
 .MuiDrawer-docked .MuiList-root .MuiListItemButton-root {
   border-radius: 0.73rem;
@@ -1087,8 +1085,7 @@ footer .copyright-wrapper {
 .home .hero-desktop .image-wrapper .image img {
   border-radius: 0.625rem;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 100%;
 }
 .home .hero-desktop .image-wrapper .image-1 {
@@ -1231,7 +1228,6 @@ footer .copyright-wrapper {
   display: flex;
   justify-content: center;
   padding: 0.4rem;
-  width: -moz-fit-content;
   width: fit-content;
 }
 .home .middle-section .text-details-wrapper .benefits-detail h5 {
@@ -1943,8 +1939,7 @@ footer .copyright-wrapper {
 .take-a-test .available-test .test-card-wrapper .test-card .image-wrapper img {
   width: 8.32rem;
   height: 6.4rem;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 @media screen and (min-width: 768px) {
@@ -1960,6 +1955,24 @@ footer .copyright-wrapper {
   .nav .pricing-nav {
     padding: 1.86rem 5.99rem 0;
   }
+  .outlet-wrapper .nav > .outlet-nav {
+    padding: 1.61rem 2.42rem 1.7rem;
+  }
+  .outlet-wrapper .navbar-title {
+    font-size: 1.563rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 1440px) {
+  .outlet-wrapper .navbar-title {
+    font-size: 1.863rem;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 2560px) {
+  .outlet-wrapper .navbar-title {
+    font-size: 2.363rem;
+  }
+}
+@media screen and (min-width: 768px) {
   .icon-text-wrapper {
     gap: 1rem;
     padding: 1rem 2rem;
@@ -2357,7 +2370,7 @@ footer .copyright-wrapper {
 @media screen and (min-width: 768px) {
   .take-a-test {
     gap: 1.91rem;
-    padding: 2.13rem 1.85rem 6.86rem;
+    padding: 2.13rem 1rem 6.86rem 3.7rem;
   }
   .take-a-test .header .text-wrapper h1 {
     font-size: 1.563rem;
@@ -2392,6 +2405,9 @@ footer .copyright-wrapper {
 }
 @media screen and (min-width: 768px) {
   .take-a-test .header .profile-card-wrapper {
+    position: absolute;
+    top: 24%;
+    left: 2.42rem;
     width: 14.45rem;
     height: 21.44rem;
   }
@@ -2399,7 +2415,7 @@ footer .copyright-wrapper {
     height: 100%;
     justify-content: center;
     gap: 0.69rem;
-    padding: 1.38rem 2.54rem;
+    padding: 1.38rem 2.2rem;
   }
   .take-a-test .header .profile-card-wrapper .profile-card .avatar-wrapper .avatar img {
     width: unset;

@@ -65,9 +65,8 @@
 	.pricingContainer {
 		padding: 0rem 6rem;
 		.descriptionSection {
-			margin: 30px auto 3.313rem;
+			margin: 30px auto;
 			text-align: center;
-			width: 80%;
 			@include resize(fs-h3);
 			font-weight: weight(xx-bold);
 			line-height: 48px;
@@ -87,16 +86,6 @@
 		}
 		.pricingHeroSection + p {
 			@include resize(fs-h5);
-		}
-		.pricingCardContainer {
-			width: 100%;
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			gap: 2rem;
-			.pricingCardItem {
-				gap: 1rem;
-				padding: 30px 13px;
-			}
 		}
 	}
 
@@ -521,16 +510,16 @@
 	.pricingContainer {
 		padding: 0rem 6rem;
 		.descriptionSection {
-			margin: 30px auto 3.313rem;
+			margin: 30px auto;
 			text-align: center;
-			width: 60%;
+			width: 80%;
 			@include resize(fs-h3);
 			font-weight: weight(xx-bold);
 			line-height: 48px;
 		}
 		.pricingHeroSection {
 			display: grid;
-			grid-template-columns: 0.6fr 1fr;
+			grid-template-columns: 0.5fr 1fr;
 			align-items: center;
 			gap: 2rem;
 
@@ -541,7 +530,7 @@
 			.pricingHeroSectionFeatures {
 				.pricingHeroSectionFeaturesPara {
 					margin: 0px 0px 50px;
-					@include resize(fs-h5);
+					@include resize(fs-body1);
 				}
 				.pricingFeatures {
 					display: grid;
@@ -560,7 +549,10 @@
 			gap: 2rem;
 			.pricingCardItem {
 				gap: 1rem;
-				padding: 30px 13px;
+				padding: 20px 13px;
+			}
+			.pricingCardItem h2{
+				@include resize (fs-body2);
 			}
 		}
 	}

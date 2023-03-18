@@ -28,9 +28,6 @@ import { ReactComponent as HomeIcon } from "../../assets/svg/home-icon.svg";
 import { ReactComponent as ResourcesIcon } from "../../assets/svg/resources-icon.svg";
 import { ReactComponent as TestIcon } from "../../assets/svg/test-icon.svg";
 
-// TODO: stopped here
-// style take-a-test for tablet, desktop screen
-
 // STUB: define drawerwidth & items
 const drawerWidth = 240;
 

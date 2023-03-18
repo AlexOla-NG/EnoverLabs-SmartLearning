@@ -1525,6 +1525,7 @@ footer .copyright-wrapper {
   flex-direction: column;
   gap: 2.625rem;
   padding: 2.5rem 3rem 2.1rem;
+  width: 100vw;
 }
 .study-plan .text-details {
   display: flex;
@@ -2245,9 +2246,6 @@ footer .copyright-wrapper {
   }
 }
 @media screen and (min-width: 768px) {
-  .study-plan .categories-wrapper {
-    width: 56.96rem;
-  }
   .study-plan .categories-wrapper .swiper .icon-text-wrapper {
     width: 9rem;
   }

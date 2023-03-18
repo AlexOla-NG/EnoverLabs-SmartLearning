@@ -320,7 +320,6 @@
 				}
 			}
 
-			// STUB: absolutely position profile card after building sidebar
 			.profile-card-wrapper {
 				position: absolute;
 				top: 24%;
@@ -638,6 +637,35 @@
 			}
 		}
 	}
+
+	.take-a-test {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		column-gap: 1.375rem;
+		row-gap: 2.69rem;
+
+		.header,
+		.available-test {
+			grid-column: span 12;
+		}
+
+		.header {
+			.text-wrapper {
+				h1 {
+					margin-bottom: 0.94rem;
+				}
+			}
+		}
+
+		& > .progress {
+			gap: 1.25rem;
+			grid-column: 1/9;
+		}
+
+		.ranking {
+			grid-column: 9/-1;
+		}
+	}
 }
 
 @include media-xl {
@@ -883,6 +911,16 @@
 					height: 1.5rem;
 				}
 			}
+		}
+	}
+
+	.take-a-test {
+		.progress {
+			grid-column: 1/7;
+		}
+
+		.ranking {
+			grid-column: 7/-1;
 		}
 	}
 }

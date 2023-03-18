@@ -2848,6 +2848,28 @@ footer .copyright-wrapper {
     grid-template-columns: 1fr 0.7fr;
   }
 }
+@media screen and (min-width: 1024px) {
+  .take-a-test {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 1.375rem;
+    row-gap: 2.69rem;
+  }
+  .take-a-test .header,
+  .take-a-test .available-test {
+    grid-column: span 12;
+  }
+  .take-a-test .header .text-wrapper h1 {
+    margin-bottom: 0.94rem;
+  }
+  .take-a-test > .progress {
+    gap: 1.25rem;
+    grid-column: 1/9;
+  }
+  .take-a-test .ranking {
+    grid-column: 9/-1;
+  }
+}
 @media screen and (min-width: 1440px) {
   nav .container .navbar-items {
     gap: 3rem;
@@ -3156,6 +3178,14 @@ footer .copyright-wrapper {
   footer .social-icons-wrapper .icon-wrapper svg {
     width: 1.5rem;
     height: 1.5rem;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .take-a-test .progress {
+    grid-column: 1/7;
+  }
+  .take-a-test .ranking {
+    grid-column: 7/-1;
   }
 }
 :root {

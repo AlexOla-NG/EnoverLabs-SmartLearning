@@ -9,6 +9,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import WhiteBgBtn from "../button/WhiteBgBtn";
 import ColorBgBtn from "../button/ColorBgBtn";
+import { UserAuth } from "../../context/AuthContext";
 
 const navlinks = [
 	{
@@ -41,6 +42,7 @@ const Navbar = (props) => {
 	const { drawerWidth, handleDrawerToggle } = props;
 	const [anchorElNav, setAnchorElNav] = useState(null);
 	const location = useLocation();
+	const { user, logOut } = UserAuth();
 
 	// STUB: open nav menu
 	const handleOpenNavMenu = (event) => {
@@ -51,6 +53,10 @@ const Navbar = (props) => {
 	const handleCloseNavMenu = () => {
 		setAnchorElNav(null);
 	};
+
+	const handleLogOut = () => {
+		logOut();
+	}
 
 	let output;
 
@@ -143,6 +149,7 @@ const Navbar = (props) => {
 													padding="0.5rem 1.5rem"
 												/>
 											</NavLink>
+											
 										</div>
 									</MenuItem>
 								</Menu>
@@ -177,7 +184,10 @@ const Navbar = (props) => {
 									</div>
 
 									<div className="login-wrapper">
-										<NavLink
+										{
+											!user &&
+											<>
+											<NavLink
 											to="signin"
 											onClick={handleCloseNavMenu}
 										>
@@ -192,6 +202,22 @@ const Navbar = (props) => {
 												padding="0.5rem 1.5rem"
 											/>
 										</NavLink>
+										</>
+										}
+										
+										{
+											user && 
+											<NavLink
+												to="/"
+												onClick={handleLogOut}
+											>
+												<ColorBgBtn
+													text="sign out"
+													padding="0.5rem 1.5rem"
+												/>
+											</NavLink>
+										}
+										
 									</div>
 								</div>
 							</Box>

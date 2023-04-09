@@ -19,8 +19,6 @@ const Test = () => {
 	const [finalScore, setFinalScore] = useState(0);
 	const [publish, setPublish] = useState(false);
 	const [formVisibility, setFormVisibility] = useState(true);
-	// const [timeOut, setTimeOut] = useState();
-
 	
 	async function handleTest(e){
 		e.preventDefault();
@@ -49,41 +47,21 @@ const Test = () => {
 		e.preventDefault();
 
 		if (correctOption === choice){
-			console.log("Correct")
 			setScore(Number(score) + 1);
-			// setCount(Number(count) + 1)
 			setFinalScore(score);
 		} else{
-			console.log("Wrong Answer")
-	
 			setFinalScore(score);
 		}
-		// console.log(correctOption);
-		// console.log(choice);
-		// console.log(score);
-		
 		
 		if(count > 19){
 			setPublish(true);
 			setFormVisibility(false);
-			// if 
-			console.log(count)
 		} else{
 			handleTest(e);
 			setCount(Number(count) + 1)
-			console.log(count)
-			console.log(score)
 		}
 		
 	}
-	
-	// useEffect(() =>{
-	// 	setTimeOut(() => {
-	// 		setPublish(true);
-	// 		setFormVisibility(false);
-	// 		console.log("TimeUp")
-	// 	}, 5000)
-	// }, [])
 	
 	const ResetTest = () =>{
 		setCount(0)

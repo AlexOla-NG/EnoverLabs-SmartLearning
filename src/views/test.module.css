@@ -78,11 +78,14 @@
     color: black;
 }
 .Subject{
-    position: absolute;
+    position: fixed;
     top: 50;
     left: 50;
-    margin: -133px 0 0 150px;
+    margin: -138px 0 0 150px;
     z-index: 10000;
+    font-size: 18px;
+    display: flex;
+    gap: 600px;
 }
 .SubmissionFormButton span{
     font-size: 24px;
@@ -93,7 +96,7 @@
     width: 300px;
     padding: 5px 0;
     text-align: center;
-    height: 40px;
+    height: 45px;
     border-radius: 8px;
     color: white;
     background-color: #0F67F5;

@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import styles from "./test.module.css";
+import Timer from "./clock";
+// import { Timer } from "./clock";
 
 const Test = () => {
 	const [subject, setSubject] = useState("");
@@ -17,6 +19,7 @@ const Test = () => {
 	const [finalScore, setFinalScore] = useState(0);
 	const [publish, setPublish] = useState(false);
 	const [formVisibility, setFormVisibility] = useState(true);
+	// const [timeOut, setTimeOut] = useState();
 
 	
 	async function handleTest(e){
@@ -41,7 +44,7 @@ const Test = () => {
 			console.log(error.message);
 		}
 	}
-
+	
 	const handleUpdateScore = async (e) => {
 		e.preventDefault();
 
@@ -59,9 +62,11 @@ const Test = () => {
 		// console.log(choice);
 		// console.log(score);
 		
+		
 		if(count > 19){
 			setPublish(true);
 			setFormVisibility(false);
+			// if 
 			console.log(count)
 		} else{
 			handleTest(e);
@@ -71,6 +76,15 @@ const Test = () => {
 		}
 		
 	}
+	
+	// useEffect(() =>{
+	// 	setTimeOut(() => {
+	// 		setPublish(true);
+	// 		setFormVisibility(false);
+	// 		console.log("TimeUp")
+	// 	}, 5000)
+	// }, [])
+	
 	const ResetTest = () =>{
 		setCount(0)
 	}
@@ -107,7 +121,7 @@ const Test = () => {
 
 			
 			<form onSubmit={handleUpdateScore} className={styles.SubmissionForm}>
-			<h1 className={styles.Subject}>{subject}</h1>
+			<h1 className={styles.Subject}> <h1>{subject}</h1><h1><Timer duration={30 * 60 * 1000}/></h1></h1>
 			<p className={styles.Question}>{count}. {question}</p>
 			<p><input type="radio" name="option" id="optiona" value="a"  onChange={((e)=> setChoice(e.target.value))} className={styles.SelectRadio}/> <label htmlFor="optiona"  className={styles.RadioLabel} onChange={((e)=>e.target.style.color="red")}>a. {optionA}</label></p>
 			<p><input type="radio" name="option" id="optionb" value="b"  onChange={((e)=> setChoice(e.target.value))} className={styles.SelectRadio} /> <label htmlFor="optionb" className={styles.RadioLabel} onChange={((e)=>e.target.style.color="red")}>b. {optionB}</label></p>

@@ -78,6 +78,7 @@
     color: black;
 }
 .Subject{
+    width: 90%;
     position: fixed;
     top: 50;
     left: 50;
@@ -85,7 +86,7 @@
     z-index: 10000;
     font-size: 18px;
     display: flex;
-    gap: 600px;
+    gap: 50%;
 }
 .SubmissionFormButton span{
     font-size: 24px;
@@ -127,7 +128,3 @@
 .RadioLabel:hover{
     background-color: #aaa5a5;
 }
-/* .RadioLabel:visited{
-    background-color: #706e6e;
-    color: red;
-} */

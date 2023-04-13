@@ -2,69 +2,94 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import styles from "./test.module.css";
 import Timer from "./clock";
-// import { Timer } from "./clock";
 
 const Test = () => {
 	const [subject, setSubject] = useState("");
 	const [start, setStart] = useState(true);
-	const [question, setQuestion] = useState("");
-	const [optionA, setOptionsA] = useState("");
-	const [optionB, setOptionsB] = useState("");
-	const [optionC, setOptionsC] = useState("");
-	const [optionD, setOptionsD] = useState("");
-	const [correctOption, setCorrectOption] = useState("")
+	const [allQuestions, setAllQuestions] = useState(null)
 	const [choice, setChoice] = useState("");
 	const [score, setScore] = useState(0);
-	const [count, setCount] = useState(1);
+	const [count, setCount] = useState(0);
 	const [finalScore, setFinalScore] = useState(0);
 	const [publish, setPublish] = useState(false);
-	const [formVisibility, setFormVisibility] = useState(true);
 	
 	async function handleTest(e){
 		e.preventDefault();
 
 		const mysubject = subject		
 		try {
-			const questions = await axios.get(`https://questions.aloc.com.ng/api/v2/q?subject=${mysubject}`,
+			const questions = await axios.get(`https://questions.aloc.com.ng/api/v2/m?subject=${mysubject}`,
 			{
 				headers: {
 				"AccessToken": "QB-91e2cfa590f5e7fcd4c8"
 				}
 		})
-			setQuestion(questions.data.data.question);
-			setOptionsA(questions.data.data.option.a)
-			setOptionsB(questions.data.data.option.b)
-			setOptionsC(questions.data.data.option.c)
-			setOptionsD(questions.data.data.option.d)
-			setCorrectOption(questions.data.data.answer)
+			setAllQuestions(questions.data.data)
 			setStart(false)
+			setTimeout(() => {
+					submitTest();
+				}, 1800000)
+
 		} catch (error) {
 			console.log(error.message);
 		}
 	}
-	
-	const handleUpdateScore = async (e) => {
-		e.preventDefault();
 
-		if (correctOption === choice){
-			setScore(Number(score) + 1);
-			setFinalScore(score);
-		} else{
-			setFinalScore(score);
-		}
-		
-		if(count > 19){
-			setPublish(true);
-			setFormVisibility(false);
-		} else{
-			handleTest(e);
-			setCount(Number(count) + 1)
-		}
-		
+	const submitTest = () => {
+		setFinalScore(Number(score));
+		setPublish(true);
+		setCount(0);
+		setAllQuestions(null);
 	}
+	const getPreviousQuestion = () => {
+		if (count <= 0){
+			setCount(0)
+		} else{
+			setCount(count-1);
+		}
+		if (allQuestions[count].answer === choice && choice !== null){
+					setScore(Number(score) + 1);
+				} 
+	}
+	const getNextQuestion = () => {
+		if (count >=39){
+			setCount(39)
+			submitTest()
+		} else {
+			setCount(count+1);
+		}
+		if (allQuestions[count].answer === choice && choice !== null){
+			setScore(Number(score) + 1);
+			
+		} 		
+	}
+
+	function TestProp() {
+		return (
+		  <div>
+			{ 
+			  allQuestions.map((question, index) => {
+				if (index == count)
+				return  <div key={index}>
+				  <p className={styles.Question}>{index + 1}. {question.question}</p>
+				  {
+					question.image &&
+					<img src={question.image} alt="photo" />
+				  }
+				  <p><input type="radio" name="option" id="optiona" value="a"  autoComplete="off" onChange={((e)=> setChoice(e.target.value))} className={styles.SelectRadio}/> <label htmlFor="optiona"  className={styles.RadioLabel}>a. {question.option.a}</label></p>
+				  <p><input type="radio" name="option" id="optionb" value="b"  autoComplete="off" onChange={((e)=> setChoice(e.target.value))} className={styles.SelectRadio}/> <label htmlFor="optionb"  className={styles.RadioLabel}>b. {question.option.b}</label></p>
+				  <p><input type="radio" name="option" id="optionc" value="c"  autoComplete="off" onChange={((e)=> setChoice(e.target.value))} className={styles.SelectRadio}/> <label htmlFor="optionc"  className={styles.RadioLabel}>c. {question.option.c}</label></p>
+				  <p><input type="radio" name="option" id="optiond" value="d"  autoComplete="off" onChange={((e)=> setChoice(e.target.value))} className={styles.SelectRadio}/> <label htmlFor="optiond"  className={styles.RadioLabel}>d. {question.option.d}</label></p>
+				  </div>
+			   
+	  })}	  
+	  </div>
+		)
+	  }
 	
 	const ResetTest = () =>{
-		setCount(0)
+		setStart(true);
+		setPublish(false);
 	}
 	return <div className={styles.TestMain}>
 		{
@@ -95,24 +120,23 @@ const Test = () => {
 			</form>
 		}
 		{
-			question && optionA && optionB && optionC && optionD && formVisibility &&
+			allQuestions &&
 
-			
-			<form onSubmit={handleUpdateScore} className={styles.SubmissionForm}>
+			<div>
 			<h1 className={styles.Subject}> <h1>{subject}</h1><h1><Timer duration={30 * 60 * 1000}/></h1></h1>
-			<p className={styles.Question}>{count}. {question}</p>
-			<p><input type="radio" name="option" id="optiona" value="a"  onChange={((e)=> setChoice(e.target.value))} className={styles.SelectRadio}/> <label htmlFor="optiona"  className={styles.RadioLabel} onChange={((e)=>e.target.style.color="red")}>a. {optionA}</label></p>
-			<p><input type="radio" name="option" id="optionb" value="b"  onChange={((e)=> setChoice(e.target.value))} className={styles.SelectRadio} /> <label htmlFor="optionb" className={styles.RadioLabel} onChange={((e)=>e.target.style.color="red")}>b. {optionB}</label></p>
-			<p><input type="radio" name="option" id="optionc" value="c"  onChange={((e)=> setChoice(e.target.value))} className={styles.SelectRadio}/> <label htmlFor="optionc" className={styles.RadioLabel} onChange={((e)=>e.target.style.color="red")}>c. {optionC}</label></p>
-			<p><input type="radio" name="option" id="optiond" value="d"  onChange={((e)=> setChoice(e.target.value))} className={styles.SelectRadio}/> <label htmlFor="optiond" className={styles.RadioLabel} onChange={((e)=>e.target.style.color="red")}>d. {optionD}</label></p>
-
-			<div className={styles.ButtonContainer}><button type="submit"  className={styles.SubmissionFormButton}><span>&laquo; </span>Previous</button><button type="submit"   className={styles.SubmissionFormButton}>Next <span> &raquo;</span></button></div>
-
-		</form>
+			<TestProp
+				allQuestions={allQuestions}
+			/>
+		<div className={styles.ButtonContainer}>
+		<button onClick={getPreviousQuestion} className={styles.SubmissionFormButton}><span>&laquo; </span>Previous</button>
+	  	{ count <= 38 ? (<button onClick={getNextQuestion} className={styles.SubmissionFormButton}>Next<span> &raquo;</span></button>) : (<button onClick={getNextQuestion} className={styles.SubmissionFormButton}>Submit<span></span></button>)}
+		</div>
+			</div>
+			
 		}
 		{
 			publish &&
-			<h1>Total Score: {finalScore}/20
+			<h1>Total Score: {finalScore}/40
 			<form onSubmit={ResetTest}><button type="submit" className={styles.ResetButton}>Try Again</button></form>
 			</h1>
 		}
@@ -123,26 +147,3 @@ const Test = () => {
 export default Test;
 
 
-// {
-// 	question &&
-// 	<p className={styles.Question}>{question}</p>
-// }
-// {
-// 	optionA &&
-// 	<p  className={styles.Option}>A. <input type="radio" name="option" id="option" /> {optionA}</p>
-// }
-// {
-// 	optionB &&
-// 	<p  className={styles.Option}>B. <input type="radio" name="option" id="option" /> {optionB}</p>
-// }	
-// {
-// 	optionC &&
-// 	<p  className={styles.Option}>C. <input type="radio" name="option" id="option" /> {optionC}</p>
-// }	
-// {
-// 	optionD &&
-// 	<p  className={styles.Option}>D. <input type="radio" name="option" id="option" /> {optionD} 
-	
-// 	<p className={styles.NextButton}> <button onClick={handleTest}>Next</button></p>
-// 	</p>
-// }

@@ -12,6 +12,7 @@ const Test = () => {
 	const [count, setCount] = useState(0);
 	const [finalScore, setFinalScore] = useState(0);
 	const [publish, setPublish] = useState(false);
+	const [isLoading, setIsLoading] = useState(false)
 	
 	async function handleTest(e){
 		e.preventDefault();
@@ -24,7 +25,11 @@ const Test = () => {
 				"AccessToken": "QB-91e2cfa590f5e7fcd4c8"
 				}
 		})
-			setAllQuestions(questions.data.data)
+		setIsLoading(true);	
+		setAllQuestions(questions.data.data)
+			if(allQuestions){
+				setIsLoading(false)
+			}
 			setStart(false)
 			setTimeout(() => {
 					submitTest();

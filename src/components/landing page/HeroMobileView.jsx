@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { UserAuth } from "../../context/AuthContext";
 import ColorBgBtn from "../button/ColorBgBtn";
 import AvatarGroup from "../avatar/AvatarGroup";
 import student1 from "../../assets/images/student-1.png";
@@ -6,6 +8,7 @@ import student2 from "../../assets/images/student-2.png";
 import student3 from "../../assets/images/student-3.png";
 
 const HeroMobileView = () => {
+	const { user } = UserAuth();
 	return (
 		<section className="hero-mobile my-1rem">
 			<div className="hero-mobile-text">
@@ -17,8 +20,9 @@ const HeroMobileView = () => {
 					it. Award winning online platform to boost your grades.
 				</p>
 			</div>
-
-			<ColorBgBtn borderRadius="0.313rem" padding="0.5rem 2rem" />
+			{
+				user ? <Link to="/test"><ColorBgBtn padding="1.1rem 3rem" /></Link> : <Link to="/signup"><ColorBgBtn padding="1.1rem 3rem" /></Link>
+			}			
 			<div className="avatar-group">
 				<AvatarGroup />
 				<h2>10K+</h2>

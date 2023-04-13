@@ -128,3 +128,53 @@
 .RadioLabel:hover{
     background-color: #aaa5a5;
 }
+@media screen and (max-width: 1100px) {
+    .Subject{
+        width: 70%;
+    }
+}
+@media screen and (max-width: 900px) {
+    .Subject{
+        width: 50%;
+        gap: 25%;
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 770px) {
+    .Subject{
+        width: 65%;
+        gap: 25%;
+        font-size: 16px;
+        margin: -160px 0 0 70px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .Subject{
+        width: 90%;
+        gap: 30%;
+        font-size: 14px;
+        margin: -145px 0 0 10px;
+    }
+    .Question{
+        font-size: 16px;
+    }
+    .RadioLabel{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 430px) {
+    .Subject{
+        width: 90%;
+        gap: 5%;
+        font-size: 14px;
+        margin: -145px 0 0 5px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .Subject{
+        width: 90%;
+        gap: 5%;
+        font-size: 12px;
+        margin: -145px 0 0 5px;
+    }
+}

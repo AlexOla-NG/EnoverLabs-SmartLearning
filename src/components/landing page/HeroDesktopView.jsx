@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { UserAuth } from "../../context/AuthContext";
 import ColorBgBtn from "../button/ColorBgBtn";
 import AvatarGroup from "../avatar/AvatarGroup";
 import student1 from "../../assets/images/student-1.png";
@@ -10,6 +12,7 @@ import student3 from "../../assets/images/student-3.png";
 // it looks blurry
 
 const HeroDesktopView = () => {
+	const { user } = UserAuth();
 	return (
 		<section className="hero-desktop my-1rem">
 			<div className="hero-desktop-text">
@@ -20,8 +23,9 @@ const HeroDesktopView = () => {
 					testing and time management skills and having fun while at
 					it. Award winning online platform to boost your grades.
 				</p>
-
-				<ColorBgBtn padding="1.1rem 3rem" />
+				{
+					user ? <Link to="/test"><ColorBgBtn padding="1.1rem 3rem" /></Link> : <Link to="/signup"><ColorBgBtn padding="1.1rem 3rem" /></Link>
+				}
 				<div className="avatar-group">
 					<AvatarGroup />
 					<h2>10K+</h2>

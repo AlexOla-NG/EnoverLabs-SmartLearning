@@ -24,7 +24,7 @@ const HeroDesktopView = () => {
 					it. Award winning online platform to boost your grades.
 				</p>
 				{
-					user ? <Link to="/test"><ColorBgBtn padding="1.1rem 3rem" /></Link> : <Link to="/signup"><ColorBgBtn padding="1.1rem 3rem" /></Link>
+					user ? <Link to="/take-a-test"><ColorBgBtn padding="1.1rem 3rem" /></Link> : <Link to="/signup"><ColorBgBtn padding="1.1rem 3rem" /></Link>
 				}
 				<div className="avatar-group">
 					<AvatarGroup />

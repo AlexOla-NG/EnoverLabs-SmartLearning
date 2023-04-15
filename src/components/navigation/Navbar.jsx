@@ -133,6 +133,9 @@ const Navbar = (props) => {
 									))}
 
 									<MenuItem>
+									{
+										!user &&
+										
 										<div className="login-wrapper">
 											<NavLink
 												to="signin"
@@ -151,6 +154,19 @@ const Navbar = (props) => {
 											</NavLink>
 											
 										</div>
+									}
+									{
+										user &&
+										<NavLink
+												to="/"
+												onClick={handleLogOut}
+											>
+												<ColorBgBtn
+													text="sign out"
+													padding="0.5rem 1.5rem"
+												/>
+											</NavLink>
+									}
 									</MenuItem>
 								</Menu>
 							</Box>

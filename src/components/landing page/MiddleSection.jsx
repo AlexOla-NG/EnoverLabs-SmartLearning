@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"
 import student5 from "../../assets/images/student-5.png";
 import student6 from "../../assets/images/student-6.png";
 import ColorBgBtn from "../button/ColorBgBtn";
@@ -35,13 +36,13 @@ const MiddleSection = () => {
 					</h4>
 					{textFiller}
 					<div className="mobile-view-btn">
-						<ColorBgBtn
+					<Link to="/take-a-test">	<ColorBgBtn
 							borderRadius="0.313rem"
 							padding="0.625rem 2.188rem"
-						/>
+						/></Link>
 					</div>
 					<div className="desktop-view-btn">
-						<ColorBgBtn padding="1.25rem 2.625rem" />
+					<Link to="/take-a-test"><ColorBgBtn padding="1.25rem 2.625rem" /></Link>
 					</div>
 				</div>
 				<img src={student6} alt="john smith" />
@@ -52,17 +53,17 @@ const MiddleSection = () => {
 					<h4>Gamified Learning</h4>
 					{textFiller}
 					<div className="mobile-view-btn">
-						<ColorBgBtn
+					<Link to="/take-a-test"><ColorBgBtn
 							borderRadius="0.313rem"
 							padding="0.625rem 2.188rem"
 							text="take test"
-						/>
+						/></Link>	
 					</div>
 					<div className="desktop-view-btn">
-						<ColorBgBtn
+					<Link to="/take-a-test">	<ColorBgBtn
 							padding="1.25rem 2.625rem"
 							text="take test"
-						/>
+						/></Link>
 					</div>
 				</div>
 				<DemoLeaderboard />
